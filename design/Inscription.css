@@ -1,0 +1,71 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding:0;
+}
+@font-face {
+    font-family: 'BEBAS__';
+    src: url('typos/BEBAS__.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('typos/CaviarDreams.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('typos/Roboto-Light.ttf');
+}
+
+
+img {
+  width : 100px;
+  height: auto;
+  padding : 15px;
+
+}
+
+header {
+  background: linear-gradient(90deg,#FFFFFF, #85C1BE);
+  width: 100%;
+  height: auto;
+  margin-bottom: auto;
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*position: fixed;*/
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+              0 3px 5px rgba(0, 0, 0, .2),
+              0 5px 10px rgba(0, 0, 0, .2),
+              0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.h_title{
+  margin-left: 100px;  
+}
+
+.co_ins{  
+  padding-right: 15px;
+}
+
+.at_coins{
+  font-family : Roboto-Light;
+  text-underline-position: none;
+  text-decoration: none;
+  color : black;
+}
+.at_coins:hover{
+
+  text-decoration: underline black; 
+
+}
+
+h1{
+  font-family : BEBAS__;
+}
+
+h2{
+  font-family: CaviarDreams;
+}
