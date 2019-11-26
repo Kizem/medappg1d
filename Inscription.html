@@ -21,58 +21,83 @@
                 <div class = "co_ins">
 
                     <ul class="liste_options">
-                        <a class="atco_ins" href="connexion.php"">Connexion |</a>
+                        <a class="atco_ins" href="connexion.php">Connexion |</a>
                         <a class="atco_ins" href="inscription.php">Inscription</a>
                     </ul>
 
                 </div>
             <div class="conteneur"> 
         </header>
+        <!--corp-->
+        <article class="art">
+            <div class="boxtotale">
+                    <div class="titrePage">
+                        <h1>Inscription</h1>
+                    </div>
 
-        <div class="boxtotale">
-                <div class="titrePage">
-                    <h1>Inscription</h1>
-                </div>
-                <div class="entreesInformations">
-                    <div class="nomEtPrenom">
-                        <div class="partieNom">
-                            <div class="partieAfficher">
-                                <input class="entreeDeTexte" type="charset" name="nom" value="Nom" />
+                    <div class="entreesInformations">
+                        <div class="conteneurChamp">
+                            <div class="partieNom">
+                                <div class="partieAfficher">
+                                    <label class="input-label" for="nom">Nom</label>
+                                    <input class="entreeDeTexte" type="charset" name="nom"/>
+                                    
+                                </div>
+                                <div class="partieCachee">
+                                </div>
                             </div>
-                            <div class="partieCachee">
+
+                            <div class="partiePrenom">
+                                <div class="partieAfficher">
+                                    <label class="input-label" for="prenom">Prenom</label>
+                                    <input class="entreeDeTexte" type="charset" name="prenom" />
+                                    
+                                </div>
+                                <div class="partieCachee">
+                                </div>
                             </div>
                         </div>
 
-                        <div class="partiePrenom">
-                            <div class="partieAfficher">
                         
-                                <input class="entreeDeTexte" type="charset" name="prenom" value="Prenom" />
-                            </div>
-                            <div class="partieCachee">
-                            </div>
+
+                        <div class="conteneurChamp">
+                            <label class="input-label" for="mail">Adresse E-mail</label>
+                            <input class="entreeDeTexte" type="charset" name="mail"/>
+                            
                         </div>
-                    </div>
-                    
-                    </div>
 
-                    <div class="Email">
-                        <input class="entreeDeTexte" type="charset" name="mail" value="Adresse e-mail" />
-                    </div>
+                        <div class="conteneurChamp">
+                            <label class="input-label">Mot de passe</label>
+                            <input class="entreeDeTexte" type="charset" name="motDePasse"/>
+                            <label class="input-label">Confimer le mot de passe</label>
+                            <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
+                            
+                        </div>
+                        <div class="conteneurChamp">
+                            <FORM>
+                                <SELECT name="listeDeroulante" size="1">
+                                <OPTION>Utilisateur
+                                <OPTION>Gestionnaire
+                                <OPTION>Administrateur
+                                </SELECT>
+                            </FORM>
+                        </div>
+                        <div class="conteneurChamp">
+                            <label class="input-label">Code d'inscription</label>
+                            <input class="entreeDeTexte" type="charset" name="codeInscription"/>
+                        </div>
 
-                    <div class="MDP">
-                        <input class="entreeDeTexte" type="charset" name="motDePasse" value="Mot de passe" />
-                        <input class="entreeDeTexte" type="charset" name="confirmMDP" value="Confirmer Mdp" />
-                    </div>
+                        <div class="conteneurChamp">
+                            <input type="checkbox" name="CGUaccepted" value="1">J'accepte les <a href="CGUMentionLegales.html">termes et conditions d'utilisation</a>
+                        </div>
 
-                    <div class="CGU">
-                        <input type="checkbox" name="CGUaccepted" value="1">J'accepte les termes et conditions d'utilisation
-                    </div>
-
-                    <div class="BoutonConfirmer">
-                        <input type="button" value="S'inscrire">
+                        <div class="conteneurChamp">
+                            <input class="boutonValider" type="button" value="S'inscrire">
+                        </div>
                     </div>
 
                 </div>
+        </article>
 
 	</body>
 </html>

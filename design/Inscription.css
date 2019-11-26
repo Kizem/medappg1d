@@ -67,15 +67,35 @@ h1{
 }
 
 h2{
-  font-family: CaviarDreams;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
 }
 
 
 /*Element de page*/
+.art{
+  margin: auto;
+  max-width:935px;
+  width:100%;
+  padding: 130px;
+  
+}
+.input-label{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
 
+}
+.boxtotale{
+    background-color:#eee;
+    border:1px solid #e6e6e6;
+    border-radius:1px;margin:0 0 10px;
+    padding:50px;
+    margin: 12;
+    border-radius:10px;
 
-
-
+}
+.titrePage{
+  margin:22px auto 12px
+}
 .entreeDeTexte{
 font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
 font-size:16px;
@@ -84,4 +104,41 @@ color:#222427;
 border:2px solid #d9d9d9;
 border-radius:5px;
 background:#fff
+margin:10px;
+}
+
+.entreesInformations{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column
+}
+
+.conteneurChamp{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:row
+  justify-content: space-between;
+
+}
+
+.boutonValider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #F6F1F0;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+  color:#CD1F01;
 }
