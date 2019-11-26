@@ -2,7 +2,7 @@
 <html>
 	<head>
         <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="Style/Inscription.css"> 
+    <link rel="stylesheet" type="text/css" href="design/Inscription.css"> 
 		<title>Page de connexion</title>
 	</head>
 	<body>
@@ -30,9 +30,49 @@
         </header>
 
         <div class="boxtotale">
-                <section class="titrePage">
+                <div class="titrePage">
                     <h1>Inscription</h1>
-                </section>
+                </div>
+                <div class="entreesInformations">
+                    <div class="nomEtPrenom">
+                        <div class="partieNom">
+                            <div class="partieAfficher">
+                                <input class="entreeDeTexte" type="charset" name="nom" value="Nom" />
+                            </div>
+                            <div class="partieCachee">
+                            </div>
+                        </div>
+
+                        <div class="partiePrenom">
+                            <div class="partieAfficher">
+                        
+                                <input class="entreeDeTexte" type="charset" name="prenom" value="Prenom" />
+                            </div>
+                            <div class="partieCachee">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    <div class="Email">
+                        <input class="entreeDeTexte" type="charset" name="mail" value="Adresse e-mail" />
+                    </div>
+
+                    <div class="MDP">
+                        <input class="entreeDeTexte" type="charset" name="motDePasse" value="Mot de passe" />
+                        <input class="entreeDeTexte" type="charset" name="confirmMDP" value="Confirmer Mdp" />
+                    </div>
+
+                    <div class="CGU">
+                        <input type="checkbox" name="CGUaccepted" value="1">J'accepte les termes et conditions d'utilisation
+                    </div>
+
+                    <div class="BoutonConfirmer">
+                        <input type="button" value="S'inscrire">
+                    </div>
+
+                </div>
 
 	</body>
 </html>
