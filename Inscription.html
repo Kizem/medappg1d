@@ -32,25 +32,31 @@
         <article class="art">
             <div class="boxtotale">
                     <div class="titrePage">
-                        <h1>Inscription</h1>
+                        <h1>Formulaire d'inscription</h1>
                     </div>
 
                     <div class="entreesInformations">
                         <div class="conteneurChamp">
-                            <div class="partieNom">
+                            <div class="champSepare">
                                 <div class="partieAfficher">
-                                    <label class="input-label" for="nom">Nom</label>
-                                    <input class="entreeDeTexte" type="charset" name="nom"/>
+                                    <label class="input-label" for="nom"><p class="champTexte">Nom :  
+                                </p>
+                                <input class="entreeDeTexte" type="charset" name="nom"/>
+                            </label>
+                                    
                                     
                                 </div>
                                 <div class="partieCachee">
                                 </div>
                             </div>
 
-                            <div class="partiePrenom">
+                            <div class="champSepare">
                                 <div class="partieAfficher">
-                                    <label class="input-label" for="prenom">Prenom</label>
-                                    <input class="entreeDeTexte" type="charset" name="prenom" />
+                                    <label class="input-label" for="prenom"><p class="champTexte">Prenom :  
+                                </p>
+                                <input class="entreeDeTexte" type="charset" name="prenom" />
+                            </label>
+                                    
                                     
                                 </div>
                                 <div class="partieCachee">
@@ -61,30 +67,49 @@
                         
 
                         <div class="conteneurChamp">
-                            <label class="input-label" for="mail">Adresse E-mail</label>
-                            <input class="entreeDeTexte" type="charset" name="mail"/>
+                            <label class="input-label" for="mail">
+                                <p class="champTexte">Adresse E-mail : 
+                                </p>
+                                <input class="entreeDeTexte" type="charset" name="mail"/>
+                            </label>
                             
                         </div>
 
                         <div class="conteneurChamp">
-                            <label class="input-label">Mot de passe</label>
-                            <input class="entreeDeTexte" type="charset" name="motDePasse"/>
-                            <label class="input-label">Confimer le mot de passe</label>
-                            <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
+                            <div class="champSepare">
+                                <label class="input-label">
+                                    <p class="champTexte">Mot de passe : 
+                                    </p>
+                                    <input class="entreeDeTexte" type="charset" name="motDePasse"/>
+                                </label>
+                            </div>
+                            <div class="champSepare">
+                                <label class="input-label"><p class="champTexte">Confirmez le mot de passe : 
+                                    </p>
+                                    <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
+                                </label>
+                            </div>
                             
                         </div>
                         <div class="conteneurChamp">
-                            <FORM>
+                            <label class="input-label"><p class="champTexte">Type d'utilisateur : 
+                                </p>
+                                <FORM>
                                 <SELECT name="listeDeroulante" size="1">
                                 <OPTION>Utilisateur
                                 <OPTION>Gestionnaire
                                 <OPTION>Administrateur
                                 </SELECT>
                             </FORM>
+                            </label>
+                            
                         </div>
                         <div class="conteneurChamp">
-                            <label class="input-label">Code d'inscription</label>
-                            <input class="entreeDeTexte" type="charset" name="codeInscription"/>
+                            <label class="input-label"><p class="champTexte">Code d'inscription : 
+                                </p>
+                                <input class="entreeDeTexte" type="charset" name="codeInscription"/>
+                            </label>
+                            
                         </div>
 
                         <div class="conteneurChamp">

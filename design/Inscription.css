@@ -64,6 +64,7 @@ header {
 
 h1{
   font-family : BEBAS__;
+  margin: auto;
 }
 
 h2{
@@ -86,7 +87,7 @@ h2{
 }
 .boxtotale{
     background-color:#eee;
-    border:1px solid #e6e6e6;
+    border:3px solid #e6e6e6;
     border-radius:1px;margin:0 0 10px;
     padding:50px;
     margin: 12;
@@ -94,7 +95,16 @@ h2{
 
 }
 .titrePage{
-  margin:22px auto 12px
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column
+  margin:auto;
 }
 .entreeDeTexte{
 font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
@@ -128,8 +138,8 @@ margin:10px;
   -webkit-box-direction:normal;
   -webkit-flex-direction:column;
   -ms-flex-direction:column;
-  flex-direction:row
-  justify-content: space-between;
+  flex-direction:column;
+  margin: 12px auto;
 
 }
 
@@ -141,4 +151,12 @@ margin:10px;
   border-color: #3090E3;
   font:bold 13px Arial;
   color:#CD1F01;
+}
+
+.champSepare{
+  margin:10px;
+}
+
+.champTexte{
+  margin:auto;
 }
