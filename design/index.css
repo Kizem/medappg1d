@@ -26,53 +26,74 @@ body {
 }
 
 .logo {
-  width : 50px;
-  height: auto;
+  height: 50px;
+  width:auto;
   padding : 15px;
 }
 
 header {
-	background: linear-gradient(90deg,#FFFFFF, #9ac8e7);
-  width: 100%;
-  height: auto;
-  margin-bottom: auto;
+	background: #28292A;
   display : flex;
   flex-wrap: wrap;
   justify-content: space-between;
   
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
-              0 3px 5px rgba(0, 0, 0, .2),
-              0 5px 10px rgba(0, 0, 0, .2),
-              0 20px 20px rgba(0, 0, 0, .15);
-}
-
-.h_title{
-
-  margin-left: 100px;  
+  /* effet barre 3d bas de header */
+    box-shadow: 
+      0 -1px 0 hsl(210, 100%, 42%) inset, 
+      0 -2px 0 hsl(210, 100%, 48%) inset, 
+      0 -3px 0 hsl(210, 100%, 54%) inset, 
+      0 -4px 0 hsl(210, 100%, 60%) inset, 
+      0 -5px 0 hsl(210, 100%, 70%) inset; 
 }
 
 .co_ins{  
   padding-right: 15px;
 }
 
+/* boutons de connexion et d'inscription */
+
+.co_ins{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .at_coins{
-  font-family : Roboto-Light;
-  text-underline-position: none;
-  text-decoration: none;
-  color : black;
+    font:bold 15px Roboto-Light;
+    color: white;
+    text-decoration: none;
+    padding:10px 10px 10px 10px;
+    background: #28292A;
+    border-radius:10px;
+    border: 2px solid hsl(210, 100%, 54%);
 }
 .at_coins:hover{
-
-  text-decoration: underline black; 
-
+  box-shadow:2px 2px 8px #00D4FF;
+  color : #00D4FF;
 }
 
-h1{
-  font-family : BEBAS__;
+.at_coins:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px #00D4FF;
 }
 
-h2{
+/* ------------- */
+
+.slogan{
   font-family: CaviarDreams;
+  color: white;
+  /* effet de 3D sur le texte */
+  text-shadow:
+  0 1px 0 #ccc,
+  0 2px 0 #b5b5b5,
+  0 3px 0 rgba(0,0,0,.5)
+/*0 3px 0 #9b9b9b,
+  0 4px 0 #898989
+  0 5px 0 #7b7b7b,
+  0 6px 0 #626262,
+  0 7px 0 rgba(0,0,0,.5)*/
+  ;
+
 }
 
 
