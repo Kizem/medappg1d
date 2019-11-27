@@ -94,21 +94,23 @@ nav
   -ms-flex-direction:column;
   flex-direction:column
   margin:auto;
+
 }
 .zoneArticle{
-background-color:#eee;
-border:3px solid #e6e6e6;
+background-color:#F3F3F3;
 border-radius:1px;margin:0 0 10px;
 padding:50px;
 margin: 12;
-border-radius:10px;
 
 }
 .section{
-  margin: auto;
+  margin: 35px auto;
   max-width:935px;
   width:100%;
   padding: 50px;
+  background-color:#F3F3F3;
+  border-radius:10px;
+  border:3px solid #e6e6e6;
 }
 .art
 {
@@ -123,7 +125,6 @@ border-radius:10px;
 .texte
 {
   margin-left: 170px;
-  margin-top: 10px;
   background-color: #D4E7E6;
 }
 .menuNav{
@@ -134,7 +135,7 @@ border-radius:10px;
   margin: 0;
   padding: 0;
   width: auto;
-  background-color: #f1f1f1;
+  background-color: #C1C0C0;
 }
 #navigation li a{
   display: block;
@@ -147,7 +148,9 @@ border-radius:10px;
   color: white;
 }
 
-
+p{
+  font:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+}
 footer{
   padding: 50px;
   background-color:#85C1BE;
