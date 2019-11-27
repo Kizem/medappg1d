@@ -55,7 +55,7 @@
 
                         <div class="conteneurChamp">    
                             <div class="partieAfficher">
-                                <label class="input-label" for="prenom"><p class="champTexte">Prenom* :  
+                                <label class="input-label" for="prenom"><p class="champTexte">Prénom* :  
                             </p>
                                 <input class="entreeDeTexte" type="charset" name="prenom" />
                                 </label>      
@@ -105,6 +105,7 @@
                                 </p>
                                 <FORM>
                                 <SELECT class="liste" name="listeDeroulante" size="1">
+                                <OPTION>
                                 <OPTION>Utilisateur
                                 <OPTION>Gestionnaire
                                 <OPTION>Administrateur
