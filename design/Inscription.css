@@ -77,7 +77,7 @@ h2{
   margin: auto;
   max-width:935px;
   width:100%;
-  padding: 130px;
+  padding: 50px;
   
 }
 .input-label{
@@ -112,9 +112,22 @@ font-size:16px;
 display:inline-block;
 color:#222427;
 border:2px solid #d9d9d9;
+border-color:#3090E3;
 border-radius:5px;
 background:#fff
 margin:10px;
+}
+
+.liste{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+  display:inline-block;
+  color:#222427;
+  border:2px solid #d9d9d9;
+  border-color:#3090E3;
+  border-radius:5px;
+  background:#fff
+  margin:10px;
 }
 
 .entreesInformations{
@@ -159,4 +172,14 @@ margin:10px;
 
 .champTexte{
   margin:auto;
+}
+
+.boutonValider:hover{
+  background: #66B14B;
+  color:#eee;
+}
+.boutonValider:active{
+  background: #66B14B;
+  border-color: #F6F1F0;
+  color:#eee;
 }
