@@ -37,31 +37,29 @@
 
                     <div class="entreesInformations">
                         <div class="conteneurChamp">
-                            <div class="champSepare">
-                                <div class="partieAfficher">
-                                    <label class="input-label" for="nom"><p class="champTexte">Nom* :  
-                                </p>
-                                <input class="entreeDeTexte" type="charset" name="nom"/>
-                            </label>
-                                    
-                                    
-                                </div>
-                                <div class="partieCachee">
-                                </div>
+                            
+                            <div class="partieAfficher">
+                                <label class="input-label" for="nom">
+                                    <p class="champTexte">Nom* :  
+                                    </p>
+                                    <input class="entreeDeTexte" type="charset" name="nom"/>
+                                </label>
                             </div>
 
-                            <div class="champSepare">
-                                <div class="partieAfficher">
-                                    <label class="input-label" for="prenom"><p class="champTexte">Prenom* :  
-                                </p>
+                            <div class="partieCachee">
+                            </div>
+                        </div>
+                            
+
+                        <div class="conteneurChamp">    
+                            <div class="partieAfficher">
+                                <label class="input-label" for="prenom"><p class="champTexte">Prenom* :  
+                            </p>
                                 <input class="entreeDeTexte" type="charset" name="prenom" />
-                            </label>
-                                    
-                                    
-                                </div>
+                                </label>      
+                            </div>
                                 <div class="partieCachee">
                                 </div>
-                            </div>
                         </div>
 
                         
@@ -76,21 +74,21 @@
                         </div>
 
                         <div class="conteneurChamp">
-                            <div class="champSepare">
-                                <label class="input-label">
-                                    <p class="champTexte">Mot de passe* : 
-                                    </p>
-                                    <input class="entreeDeTexte" type="charset" name="motDePasse"/>
-                                </label>
-                            </div>
-                            <div class="champSepare">
-                                <label class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
-                                    </p>
-                                    <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
-                                </label>
-                            </div>
                             
+                            <label class="input-label">
+                                <p class="champTexte">Mot de passe* : 
+                                </p>
+                                <input class="entreeDeTexte" type="charset" name="motDePasse"/>
+                            </label>
                         </div>
+                        <div class="conteneurChamp">
+                            <label class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
+                                </p>
+                                <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
+                            </label>
+                        </div>
+                            
+                        
                         <div class="conteneurChamp">
                             <label class="input-label"><p class="champTexte">Type d'utilisateur* : 
                                 </p>
@@ -105,15 +103,27 @@
                             
                         </div>
                         <div class="conteneurChamp">
-                            <label class="input-label"><p class="champTexte">Code d'inscription* : 
-                                </p>
-                                <input class="entreeDeTexte" type="charset" name="codeInscription"/>
-                            </label>
-                            
+                            <div class="champSepare">
+                                <label class="input-label">
+                                    <div class="textePlusInfoBulle">
+                                        <p class="champTexte">Code d'inscription* :    
+                                        </p>
+                                        <div class="infobulle"> 
+                                            <img src="ressources/aide.png" alt=" ? " style=width:13px;/> 
+                                            <span>Code fourni par votre établissement d'examen</span> 
+                                        </div>
+                                    </div>
+                                    
+                                    <input class="entreeDeTexte" type="charset" name="codeInscription"/>
+                                </label>
+                            </div>
                         </div>
 
+                            
+                    
+
                         <div class="conteneurChampCGU">
-                            <input type="checkbox" name="CGUaccepted" value="1"><p>J'accepte les <a href="CGUMentionLegales.html">termes et conditions d'utilisation</a></p>
+                            <input type="checkbox" name="CGUaccepted" value="1"><label>J'accepte les <a href="CGUMentionLegales.html">termes et conditions d'utilisation</a></label>
                         </div>
 
                         <div class="conteneurChamp">

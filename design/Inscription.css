@@ -26,7 +26,6 @@ body{
 img {
   width : 100px;
   height: auto;
-  padding : 15px;
 
 }
 
@@ -119,6 +118,7 @@ border-color:#3090E3;
 border-radius:5px;
 background:#fff
 margin:10px;
+width: 250px;
 }
 
 .liste{
@@ -152,9 +152,9 @@ margin:10px;
   display:flex;
   -webkit-box-orient:vertical;
   -webkit-box-direction:normal;
-  -webkit-flex-direction:column;
-  -ms-flex-direction:column;
-  flex-direction:column;
+  -webkit-flex-direction:row;
+  -ms-flex-direction:row;
+  flex-direction:row;
   margin: 12px auto;
 
 }
@@ -170,6 +170,17 @@ margin:10px;
   flex-direction:row;
   margin: 12px auto;
 }
+.textePlusInfoBulle{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:row;
+  -ms-flex-direction:row;
+  flex-direction:row;
+}
 
 .boutonValider{
   border-radius:10px;
@@ -181,12 +192,10 @@ margin:10px;
   color:#CD1F01;
 }
 
-.champSepare{
-  margin:10px;
-}
 
 .champTexte{
-  margin:auto;
+  margin:0px;
+
 }
 
 .boutonValider:hover{
@@ -198,7 +207,42 @@ margin:10px;
   border-color: #F6F1F0;
   color:#eee;
 }
+.infobulle { 
 
+  text-decoration:none; 
+  position:relative; 
+}
+.infobulle span { 
+  display:none; 
+  -moz-border-radius:6px; 
+  -webkit-border-radius:6px; 
+  border-radius:6px; 
+  color:black; 
+  background-color: #eff1f3; 
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+  font-style:italic; 
+} 
+.infobulle span img { 
+  float:left; 
+  margin:0px 8px 8px 0; 
+} 
+
+.infobulle:hover span { 
+  display:block; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  z-index:1000; 
+  width:250px; 
+  /* max-width:200px; */ 
+  min-height:20px; 
+  border:1px solid black; 
+  margin-top:12px; 
+  margin-left:32px; 
+  overflow:hidden; 
+  
+}
 .asterix{
   font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
   font-size:10px;
