@@ -19,7 +19,7 @@
     <!-- MENU ------------------------------->
 
     <ul class="menu">
-      <li class="limenu"><a class="title_menu" href="#home">Accueil</a></li>
+      <li class="limenu"><a class="title_menu" href="index.php">Accueil</a></li>
       <li class="limenu"><a href="#news">News</a></li>
       <li class="limenu"><a href="#tests">Nos tests</a></li>
       <li class="limenu"><a href="#nos_tests">Mon espace</a></li>

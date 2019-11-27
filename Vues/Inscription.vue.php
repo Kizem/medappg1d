@@ -12,7 +12,7 @@
         <article class="art">
             <div class="boxtotale">
                     <div class="titrePage">
-                        <h1>Formulaire d'inscription</h1>
+                        <h1 class="titre_formulaire">Formulaire d'inscription</h1>
                     </div>
 
                     <div class="entreesInformations">

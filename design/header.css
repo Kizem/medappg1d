@@ -29,7 +29,6 @@ header {
   display : flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
   /* effet barre 3d bas de header */
     box-shadow: 
       0 -1px 0 hsl(210, 100%, 42%) inset, 
