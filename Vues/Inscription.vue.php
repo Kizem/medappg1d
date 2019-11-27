@@ -7,29 +7,7 @@
 	</head>
 	<body>
 		<!-- ENTETE -->
-        <header>
-            <div class="icone">
-                <a href="homepage.html" class="navbar-left"><img src="ressources/logo2.png"></a>
-            </div>
-            <div class="conteneur" align="center">
-                <div class="h_title">
-
-                    <h1> MedApp </h1>
-                    <h2> Easy stats for everyone </h2>
-                </div>
-            </div>
-      
-            <div class="conteneur"> 
-                <div class = "co_ins">
-
-                    <ul class="liste_options">
-                        <a class="atco_ins" href="connexion.php">Connexion |</a>
-                        <a class="atco_ins" href="inscription.php">Inscription</a>
-                    </ul>
-
-                </div>
-            <div class="conteneur"> 
-        </header>
+        <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
         <article class="art">
             <div class="boxtotale">

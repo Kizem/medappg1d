@@ -2,7 +2,7 @@
 
 <!--php car il faudra intégrer un affichage selon que la personne est connectée ou non -->
 
-<a href="index.html"><img class="logo" src="ressources/logo_provisoire.png"></a>
+<a href="index.php"><img class="logo" src="ressources/logo_provisoire.png"></a>
 <center>
 <div class="h_title" >
   <div>
@@ -16,7 +16,7 @@
 
   <ul>
       <a class="at_coins" href="connexion.php">Connexion</a>
-      <a class="at_coins" href="inscription.html">Inscription</a>
+      <a class="at_coins" href="inscription.php">Inscription</a>
   </ul>
 
 </div>
