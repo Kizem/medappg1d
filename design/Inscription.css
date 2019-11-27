@@ -6,7 +6,7 @@ html{
 body{
   margin: 0;
   padding:0;
-  background-image:url(ressource/fond.png);
+  background-image:url(ressources/fond.png);
 }
 @font-face {
     font-family: 'BEBAS__';
@@ -78,7 +78,7 @@ h2{
 /*Element de page*/
 .art{
   margin: auto;
-  max-width:935px;
+  max-width:700px;
   width:100%;
   padding: 50px;
   
@@ -158,6 +158,18 @@ margin:10px;
   margin: 12px auto;
 
 }
+.conteneurChampCGU{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:row;
+  -ms-flex-direction:row;
+  flex-direction:row;
+  margin: 12px auto;
+}
 
 .boutonValider{
   border-radius:10px;
@@ -185,4 +197,9 @@ margin:10px;
   background: #66B14B;
   border-color: #F6F1F0;
   color:#eee;
+}
+
+.asterix{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:10px;
 }
