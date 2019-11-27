@@ -1,9 +1,12 @@
 html{
   scroll-behavior: smooth;
 }
+
+}
 body{
   margin: 0;
   padding:0;
+  background-image:url(ressource/fond.png);
 }
 @font-face {
     font-family: 'BEBAS__';
