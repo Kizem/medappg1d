@@ -10,32 +10,9 @@
 <body>
 <div id = "main">
 
-
-    <!--HEADER -------------------------------- -->
-
-
-    <header>
-      
-      <a href="index.html"><img class="logo" src="ressources/logo_provisoire.png"></a>
-      <center>
-      <div class="h_title" >
-        <div>
-          <h1 class="slogan"> Easy stats for everyone </h1>
-
-        </div>
-      </div>
-    </center>
-      
-      <div class = "co_ins">
-
-        <ul>
-            <a class="at_coins" href="connexion.php">Connexion</a>
-            <a class="at_coins" href="inscription.html">Inscription</a>
-        </ul>
-
-      </div>
-      
-    </header>
+    <header><?php include_once('includes/header.php'); ?></header>
+    
+   
 
     <!--BODY --------------------------------- -->
 
