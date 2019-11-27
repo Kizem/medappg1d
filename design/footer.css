@@ -1,0 +1,26 @@
+footer{
+  padding: 50px;
+  background-color:#85C1BE;
+  margin-top:1%;  
+
+}
+
+.boutons_link{
+  display:flex;
+  justify-content: space-around;
+
+
+}
+
+.bouton_footer {
+    font: 17px Roboto-Black;
+    color:#3281E0;
+    background: #F6F1F0;
+    border-color: #3090E3;
+    border-radius:10px;
+    width:auto;
+    height:auto;
+}
+.bouton_footer:hover{
+box-shadow:2px 2px 8px #BD9C43;
+}
