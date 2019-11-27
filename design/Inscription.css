@@ -2,11 +2,11 @@ html{
   scroll-behavior: smooth;
 }
 
-}
 body{
   margin: 0;
   padding:0;
-  background-image:url(ressources/fond.png);
+  background-image:url(fond.png);
+  background-attachment:fixed;
 }
 @font-face {
     font-family: 'BEBAS__';
