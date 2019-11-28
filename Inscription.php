@@ -1,10 +1,10 @@
 
 <?php
-if(isset($_GET['nom'])){
-	echo 'Votre nom est '.$_GET['nom'];
+if(isset($_POST['nom'])){
+	echo 'Votre nom est '.$_POST['nom'];
 }
 else{
-	include("Vues/Inscription.vue.php");
+	echo 'nom pas declare';
 }
 include_once('Vues/Inscription.vue.php');
 ?>
