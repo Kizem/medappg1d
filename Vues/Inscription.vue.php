@@ -9,7 +9,7 @@
 		<!-- ENTETE -->
         <header><?php include_once('header.vue.php'); ?></header>
         <!--corp-->
-        <form method="post" action="../Inscription.php">
+        <form method="post" action="Inscription.php">
         <article class="art">
             <div class="boxtotale">
                     <div class="titrePage">
@@ -101,7 +101,7 @@
                                             <p class="champTexte">Code d'inscription* :    
                                             </p>
                                             <div class="infobulle"> 
-                                                <img src="../ressources/aide.png" alt=" ? " style=width:13px;/> 
+                                                <img src="ressources/aide.png" alt=" ? " style=width:13px;/> 
                                                 <span>Code fourni par votre établissement d'examen</span> 
                                             </div>
                                         </div>
