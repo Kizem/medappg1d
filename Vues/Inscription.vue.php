@@ -7,9 +7,9 @@
 	</head>
 	<body>
 		<!-- ENTETE -->
-        <header><?php include_once('includes/header.php'); ?></header>
+        <header><?php include_once('header.vue.php'); ?></header>
         <!--corp-->
-        <form method="post" action="Inscription.php">
+        <form method="post" action="../Inscription.php">
         <article class="art">
             <div class="boxtotale">
                     <div class="titrePage">
@@ -101,7 +101,7 @@
                                             <p class="champTexte">Code d'inscription* :    
                                             </p>
                                             <div class="infobulle"> 
-                                                <img src="ressources/aide.png" alt=" ? " style=width:13px;/> 
+                                                <img src="../ressources/aide.png" alt=" ? " style=width:13px;/> 
                                                 <span>Code fourni par votre établissement d'examen</span> 
                                             </div>
                                         </div>
@@ -118,7 +118,7 @@
                             </div>
 
                             <div class="conteneurChamp">
-                                <input class="boutonValider" type="button" value="S'inscrire">
+                                <input class="boutonValider" type="submit" value="S'inscrire">
                             </div>
                         
                     </div>
@@ -130,7 +130,7 @@
                 </form>
         </article>
         <?php
-            include ("Vues/footer.php");
+            include ("footer.php");
         ?>
 	</body>
 </html>
