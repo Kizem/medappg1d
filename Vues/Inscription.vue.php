@@ -83,9 +83,10 @@
                                 </p>
                                 <FORM>
                                 <SELECT class="liste" name="listeDeroulante" size="1">
-                                <OPTION>Utilisateur
-                                <OPTION>Gestionnaire
-                                <OPTION>Administrateur
+                                <OPTION value=0>Utilisateur</OPTION>
+                                <OPTION value=1>Utilisateur</OPTION>
+                                <OPTION value=2>Gestionnaire</OPTION>
+                                <OPTION value=3>Administrateur</OPTION>
                                 </SELECT>
                             </FORM>
                             </label>
