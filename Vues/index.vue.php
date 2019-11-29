@@ -8,9 +8,10 @@
 
 </head>
 <body>
+<header><?php include_once('includes/header.php'); ?></header>
 <div id = "main">
 
-    <header><?php include_once('includes/header.php'); ?></header>
+    
     
    
 
@@ -79,9 +80,9 @@
                     
 
 <!--FOOTER -------------------------------- -->
-<footer><?php include_once('includes/footer.php'); ?></footer>
+
 
 </div>
-
+<footer><?php include_once('includes/footer.php'); ?></footer>
 </body>
 </html>

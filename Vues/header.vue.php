@@ -3,14 +3,14 @@
 <!--php car il faudra intégrer un affichage selon que la personne est connectée ou non -->
 
 <a href="index.php"><img class="logo" src="ressources/logo_provisoire.png"></a>
-<center>
+<div class="center">
 <div class="h_title" >
   <div>
     <h1 class="slogan"> Easy stats for everyone </h1>
 
   </div>
 </div>
-</center>
+</div>
 
 <div class = "co_ins">
 

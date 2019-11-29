@@ -7,7 +7,6 @@
     font-family: 'CaviarDreams';
     src: url('typos/CaviarDreams.ttf');
 }
-
 @font-face {
     font-family: 'Roboto-Light';
     src: url('typos/Roboto-Light.ttf');
@@ -22,13 +21,14 @@
   height: 50px;
   width:auto;
   padding : 15px;
+  margin-right: 100px;
 }
 
 header {
 	background: #28292A;
   display : flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  
   /* effet barre 3d bas de header */
     box-shadow: 
       0 -1px 0 hsl(210, 100%, 42%) inset, 
@@ -37,16 +37,20 @@ header {
       0 -4px 0 hsl(210, 100%, 60%) inset, 
       0 -5px 0 hsl(210, 100%, 70%) inset; 
 }
-
-.co_ins{  
-  padding-right: 15px;
+.center{
+  margin: auto;
+}
+h1{
+  text-align: center;
 }
 
 /* boutons de connexion et d'inscription */
 
 .co_ins{
+  padding-right: 15px;
   margin-top: auto;
   margin-bottom: auto;
+
 }
 
 .at_coins{
