@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<!-- ENTETE -->
-        <header><?php include_once('header.vue.php'); ?></header>
+        <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
         <form method="post" action="Inscription.php">
         <article class="art">

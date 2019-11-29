@@ -5,12 +5,9 @@
     <link rel="stylesheet" type="text/css" href="design/CGUMentionLegales.css"> 
         <title>CGU et Mention légales</title>
     </head>
-     
-    
-
     <body>
         <!-- ENTETE -->
-        <header><?php include_once('header.vue.php'); ?></header>
+        <header><?php include_once('includes/header.php'); ?></header>
         <section class="section">
             <div class="titrePage">
                 <div class="titreP">
