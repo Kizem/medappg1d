@@ -10,27 +10,7 @@
 
     <body>
         <!-- ENTETE -->
-        <header>
-            <a href="homepage.html" class="navbar-left"><img src="ressources/logo2.png"></a>
-            <div class="conteneur" align="center">
-                <div class="h_title">
-
-                    <h1> MedApp </h1>
-                    <h2> Easy stats for everyone </h2>
-                </div>
-            </div>
-      
-            <div class="conteneur"> 
-                <div class = "co_ins">
-
-                    <ul class="liste_options">
-                        <a class="atco_ins" href="connexion.php">Connexion</a>
-                        <a class="atco_ins" href="inscription.html">Inscription</a>
-                    </ul>
-
-                </div>
-            <div class="conteneur"> 
-        </header>
+        <header><?php include_once('header.vue.php'); ?></header>
         <section class="section">
             <div class="titrePage">
                 <div class="titreP">
@@ -179,12 +159,6 @@
             </article>
         </section>
         <!-- PIED DE PAGE -->
-        <footer>
-          <div class="boutons_link">
-            <input  class="bouton_footer" type="button" value="FAQ">
-            <input  class="bouton_footer" type="button" value="CGU & Mentions Légales">
-            <input  class="bouton_footer" type="button" value="Infos de contact">
-          </div> 
-        </footer>
+        <footer><?php include_once('includes/footer.php'); ?></footer>
     </body>
 </html>
