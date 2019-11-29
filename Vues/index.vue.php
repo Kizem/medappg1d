@@ -79,16 +79,7 @@
                     
 
 <!--FOOTER -------------------------------- -->
-<footer>
-
-  <div class="boutons_link">
-    <input  class="bouton_footer" type="button" value="FAQ">
-    <input  class="bouton_footer" type="button" value="CGU & Mentions Légales">
-    <input  class="bouton_footer" type="button" value="Infos de contact">
-  </div> 
-
-
-</footer>
+<footer><?php include_once('includes/footer.php'); ?></footer>
 
 </div>
 

@@ -129,8 +129,6 @@
                 </div>
                 </form>
         </article>
-        <?php
-            include ("footer.php");
-        ?>
+        <footer><?php include_once('includes/footer.php'); ?></footer>
 	</body>
 </html>
