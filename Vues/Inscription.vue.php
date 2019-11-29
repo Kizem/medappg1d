@@ -112,7 +112,7 @@
                             </div>
                             <div class="conteneurChampCGU">
                                 <input type="checkbox" name="CGUaccepted" value="1">
-                                    <label>J'accepte les <a href="CGUMentionLegales.html">termes et conditions d'utilisation</a>
+                                    <label>J'accepte les <a href="CGUMentionLegales.php">termes et conditions d'utilisation</a>
                                     </label>
 
                             </div>
