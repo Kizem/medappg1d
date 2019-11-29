@@ -1,8 +1,15 @@
 footer{
-  padding: 50px;
-  background-color:#85C1BE;
-  margin-top:1%;  
-
+  background: #28292A;
+  display : flex;
+  flex-wrap: wrap;
+  
+  /* effet barre 3d bas de header */
+  box-shadow: 
+      0 -1px 0 hsl(210, 100%, 42%) inset, 
+      0 -2px 0 hsl(210, 100%, 48%) inset, 
+      0 -3px 0 hsl(210, 100%, 54%) inset, 
+      0 -4px 0 hsl(210, 100%, 60%) inset, 
+      0 -5px 0 hsl(210, 100%, 70%) inset; 
 }
 
 .boutons_link{
