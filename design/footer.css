@@ -20,6 +20,7 @@ footer{
 }
 
 .bouton_footer {
+
     font: 17px Roboto-Black;
     color:#3281E0;
     background: #F6F1F0;
@@ -27,6 +28,8 @@ footer{
     border-radius:10px;
     width:auto;
     height:auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .bouton_footer:hover{
 box-shadow:2px 2px 8px #BD9C43;
