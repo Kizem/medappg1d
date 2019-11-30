@@ -9,27 +9,7 @@
 
 	</head>
 
-        <header>
-            <a href="homepage.html" class="navbar-left"><img src="ressources/logo2.png"></a>
-            <div class="conteneur" align="center">
-                <div class="h_title">
-
-                    <h1> MedApp </h1>
-                    <h2> Easy stats for everyone </h2>
-                </div>
-            </div>
-      
-            <div class="conteneur"> 
-                <div class = "co_ins">
-
-                    <ul class="liste_options">
-                        <a class="atco_ins" href="connexion.php">Connexion</a>
-                        <a class="atco_ins" href="inscription.html">Inscription</a>
-                    </ul>
-
-                </div>
-            <div class="conteneur"> 
-        </header>
+        <header><?php include_once('includes/header.php'); ?></header>
 
 	<body>
 
@@ -304,7 +284,7 @@
 		<p>
 			<h2 id="ancre_propos">A propos</h2>
 		</p>
-
+		<footer><?php include_once('includes/footer.php'); ?></footer>
 	</body>
 
 </html>
