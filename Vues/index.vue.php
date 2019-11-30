@@ -14,7 +14,7 @@
         <!--BODY --------------------------------- -->
 
         <center>
-          <div class="img_test"><a href="#nos_tests">
+          <div class="img_test"><a href="nos_tests.php">
             <img class="image" src="ressources/ill_test.jpg" alt="Alt text"/>
 
               <div class="normal">
@@ -32,7 +32,7 @@
 
       <div class=images_down>
 
-        <div class="img_user"><a href="#nos_tests">
+        <div class="img_user"><a href="connexion.php">
           <img class="image" src="ressources/ill_user.jpg" alt="Alt text"/>
             <div class="normal">
               <div class="text">Espace Utilisateur
@@ -44,7 +44,7 @@
         </a>
         </div>
 
-        <div class="img_gestionnaire"><a href="#nos_tests">
+        <div class="img_gestionnaire"><a href="connexion.php">
           <img class="image" src="ressources/ill_gestionnaire.jpg" alt="Alt text"/>
             <div class="normal">
               <div class="text">Espace Gestionnaire
