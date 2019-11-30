@@ -11,25 +11,7 @@
     <header><?php include_once('includes/header.php'); ?></header>
     <div id = "main">
 
-        
-        
-       
-
         <!--BODY --------------------------------- -->
-
-        <!-- MENU ------------------------------->
-
-        <ul class="menu">
-          <li class="limenu"><a class="title_menu" href="index.php">Accueil</a></li>
-          <li class="limenu"><a href="#news">News</a></li>
-          <li class="limenu"><a href="#tests">Nos tests</a></li>
-          <li class="limenu"><a href="#nos_tests">Mon espace</a></li>
-          <li class="limenu"><a href="#do_test">Participer à un test</a></li>
-          <li class="limenu"><a href="#a_propos">A propos</a></li>
-        </ul>
-
-         <!-- MENU ------------------------------->
-
 
         <center>
           <div class="img_test"><a href="#nos_tests">
