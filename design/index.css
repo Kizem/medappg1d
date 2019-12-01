@@ -21,8 +21,8 @@ body {
 .know_more{
 
   position: absolute;
-  bottom: 130px;
-  right: 350px;
+  bottom: 16%;
+  right: 22%;
 
   font:bold 30px Roboto-Light;
   color: white;
@@ -50,8 +50,8 @@ body {
 
 .go_connex_user{
   position: absolute;
-  bottom: -150px;
-  left: 325px;
+  bottom: -22%;
+  left: 21.4%;
 
   font:bold 28px Roboto-Light;
   color: white;
@@ -77,8 +77,8 @@ body {
 
 .go_connex_gest{
   position: absolute;
-  bottom: -660px;
-  right: 320px;
+  bottom: -92%;
+  right: 21.1%;
 
   font:bold 28px Roboto-Light;
   color: white;

@@ -13,17 +13,17 @@
         <!--BODY --------------------------------- -->
         <div class="ban" align="center">
           <img class="image" src="ressources/Nos_tests.png" alt="Alt text"/>
-          <a href="nos_tests.php"></a><button class="know_more">En savoir plus</button>
+          <a class="know_more" href="nos_tests.php">En savoir plus</a>
         </div>
 
         <div class="ban" align="center">
           <img class="image" src="ressources/ESPACE_UTILISATEUR.png" alt="Alt text"/>
-          <a href="connexion.php"></a><button class="go_connex_user">Je me connecte</button>
+          <a class="go_connex_user" href="connexion.php">Je me connecte</a>
         </div>
 
         <div class="ban" align="center">
           <img class="image" src="ressources/ESPACE_GESTIONNAIRE.png" alt="Alt text"/>
-          <a href="connexion.php "></a><button class="go_connex_gest">Je me connecte</button>
+          <a class="go_connex_gest" href="connexion.php ">Je me connecte</a>
         </div>
         
 <!-- 
