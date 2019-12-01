@@ -8,9 +8,10 @@
     <body>
         <!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
+        <form method="post" action="Vues/CGUMentionLegalesEdition.vue.php">
         <section class="section">
             <div class="boxBoutonEdit">
-                <input class="edit" type="button" value="Edit">
+                <input class="edit" type="submit" value="Edit">
             </div>
             <div class="titrePage">
                 <div class="titreP">
