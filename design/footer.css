@@ -1,4 +1,6 @@
 footer{
+  position:relative;
+  bottom: 0;
   background: #28292A;
   display : flex;
   flex-wrap: wrap;
