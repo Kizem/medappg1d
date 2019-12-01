@@ -8,7 +8,7 @@ require("includes/AccesBase.php");
 if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND !empty($_POST['motDePasse']) AND !empty($_POST['confirmMDP']) AND !empty($_POST['codeInscription']) AND ($_POST['listeDeroulante']!=0)){
 
 
-	$pseudo = htmlspecialchars($_POST['login']);
+	$login = htmlspecialchars($_POST['login']);
 	$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
 	$mail = htmlspecialchars($_POST['mail']);
@@ -21,7 +21,9 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 		if(pseudoDisponible($db, $login)){
 			if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
 				if(mailDisponible($db, $mail)){
-					echo mailDisponible($db, $mail);
+					$req= detectionCode($db, $codeInscription);
+					$fonction= $req->fetch();
+					echo $fonction["fonction"];
 					if($mdp1==$mdp2){
 
 						switch ($typeUtilisateur) {

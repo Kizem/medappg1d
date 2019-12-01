@@ -142,11 +142,19 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Mdp` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Nom` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Prenom` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `Adresse` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Mail` varchar(100) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-COMMIT;
 
+
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO utilisateur (Type, login, Mdp, Nom, Prenom, Mail) VALUES 
+('Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad','mohammad.amla.pro@gmail.com');
+COMMIT;
+-- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

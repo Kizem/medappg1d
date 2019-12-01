@@ -1,20 +1,36 @@
 <?php  
 function insertUsers($db, $nom , $prenom, $mail, $mdp, $type, $pseudo){
-	$req = $db->prepare("insert into utilisateur (Type,login,Mdp,Nom,Prenom,Adresse) values ('$type','$pseudo','$mdp','$nom','$prenom','$mail')");
+	$req = $db->prepare("insert into utilisateur (Type,login,Mdp,Nom,Prenom,Mail) values ('$type','$pseudo','$mdp','$nom','$prenom','$mail')");
 	$req->execute();
 	
 	return $req;
 }
 
 function mailDisponible($db, $mail){
-	$req = $db->prepare("SELECT * FROM utilisateur WHERE Adresse ='$mail'");
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE Mail='$mail'");
 	$req->execute();
-	return empty($req);
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		return FALSE;
+	}
 }
 
 function pseudoDisponible($db, $pseudo){
-	$req = $db->prepare("SELECT * FROM utilisateur WHERE Adresse ='$pseudo'");
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
 	$req->execute();
-	return empty($req);
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		return FALSE;
+	}
+	
+}
+function detectionCode($db, $code){
+	$req = $db->prepare("SELECT * FROM codeInscription WHERE id='$code'");
+	$req->execute();
+	return $req;
 }
 ?>
