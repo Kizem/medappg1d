@@ -43,34 +43,42 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 						if($fonction["fonction"]==$typeUtilisateur){
 							$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $login);
 							$erreur="";
+							include('connexion.php');
 						}
 						else{
 							$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
+							include('Vues/Inscription.vue.php');
 						}
 					}
 					else{
 						$erreur= "Les mots de passes ne correspondent pas";
+						include('Vues/Inscription.vue.php');
 					}
 				}
 				else{
 					$erreur= "Cette adresse mail n'est pas disponible";
+					include('Vues/Inscription.vue.php');
 				}
 			}
 			else{
 				$erreur= "Cette adresse mail n'est pas valide";
+				include('Vues/Inscription.vue.php');
 			}
 		}
 		else{
 			$erreur= "Ce pseudo est déja utilisé";
+			include('Vues/Inscription.vue.php');
 		}
 	}
 	else{
 		$erreur= "Veuillez accepter les CGU et mentions légales pour vous inscrire";
+		include('Vues/Inscription.vue.php');
 	}
 
 }
 else{
 	$erreur= "Veuillez remplir tous les champs";
+	include('Vues/Inscription.vue.php');
 	}
 	/*echo 'Votre nom est '.$_POST['nom'];
 }
@@ -78,6 +86,6 @@ else{
 else{
 	echo 'nom pas declare';*/
 
-include('Vues/Inscription.vue.php');
+
 ?>
 
