@@ -2,28 +2,27 @@ body {
   background-color: #e9e8e8;
 }
 
-
-
-
-
-/* -----------------------------------------
------- BODY -------------------------------- */
-
 /* IMAGES ----------------------------------------- */
 
-.test .image{
+.ban{
+  margin: 5%;
+}
+
+
+.ban .image{
   width: 90%;
   height: auto;
   box-shadow: 10px 5px 5px rgba(100,100,100,1);
   /*border : 3px black inset;*/
 }
 
+/* bouton EN SAVOIR PLUS */
 
 .know_more{
 
   position: absolute;
   bottom: 130px;
-  right: 300px;
+  right: 350px;
 
   font:bold 30px Roboto-Light;
   color: white;
@@ -47,262 +46,62 @@ body {
     box-shadow:2px 2px 8px white;
 }
 
+/* bouton : Se connecter; */
 
-
-
-
-
-
-
-
-
-
-/* ---- image 1 ------ */
-
-.img_test {
-  position: relative;
-  width: 400px;
-}
-/* Image originale */
-.img_test .image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/* Texte original */
-.img_test .text {
- color: #fff;
- font-size: 20px;
- line-height: 1.5em;
- text-shadow: 2px 2px 2px #000;
- text-align: center;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- width: 100%;
-}
-
-
-
-.img_test .hover {
-  margin-left: 15px;
-  margin-top: 16px;
+.go_connex_user{
   position: absolute;
-  top: 0;
-  height: 93%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0,0,0,0.5);
-}
-/* Apparition overlay sur passage souris */
-.img_test:hover .hover{
- opacity: 1;
-}
+  bottom: -150px;
+  left: 325px;
 
-.img_test .normal {
- transition: .5s ease;
-}
-.img_test:hover .normal {
- opacity: 0;
+  font:bold 28px Roboto-Light;
+  color: white;
+  text-decoration: none;
+  padding:10px 10px 10px 10px;
+  background: #28292A;
+  border-radius:10px;
+  border: 2px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+
 }
 
-
-
-
-/* ---- image 2 ------ */
-
-
-
-
-.img_user {
+.go_connex_user:hover{
   
-  position: relative;
-  width: 400px;
-}
-/* Image originale */
-.img_user .image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/* Texte original */
-.img_user .text {
- color: #fff;
- font-size: 20px;
- line-height: 1.5em;
- text-shadow: 2px 2px 2px #000;
- text-align: center;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- width: 100%;
+  color : #00D4FF;
 }
 
+.go_connex_user:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px white;
+}
 
-
-.img_user .hover {
-  margin-left: 15px;
-  margin-top: 15px;
+.go_connex_gest{
   position: absolute;
-  top: 0;
-  height: 90%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0,0,0,0.5);
-}
-/* Apparition overlay sur passage souris */
-.img_user:hover .hover{
- opacity: 1;
-}
+  bottom: -660px;
+  right: 320px;
 
-.img_user .normal {
- transition: .5s ease;
-}
-.img_user:hover .normal {
- opacity: 0;
+  font:bold 28px Roboto-Light;
+  color: white;
+  text-decoration: none;
+  padding:10px 10px 10px 10px;
+  background: #28292A;
+  border-radius:10px;
+  border: 2px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+
 }
 
-
-
-
-
-/* ---- image 2 ------ */
-
-
-
-
-
-.img_gestionnaire {
+.go_connex_gest:hover{
   
-  position: relative;
-  width: 430px;
-}
-/* Image originale */
-.img_gestionnaire .image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/* Texte original */
-.img_gestionnaire .text {
- color: #fff;
- font-size: 20px;
- line-height: 1.5em;
- text-shadow: 2px 2px 2px #000;
- text-align: center;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- width: 100%;
+  color : #00D4FF;
 }
 
-
-
-.img_gestionnaire .hover {
-  margin-left: 15px;
-  margin-top: 15px;
-  position: absolute;
-  top: 0;
-  height: 90%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0,0,0,0.5);
-}
-/* Apparition overlay sur passage souris */
-.img_gestionnaire:hover .hover{
- opacity: 1;
-}
-
-.img_gestionnaire .normal {
- transition: .5s ease;
-}
-.img_gestionnaire:hover .normal {
- opacity: 0;
-}
-
-
-
-/* PARTIE SYLVAIN ----------------- */
-
-.images_down{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 5%;
-}
-
-
-/* BOUTONS */
-
-.boutons_accueil{
-
-  /* mettre ici les boutons ronds de mohamed */
-  /*tu kiff mes boutons hein ;)
-
+.go_connex_gest:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px white;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* BOUTONS */
-
-/* -----------------------------------------
------- Footer -------------------------------- */
-
-footer{
-  background-color:#9ac8e7; 
-  margin-top: 1%;
-}
-
-.boutons_link{
-  display:flex;
-  justify-content: space-around;
-
-}
-
-.bouton_footer {
-    font: 17px Roboto-Black;
-    color:#3281E0;
-    background: #F6F1F0;
-    border-color: #3090E3;
-    border-radius:10px;
-    width:auto;
-    height:auto;
-}
-.bouton_footer:hover{
-box-shadow:2px 2px 8px #BD9C43;
-}
