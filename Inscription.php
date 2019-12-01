@@ -40,32 +40,37 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								$typeUtilisateur = "Utilisateur";
 								break;
 						}
+						if($fonction["fonction"]==$typeUtilisateur){
 					
-						$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $pseudo);
+							$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $pseudo);
+						}
+						else{
+							$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
+						}
 					}
 					else{
-						echo "Les mots de passes ne correspondent pas";
+						$erreur= "Les mots de passes ne correspondent pas";
 					}
 				}
 				else{
-					echo "Cette adresse mail n'est pas disponible";
+					$erreur= "Cette adresse mail n'est pas disponible";
 				}
 			}
 			else{
-				echo "Cette adresse mail n'est pas valide";
+				$erreur= "Cette adresse mail n'est pas valide";
 			}
 		}
 		else{
-			echo "Ce pseudo est déja utilisé";
+			$erreur= "Ce pseudo est déja utilisé";
 		}
 	}
 	else{
-		echo "Veuillez accepter les CGU et mentions légales pour vous inscrire";
+		$erreur= "Veuillez accepter les CGU et mentions légales pour vous inscrire";
 	}
 
 }
 else{
-	echo "Veuillez remplir tous les champs";
+	$erreur= "Veuillez remplir tous les champs";
 	}
 	/*echo 'Votre nom est '.$_POST['nom'];
 }

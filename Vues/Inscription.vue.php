@@ -122,6 +122,10 @@
                             </div>
                         
                     </div>
+                    <div class="boiteErreur">
+                        <p class="erreur"><?php echo $erreur ?> !</p>
+                    </div>
+
                     <div class="asterix">
                         <p>* Champs obligatoire</p>
                     </div>
