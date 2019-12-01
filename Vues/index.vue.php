@@ -14,9 +14,10 @@
         <!--BODY --------------------------------- -->
         <div class="test" align="center">
           <img class="image" src="ressources/Nos_tests.png" alt="Alt text"/>
+          <a href=""></a><button class="know_more">En savoir plus</button>
         </div>
         
-
+<!-- 
         <center>
           <div class="img_test"><a href="nos_tests.php">
             <img class="image" src="ressources/ill_test.jpg" alt="Alt text"/>
@@ -31,7 +32,7 @@
           </a>
           </div>
         <br><a href=""></a><button class="boutons_accueil">En savoir plus</button></br>
-        </center>
+        </center> -->
 
 
       <div class=images_down>

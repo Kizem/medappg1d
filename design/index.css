@@ -19,6 +19,41 @@ body {
 }
 
 
+.know_more{
+
+  position: absolute;
+  bottom: 130px;
+  right: 300px;
+
+  font:bold 30px Roboto-Light;
+  color: white;
+  text-decoration: none;
+  padding:10px 10px 10px 10px;
+  background: #28292A;
+  border-radius:10px;
+  border: 2px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+
+}
+
+.know_more:hover{
+  
+  color : #00D4FF;
+}
+
+.know_more:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px white;
+}
+
+
+
+
+
+
+
+
 
 
 
