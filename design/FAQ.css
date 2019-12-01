@@ -12,9 +12,11 @@ h1{
 
 h2{
   font-family: CaviarDreams;
-  font-size: 30px;
+  font-size: 40px;
   font-style: bold;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 h3
@@ -22,7 +24,8 @@ h3
 	text-align: center;
 	font-size: 40px;
 	font-family: Roboto-Black;
-  background-color: rgb(203, 230, 248);
+  background: #28292A;
+  color: white;
 }
 
 p{
@@ -30,10 +33,12 @@ p{
 	font-family: Roboto-Light;
 }
 
+/*-----Effet sur la barre de sélection-----*/
+
 nav{
   width: 100%;
   margin:  0 auto;
-  background-color: rgb(203, 230, 248);
+  background: #28292A;
   position: sticky;
   top: 0px;
 }
@@ -59,29 +64,35 @@ nav ul::after{
 nav a{
   display: block;
   text-decoration: none;
-  color: black;
+  color: white;
   border-bottom: 2px solid transparent;
   padding: 10px 0px;
+  background: #28292A;
 }
 
+/*Quand on passe la souris sur les catégories (thème 1, thème 2, etc)*/
+
 nav a:hover{
-  color: rgb(130,197,254);
-  border-bottom: 2px solid rgb(130,197,254);
+  color: rgb(90,157,215);
+  /*border-bottom: 2px solid rgb(130,197,254);*/
+      box-shadow: 
+      0 -1px 0 hsl(210, 100%, 42%) inset, 
+      0 -2px 0 hsl(210, 100%, 48%) inset, 
+      0 -3px 0 hsl(210, 100%, 54%) inset, 
+      0 -4px 0 hsl(210, 100%, 60%) inset, 
+      0 -5px 0 hsl(210, 100%, 70%) inset; 
 }
 
 nav > ul li:hover .sous{
   display: block;
+  background: #28292A;
 }
 
-
-.question{
-	font-size: 24px;
-}
+/*-----Barre thème/questions et autres-----*/
 
 .sous{
   display: none;
   box-shadow: 0px 1px 2px #CCC;
-  background-color: white;
   position: absolute;
   width: 86.4%;
   z-index: 1000;
@@ -91,7 +102,7 @@ nav > ul li:hover .sous{
 
 .sous li{
   float: none;
-  width: 100%;
+  width: 103%;
   text-align: left;
 }
 
@@ -102,8 +113,9 @@ nav > ul li:hover .sous{
 
 .sous a:hover{
   border-bottom: none;
-  background-color: rgba(180,180,180,0.1);
+  background-color: #555555;
 }
+
 
 .deroulant > a::after{
   content: "▼";

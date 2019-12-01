@@ -5,18 +5,28 @@
 	<link rel="stylesheet" type="text/css" href="design/index.css">
   <title>MedApp Project</title>
 
-
   </head>
   <body>
     <header><?php include_once('includes/header.php'); ?></header>
     <div id = "main">
 
         <!--BODY --------------------------------- -->
-        <div class="test" align="center">
+        <div class="ban" align="center">
           <img class="image" src="ressources/Nos_tests.png" alt="Alt text"/>
+          <a href="nos_tests.php"></a><button class="know_more">En savoir plus</button>
+        </div>
+
+        <div class="ban" align="center">
+          <img class="image" src="ressources/ESPACE_UTILISATEUR.png" alt="Alt text"/>
+          <a href="connexion.php"></a><button class="go_connex_user">Je me connecte</button>
+        </div>
+
+        <div class="ban" align="center">
+          <img class="image" src="ressources/ESPACE_GESTIONNAIRE.png" alt="Alt text"/>
+          <a href="connexion.php "></a><button class="go_connex_gest">Je me connecte</button>
         </div>
         
-
+<!-- 
         <center>
           <div class="img_test"><a href="nos_tests.php">
             <img class="image" src="ressources/ill_test.jpg" alt="Alt text"/>
@@ -31,9 +41,9 @@
           </a>
           </div>
         <br><a href=""></a><button class="boutons_accueil">En savoir plus</button></br>
-        </center>
+        </center> -->
 
-
+<!-- 
       <div class=images_down>
 
         <div class="img_user"><a href="connexion.php">
@@ -63,7 +73,7 @@
       </div>
 
 
-                        
+                    -->     
 
     <!--FOOTER -------------------------------- -->
 
