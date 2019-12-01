@@ -4,11 +4,12 @@ html{
 }
 
 body{
-  min-height: 100%;
   margin: 0;
-  padding: 0;
+  padding:0;
+  
   background-image:url(fond.jpg);
-  background-repeat:repeat;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 
 .titre_formulaire{
@@ -106,7 +107,9 @@ width: 250px;
 .erreur{
   color: #CD1F01;
 }
-
+form{
+  margin: auto;
+}
 .champTexte{
   margin:0px;
 
