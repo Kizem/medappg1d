@@ -10,9 +10,7 @@
         <header><?php include_once('includes/header.php'); ?></header>
         <form method="post" action="CGUMentionLegalesEdition.php">
         <section class="section">
-            <div class="boxBoutonEdit">
-                <input class="edit" type="submit" value="Edit">
-            </div>
+            
             <div class="titrePage">
                 <div class="titreP">
                     <h1>Mentions legales et Conditions generales d'utilisation</h1>
@@ -27,12 +25,14 @@
             <article class="texte">
                 <div class="zoneArticle">
                         <h2 id="Debut ML">Mentions Légales</h2>
-                        <output name="MentionLegale"><?php  echo $ML?></output>
-
-                        <h2 id="Debut CGU">Modèle de CGU</h2>
-                        <output name="CGU"><?php  echo $CGU ?></output>
-                    </div>
+                        <textarea name="ML" rows="50" cols="70"  placeholder="Vos mentions légales..." required></textarea>
+                        <h2 id="Debut CGU">Conditions generales d'utilisation</h2>   
+                        <textarea name="CGU" rows="50" cols="70"  placeholder="Vos CGU..." required></textarea>
+                </div>
             </article>
+            <div class="boxBoutonEdit">
+                <input class="Valider" type="submit" value="Valider">
+            </div>
         </section>
         <!-- PIED DE PAGE -->
         <footer><?php include_once('includes/footer.php'); ?></footer>

@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<!-- ENTETE -->
-        <header><?php include_once('header.vue.php'); ?></header>
+        <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
         <form method="post" action="Inscription.php">
         <article class="art">
@@ -69,13 +69,13 @@
                                 <label class="input-label">
                                     <p class="champTexte">Mot de passe* : 
                                     </p>
-                                    <input class="entreeDeTexte" type="charset" name="motDePasse"/>
+                                    <input class="entreeDeTexte" type="password" name="motDePasse"/>
                                 </label>
                             </div>
                             <div class="conteneurChamp">
                                 <label class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
                                     </p>
-                                    <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
+                                    <input class="entreeDeTexte" type="password" name="confirmMDP"/>
                                 </label>
                             </div>
                                 
@@ -112,7 +112,7 @@
                             </div>
                             <div class="conteneurChampCGU">
                                 <input type="checkbox" name="CGUaccepted" value="1">
-                                    <label>J'accepte les <a href="CGUMentionLegales.html">termes et conditions d'utilisation</a>
+                                    <label>J'accepte les <a href="CGUMentionLegales.php">termes et conditions d'utilisation</a>
                                     </label>
 
                             </div>
@@ -122,6 +122,10 @@
                             </div>
                         
                     </div>
+                    <div class="boiteErreur">
+                        <p class="erreur"><?php echo $erreur ?> !</p>
+                    </div>
+
                     <div class="asterix">
                         <p>* Champs obligatoire</p>
                     </div>
