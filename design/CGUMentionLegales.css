@@ -19,49 +19,6 @@ body{
     src: url('typos/Roboto-Light.ttf');
 }
 
-
-img {
-  width : 100px;
-  height: auto;
-  padding : 15px;
-
-}
-
-header {
-  background: linear-gradient(90deg,#FFFFFF, #85C1BE);
-  width: 100%;
-  height: auto;
-  margin-bottom: auto;
-  display : flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /*position: fixed;*/
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
-              0 3px 5px rgba(0, 0, 0, .2),
-              0 5px 10px rgba(0, 0, 0, .2),
-              0 20px 20px rgba(0, 0, 0, .15);
-}
-
-.h_title{
-  margin-left: 100px;  
-}
-
-.co_ins{  
-  padding-right: 15px;
-}
-
-.at_coins{
-  font-family : Roboto-Light;
-  text-underline-position: none;
-  text-decoration: none;
-  color : black;
-}
-.at_coins:hover{
-
-  text-decoration: underline black; 
-
-}
-
 h1{
   font-family : BEBAS__;
   
@@ -69,10 +26,6 @@ h1{
 
 h2{
   font-family: CaviarDreams;
-}
-.titreP{
-  margin:auto;
-  padding: auto;
 }
 nav
 {   
@@ -82,19 +35,23 @@ nav
     box-shadow:2px 2px 5px #aaa;
     position: fixed;
 }
-.titrePage
-{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
+.boxBoutonEdit{
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:column;
-  -ms-flex-direction:column;
   flex-direction:column
   margin:auto;
+}
+.titrePage
+{
+  display:flex;
+  flex-direction:column
+  margin:auto;
+  padding: auto;
 
+}
+
+.titreP{
+  margin:auto;
+  padding: auto;
 }
 .zoneArticle{
 background-color:#F3F3F3;
@@ -156,6 +113,22 @@ footer{
   background-color:#85C1BE;
   margin-top:1%;  
 
+}
+
+.edit {
+  background:#fafafa;
+  box-shadow:2px 2px 8px #aaa;
+  font:bold 13px Arial;
+  color:red;
+  border-color: red;
+  border-radius: 5px;
+
+}
+.edit:hover{
+  color: white;
+  border-color: #555;
+  background:#C63535;
+  box-shadow:3px 3px 12px #C63535;
 }
 
 .boutons_link{

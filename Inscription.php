@@ -73,6 +73,6 @@ else{
 else{
 	echo 'nom pas declare';*/
 
-include_once('Vues/Inscription.vue.php');
+include('Vues/Inscription.vue.php');
 ?>
 

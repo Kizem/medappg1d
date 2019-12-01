@@ -9,6 +9,9 @@
         <!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <section class="section">
+            <div class="boxBoutonEdit">
+                <input class="edit" type="button" value="Edit">
+            </div>
             <div class="titrePage">
                 <div class="titreP">
                     <h1>Mentions legales et Conditions generales d'utilisation</h1>

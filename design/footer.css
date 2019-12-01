@@ -2,8 +2,12 @@ footer{
   background: #28292A;
   display : flex;
   flex-wrap: wrap;
-  
-  /* effet barre 3d bas de header */
+  -webkit-box-ordinal-group:6;
+  -webkit-order:5;
+  -ms-flex-order:5;
+  order:5;
+  padding:0 20px
+   /* effet barre 3d bas de header */
   box-shadow: 
       0 -1px 0 hsl(210, 100%, 42%) inset, 
       0 -2px 0 hsl(210, 100%, 48%) inset, 
@@ -12,24 +16,18 @@ footer{
       0 -5px 0 hsl(210, 100%, 70%) inset; 
 }
 
-.boutons_link{
-  display:flex;
-  justify-content: space-around;
-
-
+.boutons{
+  margin:auto;
 }
 
 .bouton_footer {
-
-    font: 17px Roboto-Black;
-    color:#3281E0;
-    background: #F6F1F0;
-    border-color: #3090E3;
+    font:bold 15px Roboto-Light;
+    color: white;
+    text-decoration: none;
+    padding:10px 10px 10px 10px;
+    background: #28292A;
     border-radius:10px;
-    width:auto;
-    height:auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    border: 2px solid hsl(210, 100%, 54%);
 }
 .bouton_footer:hover{
 box-shadow:2px 2px 8px #BD9C43;

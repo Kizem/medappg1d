@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="design/footer.css"> 
-<div class="boutons_link">
-  <input  class="bouton_footer" type="button" value="FAQ">
-  <input  class="bouton_footer" type="button" value="CGU & Mentions Légales">
-  <input  class="bouton_footer" type="button" value="Infos de contact">
+<div class="boutons">
+	<ul>
+	      <a class="bouton_footer" href="FAQ.php">FAQ</a>
+	      <a class="bouton_footer" href="CGUMentionLegales.php">CGU & Mentions Légales</a>
+	      <a class="bouton_footer" href="InfoContact">Infos de contact</a>
+	 </ul>
 </div> 

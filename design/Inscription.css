@@ -6,8 +6,7 @@ body{
   margin: 0;
   padding:0;
   background-image:url(fond.jpg);
-  background-attachment:fixed;
-  background-repeat:no-repeat;
+  background-repeat:repeat;
 }
 
 .titre_formulaire{
@@ -43,14 +42,7 @@ h2{
 
 }
 .titrePage{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:column;
-  -ms-flex-direction:column;
   flex-direction:column
   margin:auto;
 }
@@ -80,51 +72,23 @@ width: 250px;
 }
 
 .entreesInformations{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:column;
-  -ms-flex-direction:column;
   flex-direction:column
 }
 
 .conteneurChamp{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:row;
-  -ms-flex-direction:row;
   flex-direction:row;
   margin: 12px auto;
 
 }
 .conteneurChampCGU{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:row;
-  -ms-flex-direction:row;
   flex-direction:row;
   margin: 12px auto;
 }
 .textePlusInfoBulle{
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -webkit-flex-direction:row;
-  -ms-flex-direction:row;
   flex-direction:row;
 }
 
