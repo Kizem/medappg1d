@@ -18,29 +18,43 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 	$codeInscription = htmlspecialchars($_POST['codeInscription']);
 
 	if(!empty($_POST['CGUaccepted'])){
-		echo "ca va";
-		if($mdp1==$mdp2){
+		if(pseudoDisponible($db, $login)){
+			if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
+				if(mailDisponible($db, $mail)){
+					echo mailDisponible($db, $mail);
+					if($mdp1==$mdp2){
 
-			switch ($typeUtilisateur) {
-				case '1':
-					$typeUtilisateur = "Utilisateur";
-					break;
-				case '2':
-					$typeUtilisateur = "Gestionnaire";
-					break;
-				case '3':
-					$typeUtilisateur = "Administrateur";
-					break;
-				default:
-					$typeUtilisateur = "Utilisateur";
-					break;
+						switch ($typeUtilisateur) {
+							case '1':
+								$typeUtilisateur = "Utilisateur";
+								break;
+							case '2':
+								$typeUtilisateur = "Gestionnaire";
+								break;
+							case '3':
+								$typeUtilisateur = "Administrateur";
+								break;
+							default:
+								$typeUtilisateur = "Utilisateur";
+								break;
+						}
+					
+						$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $pseudo);
+					}
+					else{
+						echo "Les mots de passes ne correspondent pas";
+					}
+				}
+				else{
+					echo "Cette adresse mail n'est pas disponible";
+				}
 			}
-			echo $_POST['confirmMDP'];
-			$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $pseudo);
-			echo '$nom';
-
-
-
+			else{
+				echo "Cette adresse mail n'est pas valide";
+			}
+		}
+		else{
+			echo "Ce pseudo est déja utilisé";
 		}
 	}
 	else{

@@ -5,4 +5,16 @@ function insertUsers($db, $nom , $prenom, $mail, $mdp, $type, $pseudo){
 	
 	return $req;
 }
+
+function mailDisponible($db, $mail){
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE Adresse ='$mail'");
+	$req->execute();
+	return empty($req);
+}
+
+function pseudoDisponible($db, $pseudo){
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE Adresse ='$pseudo'");
+	$req->execute();
+	return empty($req);
+}
 ?>

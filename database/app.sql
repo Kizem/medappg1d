@@ -110,6 +110,27 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `codeInscription`
+--
+
+DROP TABLE IF EXISTS `codeInscription`;
+CREATE TABLE IF NOT EXISTS `codeInscription` (
+  `id` varchar(25) NOT NULL ,
+  `fonction` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `codeInscription` 
+--
+
+INSERT INTO codeInscription (id,fonction) VALUES
+('azerty','Utilisateur'),
+('qsdfgh','Gestionnaire'),
+('wxcvbn','Administrateur');
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `utilisateur`
 --
 

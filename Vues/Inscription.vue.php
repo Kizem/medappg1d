@@ -69,13 +69,13 @@
                                 <label class="input-label">
                                     <p class="champTexte">Mot de passe* : 
                                     </p>
-                                    <input class="entreeDeTexte" type="charset" name="motDePasse"/>
+                                    <input class="entreeDeTexte" type="password" name="motDePasse"/>
                                 </label>
                             </div>
                             <div class="conteneurChamp">
                                 <label class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
                                     </p>
-                                    <input class="entreeDeTexte" type="charset" name="confirmMDP"/>
+                                    <input class="entreeDeTexte" type="password" name="confirmMDP"/>
                                 </label>
                             </div>
                                 
