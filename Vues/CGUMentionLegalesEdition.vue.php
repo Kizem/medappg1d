@@ -25,9 +25,9 @@
             <article class="texte">
                 <div class="zoneArticle">
                         <h2 id="Debut ML">Mentions Légales</h2>
-                        <input class="EntreeDeTexte" type="charset" name="MentionLegale">
+                        <textarea name="ML" rows="10" cols="40"  placeholder required></textarea>
                         <h2 id="Debut CGU">Modèle de CGU</h2>   
-                        <input class="EntreeDeTexte" type="charset" name="CGU"> 
+                        <textarea name="CGU" rows="10" cols="40"  placeholder required></textarea>
                 </div>
             </article>
             <div class="boxBoutonEdit">

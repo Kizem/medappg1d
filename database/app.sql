@@ -128,6 +128,21 @@ INSERT INTO codeInscription (id,fonction) VALUES
 ('azerty','Utilisateur'),
 ('qsdfgh','Gestionnaire'),
 ('wxcvbn','Administrateur');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `CGU`
+--
+
+DROP TABLE IF EXISTS `CGU`;
+CREATE TABLE IF NOT EXISTS `CGU`(
+  `id` INT(25) NOT NULL AUTO_INCREMENT,
+  `MentionLegales` TEXT(100000) NOT NULL,
+  `CGU` TEXT(100000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- --------------------------------------------------------
 
 --
