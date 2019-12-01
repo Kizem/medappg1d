@@ -48,6 +48,20 @@ nav
   padding: auto;
 
 }
+.Valider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #66B14B;
+  color:#eee;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+}
+.Valider:active{
+  background: #66B14B;
+  border-color: #F6F1F0;
+  color:#eee;
+}
 
 .titreP{
   margin:auto;
