@@ -4,7 +4,7 @@
 
 require("Modeles/fonction.php");
 require("includes/AccesBase.php");
-
+$erreur="";
 if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['mail']) AND !empty($_POST['motDePasse']) AND !empty($_POST['confirmMDP']) AND !empty($_POST['codeInscription']) AND ($_POST['listeDeroulante']!=0)){
 
 
@@ -25,7 +25,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 					$fonction= $req->fetch();
 					echo $fonction["fonction"];
 					if($mdp1==$mdp2){
-
+						$mdp1 = password_hash($mdp1,PASSWORD_DEFAULT);
 						switch ($typeUtilisateur) {
 							case '1':
 								$typeUtilisateur = "Utilisateur";
@@ -41,8 +41,8 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								break;
 						}
 						if($fonction["fonction"]==$typeUtilisateur){
-					
-							$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $pseudo);
+							$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $login);
+							$erreur="";
 						}
 						else{
 							$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
