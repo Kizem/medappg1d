@@ -11,6 +11,17 @@ body {
 
 /* IMAGES ----------------------------------------- */
 
+.test .image{
+  width: 90%;
+  height: auto;
+  box-shadow: 10px 5px 5px rgba(100,100,100,1);
+  /*border : 3px black inset;*/
+}
+
+
+
+
+
 /* ---- image 1 ------ */
 
 .img_test {

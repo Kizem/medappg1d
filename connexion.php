@@ -1,5 +1,5 @@
 <?php 
-		include ("includes/AccesBase.php");
+		include("includes/AccesBase.php");
 			$login = $_POST['login']; // Recup depuis un formulaire
 			$Mdp = $_POST['Mdp'];
 			$sql = "SELECT * FROM utilisateur WHERE  login= :login and Mdp= :Mdp";
