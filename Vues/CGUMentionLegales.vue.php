@@ -8,7 +8,7 @@
     <body>
         <!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
-        <form method="post" action="Vues/CGUMentionLegalesEdition.vue.php">
+        <form method="post" action="CGUMentionLegalesEdition.php">
         <section class="section">
             <div class="boxBoutonEdit">
                 <input class="edit" type="submit" value="Edit">
