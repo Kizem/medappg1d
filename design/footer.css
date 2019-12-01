@@ -1,16 +1,17 @@
 footer{
   display:flexbox;
-  position: fixed;
+  position: relative;
+  min-height: 100px;
   bottom: 0;
   left: 0; right: 0;
-  
+  top: auto;
 }
 .conteneur{
   margin: auto;
   
   position:relative;
   
-  height: 140px; 
+  height: 70px; 
   
   bottom: 0; left: 0; right: 0;
   background: #28292A;

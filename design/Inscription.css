@@ -1,12 +1,6 @@
-html{
-  scroll-behavior: smooth;
-  height: 100%;
-}
 
 body{
-  margin: 0;
-  padding:0;
-  display: block;
+  
   background-image:url(fond.jpg);
   background-repeat:;
 }
@@ -107,7 +101,9 @@ width: 250px;
   color: #CD1F01;
 }
 form{
-  margin: auto;
+  
+  
+  padding: auto;
 }
 .champTexte{
   margin:0px;
