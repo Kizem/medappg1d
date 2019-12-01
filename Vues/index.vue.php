@@ -12,6 +12,10 @@
     <div id = "main">
 
         <!--BODY --------------------------------- -->
+        <div class="test" align="center">
+          <img class="image" src="ressources/Nos_tests.png" alt="Alt text"/>
+        </div>
+        
 
         <center>
           <div class="img_test"><a href="nos_tests.php">
