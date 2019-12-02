@@ -23,7 +23,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 				if(mailDisponible($db, $mail)){
 					$req= detectionCode($db, $codeInscription);
 					$fonction= $req->fetch();
-					echo $fonction["fonction"];
+					
 					if($mdp1==$mdp2){
 						$mdp1 = password_hash($mdp1,PASSWORD_DEFAULT);
 						switch ($typeUtilisateur) {
@@ -40,10 +40,16 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								$typeUtilisateur = "Utilisateur";
 								break;
 						}
-						if($fonction["fonction"]==$typeUtilisateur){
+						if(empty($fonction)){
+							$erreur= "Code introuvable";
+							include('Vues/Inscription.vue.php');
+
+						}
+						else if($fonction["fonction"]==$typeUtilisateur){
 							$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $login);
 							$erreur="";
 							include('connexion.php');
+
 						}
 						else{
 							$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
