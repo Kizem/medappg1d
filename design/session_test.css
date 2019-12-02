@@ -1,0 +1,144 @@
+body {
+  background-color: #e9e8e8;
+  margin: 0px;
+}
+
+/* IMAGES ----------------------------------------- */
+
+.ban{
+  margin:40px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  
+  }
+
+.test1{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.test2{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+
+
+.ban p{
+  position: absolute;
+  padding: 20px;
+  margin-top: 4%;
+  width: 70%;
+  background-color: #ffff;
+  font:bold 30px Roboto-Light;
+  color: black;
+  border-radius:2px;
+  border: 0px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+ 
+ opacity: 85%;
+
+}
+
+.ban .image{
+  margin-bottom: 90px;
+  width: 100%; /* width of container */
+  height: 500Px; /* height of container */
+  object-fit: cover;
+  border: none;
+  /*box-shadow: 3px 0px 0px 3px rgba(100,100,100,1);*/
+}
+
+/* bouton "realiser test" */
+
+.do_tests{
+
+  position: absolute;
+  margin-top: 40%;
+  font:bold 30px Roboto-Light;
+  color: white;
+  text-decoration: none;
+  padding:10px 10px 10px 10px;
+  background: #28292A;
+  border-radius:10px;
+  border: 2px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+
+}
+
+.do_tests:hover{
+  
+  color : #00D4FF;
+}
+
+.do_tests:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px white;
+}
+
+/* bouton : Se connecter; */
+
+.go_connex_user{
+  position: absolute;
+  bottom: -150px;
+  left: 325px;
+
+  font:bold 28px Roboto-Light;
+  color: white;
+  text-decoration: none;
+  padding:10px 10px 10px 10px;
+  background: #28292A;
+  border-radius:10px;
+  border: 2px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+
+}
+
+.go_connex_user:hover{
+  
+  color : #00D4FF;
+}
+
+.go_connex_user:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px white;
+}
+
+.go_connex_gest{
+  position: absolute;
+  bottom: -660px;
+  right: 320px;
+
+  font:bold 28px Roboto-Light;
+  color: white;
+  text-decoration: none;
+  padding:10px 10px 10px 10px;
+  background: #28292A;
+  border-radius:10px;
+  border: 2px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+
+}
+
+.go_connex_gest:hover{
+  
+  color : #00D4FF;
+}
+
+.go_connex_gest:active{
+    color:white;
+    border-color: #F6F1F0;
+    box-shadow:2px 2px 8px white;
+}
+
+
+
+
