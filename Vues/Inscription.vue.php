@@ -9,7 +9,7 @@
 		<!-- ENTETE -->
         <header><?php include_once('header.vue.php'); ?></header>
         <!--corp-->
-        <form method="post" action="Inscription.php">
+        <form method="post" action="EcritureBase.php">
         <article class="art">
             <div class="boxtotale">
                     <div class="titrePage">
