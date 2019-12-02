@@ -13,7 +13,7 @@
         <!--BODY --------------------------------- -->
         <div class="ban" align="center">
           <img class="image" src="ressources/Nos_tests.png" alt="Alt text"/>
-          <a class="know_more" href="nos_tests.php">En savoir plus</a>
+          <a class="know_more" href="session_test.php">En savoir plus</a>
         </div>
 
         <div class="ban" align="center">
