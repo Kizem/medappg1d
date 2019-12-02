@@ -30,10 +30,27 @@ body {
 
 
 
-.ban p{
+.ban .table_header{
   position: absolute;
   padding: 20px;
-  margin-top: 4%;
+  margin-top: 90px;
+  width: 70%;
+  background-color: #ffff;
+  font:bold 30px Roboto-Light;
+  color: black;
+  border-radius:2px;
+  border: 0px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+ 
+ opacity: 85%;
+
+}
+
+.ban .table{
+  position: absolute;
+
+  padding: 20px;
+  margin-top: 400px;
   width: 70%;
   background-color: #ffff;
   font:bold 30px Roboto-Light;

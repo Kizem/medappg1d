@@ -14,13 +14,17 @@
         <div class="ban" align="center"> 
           <div class="test1" align="center">
             <img class="image" src="ressources/cardiac_test.jpg" alt="Alt text"/>
-            <p>TEST SUR LA FREQUENCE CARDIAQUE</p>
+            <p class="table_header">TEST SUR LA FREQUENCE CARDIAQUE
+              <p class="table">Ce test sur la frequence cardiaque va nous permettre d'obtenir plusieurs valeurs,
+            notamment votre niveau de stress</p>
+            </p>
+            
             <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
           </div>
 
           <div class="test2" align="center">
             <img class="image" src="ressources/temperature_test.jpg" alt="Alt text"/>
-            <p>TEST SUR LA TEMPERATURE CORPORELLE</p>
+            <p class="table_header">TEST SUR LA TEMPERATURE CORPORELLE</p>
             <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
           </div>
         </div>
