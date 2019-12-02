@@ -2,14 +2,14 @@
 <html>
 	<head>
         <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="design/Inscription.css"> 
+    <link rel="stylesheet" type="text/css" href="design/Utilisateur.css"> 
 		<title>Page Utilisateur</title>
 	</head>
 	<body>
 		<!-- ENTETE -->
-        <header><?php include_once('header.vue.php'); ?></header>
+        <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
-        <form method="post" action="Inscription.php">
+        
         <table>
             <tr>
                 <td>Fréquence cardiaque</td>
