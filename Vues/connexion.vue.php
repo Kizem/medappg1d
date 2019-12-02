@@ -10,6 +10,7 @@
 		<header><?php include_once('includes/header.php'); ?></header>	
 		<!-- Le contenu (1 seule section suffit) -->		
 		<section>
+			<form method="post" action="connexion.php ?>">
 			<h1 class="titre_formulaire">Connexion</h1>
 
 			                        <div class="entreesInformations">
