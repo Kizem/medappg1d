@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html>// faire un if avec un bouton pour rediriger vers la page de connexion
 	<head>
         <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="design/Utilisateur.css"> 
 		<title>Page Utilisateur</title>
 	</head>
+    
 	<body>
 		<!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
