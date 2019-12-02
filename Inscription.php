@@ -12,7 +12,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 	$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
 	$mail = htmlspecialchars($_POST['mail']);
-	$mdp1 = htmlspecialchars($_POST['motDePasse']);
+	$Mdp = htmlspecialchars($_POST['motDePasse']);
 	$mdp2 = htmlspecialchars($_POST['confirmMDP']);
 	$typeUtilisateur = htmlspecialchars($_POST['listeDeroulante']);
 	$codeInscription = htmlspecialchars($_POST['codeInscription']);
@@ -24,11 +24,8 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 					$req= detectionCode($db, $codeInscription);
 					$fonction= $req->fetch();
 					
-					if($mdp1==$mdp2){
-						$mdp1 = password_hash($mdp1,PASSWORD_DEFAULT);
-						echo $mdp1;
-						echo" ";
-						echo $mdp2;
+					if($Mdp==$mdp2){
+						$Mdp = password_hash($Mdp,PASSWORD_DEFAULT);
 						switch ($typeUtilisateur) {
 							case '1':
 								$typeUtilisateur = "Utilisateur";
@@ -49,7 +46,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 
 						}
 						else if($fonction["fonction"]==$typeUtilisateur){
-							$req = insertUsers($db, $nom, $prenom, $mail, $mdp1, $typeUtilisateur, $login);
+							$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
 							$erreur="";
 							include('connexion.php');
 
