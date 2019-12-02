@@ -30,10 +30,10 @@ body {
 
 
 
-.ban p{
+.ban .table_header{
   position: absolute;
   padding: 20px;
-  margin-top: 4%;
+  margin-top: 60px;
   width: 70%;
   background-color: #ffff;
   font:bold 30px Roboto-Light;
@@ -43,6 +43,23 @@ body {
   box-shadow:2px 2px 8px rgba(100,100,100,1);
  
  opacity: 85%;
+
+}
+
+.ban .table{
+  position: absolute;
+
+  padding: 50px 20px 50px 20px;
+  margin-top: 137px;
+  width: 70%;
+  background-color: black;
+  font:bold 30px Roboto-Light;
+  color: white;
+  border-radius:2px;
+  border: 0px solid white;
+  box-shadow:2px 2px 8px rgba(100,100,100,1);
+ 
+ opacity: 70%;
 
 }
 
@@ -60,7 +77,7 @@ body {
 .do_tests{
 
   position: absolute;
-  margin-top: 400px;
+  margin-top: 380px;
   font:bold 30px Roboto-Light;
   color: white;
   text-decoration: none;

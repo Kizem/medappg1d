@@ -40,7 +40,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								$typeUtilisateur = "Utilisateur";
 								break;
 						}
-						if(empty($fonction)){
+						if(empty($fonction)){	
 							$erreur= "Code introuvable";
 							include('Vues/Inscription.vue.php');
 
