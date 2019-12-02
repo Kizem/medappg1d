@@ -11,6 +11,7 @@
 			$lesEnreg = $req->fetch();
 			 
 			$Mdp_hash= $lesEnreg['Mdp'];
+			$Type=$lesEnreg['Type'];
 			print_r($lesEnreg);
 			echo "$sql";
 			
@@ -19,6 +20,7 @@
 				session_start();
 				$_SESSION['login']=$login;
 				$_SESSION['Mdp']=$Mdp;
+				$_SESSION['Type']=$Type;
 				header ('Location: index.php');
 			}
 			else{
