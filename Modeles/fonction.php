@@ -47,4 +47,10 @@ function ecrireCGU($db, $id,$CGU,$ML){
 	$req->execute();
 	return $req;
 }
+
+function rechercheUtilisateur($db, $keyword){
+	$req = $db->prepare("SELECT * FROM utilisateurs WHERE nom LIKE '%$keyword%' ORDER BY nom");
+	$req->execute();
+	return $req;
+}
 ?>
