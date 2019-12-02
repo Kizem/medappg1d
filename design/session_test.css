@@ -26,7 +26,7 @@ body {
 /* IMAGES ----------------------------------------- */
 
 .ban{
-  margin:40px 0px 40px 0px;
+  margin:40px 0px -40px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,6 +46,13 @@ body {
   flex-direction: column;
   
   align-items: center;
+}
+.test3{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  margin-bottom: 0px;
 }
 
 
@@ -82,7 +89,9 @@ body {
  opacity: 70%;
 
 }
-
+#img_chien{
+  object-position: 20% -65px;
+}
 .ban .image{
   margin-bottom: 90px;
   width: 100%; /* width of container */

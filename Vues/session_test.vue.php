@@ -63,6 +63,14 @@
             </p>
             <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
           </div>
+
+          <div class="test3" align="center">
+            <img class="image" id="img_chien" src="ressources/sond_test.jpg" alt="Alt text"/>
+            <p class="table_header">TEST SUR L'ACCUITÉE AUDITIVE 
+              <p class="table">L'audition est très importante pour la conduite de tout véhicule et même pour l'orientation dans l'espace grâce à l'oreille interne</p>
+            </p>
+            <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
+          </div>
         </div>
     <!--FOOTER -------------------------------- -->
 
