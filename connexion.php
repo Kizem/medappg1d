@@ -3,7 +3,7 @@
 		if (!empty($_POST['Mdp'])and !empty($_POST['login'])){
 			$login = $_POST['login']; // Recup depuis un formulaire
 			$Mdp = $_POST['Mdp'];
-			$sql = "SELECT * FROM utilisateur WHERE  login= :login and Mdp= :Mdp";
+			$sql = "SELECT * FROM Utilisateur WHERE  login= :login and Mdp= :Mdp";
 			$req = $db->prepare ($sql);
 			$marqueur= array('login'=>$login,'Mdp'=>$Mdp);
 
