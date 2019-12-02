@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `app`
 --
-
+CREATE DATABASE IF NOT EXISTS `app` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `app`;
 -- --------------------------------------------------------
 
 --
@@ -109,6 +110,42 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `codeInscription`
+--
+
+DROP TABLE IF EXISTS `codeInscription`;
+CREATE TABLE IF NOT EXISTS `codeInscription` (
+  `id` varchar(25) NOT NULL ,
+  `fonction` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `codeInscription` 
+--
+
+INSERT INTO codeInscription (id,fonction) VALUES
+('azerty','Utilisateur'),
+('qsdfgh','Gestionnaire'),
+('wxcvbn','Administrateur');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `CGU`
+--
+
+DROP TABLE IF EXISTS `CGU`;
+CREATE TABLE IF NOT EXISTS `CGU`(
+  `id` INT(25) NOT NULL AUTO_INCREMENT,
+  `MentionLegales` TEXT(100000) NOT NULL,
+  `CGU` TEXT(100000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `utilisateur`
 --
 
@@ -120,11 +157,19 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Mdp` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Nom` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Prenom` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `Adresse` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Mail` varchar(100) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-COMMIT;
 
+
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO utilisateur (Type, login, Mdp, Nom, Prenom, Mail) VALUES 
+('Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad','mohammad.amla.pro@gmail.com');
+COMMIT;
+-- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

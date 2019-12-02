@@ -4,42 +4,14 @@
 	<head>
 
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="FAQ.css" />
+        <link rel="stylesheet" type="text/css" href="design/FAQ.css">
 		<title>FAQ</title>
 
 	</head>
 
-	<header>
-      <a href="homepage.html" class="navbar-left"><img src="ressources/logo.png"></a>
-      <div class="h_title" align="center">
-        <div>
-
-          <h1 class="MedApp"> MedApp </h1>
-          <h2> Easy stats for everyone </h2>
-
-        </div>
-      </div>
-      
-      <div class = "co_ins">
-
-        <ul class="liste_options">
-            <a class="at_coins" href="connexion.php">Connexion</a>
-             |
-            <a class="at_coins" href="inscription.php">Inscription</a>
-        </ul>
-
-      </div>
-
-    </header>
+        <header><?php include_once('includes/header.php'); ?></header>
 
 	<body>
-
-		<div class="adresse"> 
-			<a href="accueil.html"> <img src="ressources/home.png" alt="accueil" class="homelogo"></a> 
-
-			<em class="adressefaq">> FAQ </em>
-
-		</div>
 
 		<h3>Foire aux questions</h3>
 
@@ -312,7 +284,7 @@
 		<p>
 			<h2 id="ancre_propos">A propos</h2>
 		</p>
-
+		<footer><?php include_once('includes/footer.php'); ?></footer>
 	</body>
 
 </html>

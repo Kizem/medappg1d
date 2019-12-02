@@ -1,25 +1,44 @@
 footer{
-  padding: 50px;
-  background-color:#85C1BE;
-  margin-top:1%;  
-
+  display:flexbox;
+  position: relative;
+  min-height: 100px;
+  bottom: 0;
+  left: 0; right: 0;
+  top: auto;
 }
-
-.boutons_link{
-  display:flex;
-  justify-content: space-around;
-
-
+.conteneur{
+  margin: auto;
+  
+  position:relative;
+  
+  min-height: 70px; 
+  
+  bottom: 0; left: 0; right: 0;
+  background: #28292A;
+   /* effet barre 3d bas de header */
+  box-shadow: 
+      0 -1px 0 hsl(210, 100%, 42%) inset, 
+      0 -2px 0 hsl(210, 100%, 48%) inset, 
+      0 -3px 0 hsl(210, 100%, 54%) inset, 
+      0 -4px 0 hsl(210, 100%, 60%) inset, 
+      0 -5px 0 hsl(210, 100%, 70%) inset; 
+  display: flex;
+  position: absolute;
+    bottom: 0;
+}
+.boutons{
+  margin:auto;
+  padding: auto;
 }
 
 .bouton_footer {
-    font: 17px Roboto-Black;
-    color:#3281E0;
-    background: #F6F1F0;
-    border-color: #3090E3;
+    font:bold 15px Roboto-Light;
+    color: white;
+    text-decoration: none;
+    padding:10px 10px 10px 10px;
+    background: #28292A;
     border-radius:10px;
-    width:auto;
-    height:auto;
+    border: 2px solid hsl(210, 100%, 54%);
 }
 .bouton_footer:hover{
 box-shadow:2px 2px 8px #BD9C43;
