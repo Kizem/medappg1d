@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>// faire un if avec un bouton pour rediriger vers la page de connexion
+<html>
 	<head>
         <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="design/Utilisateur.css"> 
@@ -44,8 +44,6 @@
         </tbody>    
         </table>    
        
-        <?php
-            include_once('includes/footer.php');
-        ?>
+        <footer><?php include_once('includes/footer.php');?>
 	</body>
 </html>

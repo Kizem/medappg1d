@@ -1,13 +1,34 @@
 <?php
 
-if(isset($_SESSION['admin']) OR $_SESSION['admin'] = 1){
-	include('page_admin.php');
-}
-else if(isset($_SESSION['user'])){
+session_start();
 
-	include('Utilisateur.php');
+if(isset($_SESSION['Type'])){
+
+	if($_SESSION['Type']=='Administrateur'){
+
+		include('page_admin.php');
+
+	}
+	else if($_SESSION['Type']=='Utilisateur'){
+
+		// include('Utilisateur.php');
+		header('Location: Utilisateur.php');
+		
+	}
+
 }
-else(include('connexion.php'));
+else{
+	include('connexion.php');
+}
+
+// if(isset($_SESSION['Type']) And ($_SESSION['Type']=='Administrateur') /*($_SESSION['Type']="Administrateur")*/){
+// 	include('page_admin.php');
+// }
+// if(isset($_SESSION['Type']) And ($_SESSION['Type']=='Utilisateur')/*$_SESSION['Type']="Utilisateur"*/){
+
+// 	include('Utilisateur.php');
+// }
+
 
 
 ?>

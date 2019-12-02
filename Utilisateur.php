@@ -1,9 +1,9 @@
 <?php// faire un if avec un bouton pour rediriger vers la page de connexion
-session_start();
-include("includes/AccesBase.php");
+// session_start();
+// include("includes/AccesBase.php");
 
 
 
 
-include_once('Vues/Utilisateur.vue.php');
+include('Vues/index.vue.php');
 ?>
