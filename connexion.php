@@ -1,5 +1,5 @@
 <?php 
-		include("includes/AccesBase.php");
+		include_once("includes/AccesBase.php");
 		if (!empty($_POST['Mdp'])and !empty($_POST['login'])){
 			$login = $_POST['login']; // Recup depuis un formulaire
 			$Mdp = $_POST['Mdp'];
@@ -17,7 +17,7 @@
 			
 			
 			if (password_verify($Mdp, $Mdp_hash)) {
-				session_start();
+				//session_start();
 				$_SESSION['login']=$login;
 				$_SESSION['Mdp']=$Mdp;
 				$_SESSION['Type']=$Type;

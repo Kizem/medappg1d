@@ -1,4 +1,9 @@
 <?php
+	if(!isset($_SESSION)){
+		session_start();
+	}
+	
+
 	try {
 			$db = new PDO("mysql:host=localhost;dbname=app","root","");//accès à la base de donnée
 			$db->exec('SET NAMES utf8');
