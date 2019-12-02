@@ -26,6 +26,9 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 					
 					if($mdp1==$mdp2){
 						$mdp1 = password_hash($mdp1,PASSWORD_DEFAULT);
+						echo $mdp1;
+						echo" ";
+						echo $mdp2;
 						switch ($typeUtilisateur) {
 							case '1':
 								$typeUtilisateur = "Utilisateur";
@@ -42,7 +45,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 						}
 						if(empty($fonction)){	
 							$erreur= "Code introuvable";
-							include('Vues/Inscription.vue.php');
+							//include('Vues/Inscription.vue.php');
 
 						}
 						else if($fonction["fonction"]==$typeUtilisateur){
