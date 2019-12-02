@@ -27,8 +27,9 @@
 
     			
 			}
+		}
 		else{
 			include_once('Vues/connexion.vue.php');
 		}	
-			}
+			
 ?>
