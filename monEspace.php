@@ -6,14 +6,18 @@ if(isset($_SESSION['Type'])){
 
 	if($_SESSION['Type']=='Administrateur'){
 
-		include('page_admin.php');
+		//include('page_admin.php');
+		header('Location: page_admin.php');
 
 	}
 	else if($_SESSION['Type']=='Utilisateur'){
 
-		// include('Utilisateur.php');
+		//include('Utilisateur.php');
 		header('Location: Utilisateur.php');
 		
+	}
+	else{
+		include('connexion.php');
 	}
 
 }

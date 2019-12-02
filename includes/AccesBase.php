@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_SESSION)){
+	if(!isset($_SESSION)){ //si aucune session n'est en cours
 		session_start();
 	}
 	
