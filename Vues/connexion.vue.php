@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="design/index.css" />
+		<link rel="stylesheet" href="design/inscription.css" />
 		<title>MedAPP</title>
 	</head>
 	<body>
@@ -10,31 +10,44 @@
 		<header><?php include_once('includes/header.php'); ?></header>	
 		<!-- Le contenu (1 seule section suffit) -->		
 		<section>
-			<h1>Bienvenue sur notre site</h1>
-			<h2><p>Veuillez vous identifier ou <a href= inscription.php>créer un compte </a></p></h2>
-		
+			<h1 class="titre_formulaire">Connexion</h1>
 
-			<form method="POST" action="connexion.php">
-			<article class="art">
-            <div class="boxtotale">
-                    <div class="titrePage">
-                        <h1 class="titre_formulaire">Formulaire de connexion</h1>
-                        <div class="conteneurChamp">    
-                    	<div class="partieAfficher">
-				<p>	<label for="login">Login</label>
-					<input id="login" name="login" type="text" required autofocus/> 
-				</p>
-				</div>
+			                        <div class="entreesInformations">
+                            
+                                <div class="conteneurChamp">
+                                    
+                                    <div class="partieAfficher">
+                                        <label class="input-label" for="nom">
+                                            <p class="champTexte">login* :  
+                                            </p>
+                                            <input class="entreeDeTexte" type="charset" name="login"required autofocus/>
+                                        </label>
+                                    </div>
 
-                <div class="partieCachee">
-                </div>
-              	</div>
-				<p>	<label for="Mdp">Mot de passe</label>
-					<input id="Mdp" name="Mdp" type="Mdp" required />
-				</p>
-				<p>	
-					<button id="envoi" name="envoi" type="submit" value="envoi">Connexion</button> 
-					 <a href= changepassword.php>mot de passe oublié: cliquez ici</a>
+                                    <div class="partieCachee">
+                                    </div>
+                                </div>
+                                    
+
+
+                                <div class="conteneurChamp">
+                                    
+                                    <label class="input-label">
+                                        <p class="champTexte">Mot de passe* : 
+                                        </p>
+                                        <input class="entreeDeTexte" type="password" name="Mdp"required autofocus/>
+                                    </label>
+                                </div>
+                      
+
+
+                                <div class="conteneurChamp">
+                                    <input class="boutonValider" type="submit" value="Connexion">				
+                                </div>
+                                <div class="Mdp_oublié">
+                                <a href= changepassword.php>mot de passe oublié?</a>
+                            	</div>
+
 				</p>
 				<?php 
 					include ("includes/AccesBase.php");
