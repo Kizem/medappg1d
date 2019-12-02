@@ -14,7 +14,7 @@
 			<h2><p>Veuillez vous identifier ou <a href= inscription.php>créer un compte </a></p></h2>
 		
 
-			<form method="POST" action="connex.php">
+			<form method="POST" action="connexion.php">
 				<p>	<label for="login">Login</label>
 					<input id="login" name="login" type="text" required autofocus/> 
 				</p>
@@ -26,7 +26,7 @@
 					 <a href= changepassword.php>mot de passe oublié: cliquez ici</a>
 				</p>
 				<?php 
-					include ("AccesBase.php");
+					include ("includes/AccesBase.php");
 				?>
 					
 			</form>

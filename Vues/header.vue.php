@@ -13,8 +13,16 @@
 
 	<div class = "co_ins">
 	  <ul>
-	      <a class="at_coins" href="connexion.php">Connexion</a>
-	      <a class="at_coins" href="inscription.php">Inscription</a>
+	       <?php 
+            if (empty($_SESSION['login'])){
+              echo '<a class="at_coins" href="connexion.php">Connexion </a>
+                    <a class="at_coins" href="Inscription.php">Inscription</a>';
+            }
+            else{
+                echo '<a class="at_coins" href="connex.php">id:'.$_SESSION['login'].'</a>
+                      <a class="at_coins" href="deconnex.php">deconnexion</a>';
+            }
+            ?>
 	  </ul>
 	</div>
 </div>
