@@ -15,7 +15,7 @@
 
 		<h3>Foire aux questions</h3>
 
-		<form method="post" action="../resultat_recherche.php">
+		<form method="post" action="resultat_recherche.php">
    			<input type="text" name="keywords">
     		<input type="submit" value="Rechercher">
 		</form>
