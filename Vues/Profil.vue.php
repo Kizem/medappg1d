@@ -10,7 +10,7 @@
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
         <section class="main">
-        	<aside>
+        	<aside class="">
         		
         	</aside>
         </section>

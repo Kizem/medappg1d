@@ -35,7 +35,7 @@ function detectionCode($db, $code){
 }
 
 function lireCGU($db, $id){
-	$req = $db->prepare("SELECT * FROM cgu WHERE id='$id'");
+	$req = $db->prepare("SELECT * FROM cgu WHERE idCGU='$id'");
 	$req->execute();
 	return $req;
 }
@@ -43,7 +43,7 @@ function lireCGU($db, $id){
 function ecrireCGU($db, $id,$CGU,$ML){
 	$CGU=addslashes($CGU);
 	$ML=addslashes($ML);
-	$req = $db->prepare("UPDATE `cgu` SET `id`='$id',`MentionLegales`='$ML',`CGU`='$CGU'");
+	$req = $db->prepare("UPDATE `cgu` SET `idCGU`='$id',`MentionLegales`='$ML',`CGU`='$CGU'");
 	$req->execute();
 	return $req;
 }

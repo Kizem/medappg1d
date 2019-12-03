@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 25 nov. 2019 à 08:41
+-- Généré le :  mar. 03 déc. 2019 à 14:55
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `app`
 --
+/* Mohammad 03/12/19 : Il faut créer la base !!!!*/
 CREATE DATABASE IF NOT EXISTS `app` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `app`;
 -- --------------------------------------------------------
@@ -32,7 +33,11 @@ USE `app`;
 DROP TABLE IF EXISTS `boitier`;
 CREATE TABLE IF NOT EXISTS `boitier` (
   `idBoitier` int(11) NOT NULL,
-  PRIMARY KEY (`idBoitier`)
+  `Date` date NOT NULL,
+  `idCapteur` int(11) NOT NULL,
+  PRIMARY KEY (`idBoitier`),
+  KEY `idCapteur` (`idCapteur`),
+  KEY `Date` (`Date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
@@ -76,8 +81,25 @@ CREATE TABLE IF NOT EXISTS `message` (
   `Date` date NOT NULL,
   `Heure` datetime NOT NULL,
   `contenu` text CHARACTER SET latin1 NOT NULL,
+  `idUser` int(255) NOT NULL,
   PRIMARY KEY (`idMessage`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `messageuser`
+--
+
+DROP TABLE IF EXISTS `messageuser`;
+CREATE TABLE IF NOT EXISTS `messageuser` (
+  `idMessageUser` int(11) NOT NULL AUTO_INCREMENT,
+  `idMessage` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL,
+  PRIMARY KEY (`idMessageUser`),
+  KEY `idMessage` (`idMessage`),
+  KEY `idUser` (`idUser`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
@@ -90,7 +112,9 @@ CREATE TABLE IF NOT EXISTS `test` (
   `Date` date NOT NULL,
   `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Durée` datetime NOT NULL,
-  PRIMARY KEY (`Date`)
+  `idUser` int(255) NOT NULL,
+  PRIMARY KEY (`Date`),
+  KEY `idUser` (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
@@ -108,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
-
+/* Mohammad 03/12/19 : table pour les codes d'inscriptions. Surement à modifier*/
 --
 -- Structure de la table `codeInscription`
 --
@@ -130,18 +154,27 @@ INSERT INTO codeInscription (id,fonction) VALUES
 ('wxcvbn','Administrateur');
 
 -- --------------------------------------------------------
-
+/* Mohammad 03/12/19 : Table pour les cgu et ml*/
 --
 -- Structure de la table `CGU`
 --
 
 DROP TABLE IF EXISTS `CGU`;
 CREATE TABLE IF NOT EXISTS `CGU`(
-  `id` INT(25) NOT NULL AUTO_INCREMENT,
+  `idCGU` INT(25) NOT NULL AUTO_INCREMENT,
   `MentionLegales` TEXT(100000) NOT NULL,
   `CGU` TEXT(100000) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idCGU`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/* Mohammad 03/12/19 : dumping data pour cgu*/
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO CGU (idCGU, MentionLegales, CGU) VALUES 
+('1', 'Vos Mentions legales...', 'Vos CGU...');
+
 
 -- --------------------------------------------------------
 
@@ -152,16 +185,17 @@ CREATE TABLE IF NOT EXISTS `CGU`(
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `idUser` int(11) NOT NULL AUTO_INCREMENT,
-  `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Type` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
   `login` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Mdp` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `Nom` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `Prenom` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `Mail` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Nom` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `Prenom` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `Mail` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `codeInscription` varchar(255) COLLATE latin1_general_cs DEFAULT NULL,
   PRIMARY KEY (`idUser`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
-
+/* Mohammad 03/12/19 : dumping data pour utilisateur*/
 --
 -- Dumping data for table `utilisateur`
 --
@@ -170,6 +204,50 @@ INSERT INTO utilisateur (Type, login, Mdp, Nom, Prenom, Mail) VALUES
 ('Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad','mohammad.amla.pro@gmail.com');
 COMMIT;
 -- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateur/entité`
+--
+
+DROP TABLE IF EXISTS `utilisateur/entité`;
+CREATE TABLE IF NOT EXISTS `utilisateur/entité` (
+  `idU/E` int(11) NOT NULL AUTO_INCREMENT,
+  `idUser` int(11) NOT NULL,
+  `idEntité` int(11) NOT NULL,
+  PRIMARY KEY (`idU/E`),
+  KEY `idEntité` (`idEntité`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `boitier`
+--
+ALTER TABLE `boitier`
+  ADD CONSTRAINT `boitier_ibfk_1` FOREIGN KEY (`idCapteur`) REFERENCES `capteur` (`idCapteur`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `boitier_ibfk_2` FOREIGN KEY (`Date`) REFERENCES `test` (`Date`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `messageuser`
+--
+ALTER TABLE `messageuser`
+  ADD CONSTRAINT `messageuser_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `test`
+--
+ALTER TABLE `test`
+  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `utilisateur/entité`
+--
+ALTER TABLE `utilisateur/entité`
+  ADD CONSTRAINT `utilisateur/entité_ibfk_1` FOREIGN KEY (`idEntité`) REFERENCES `entit` (`idEntité`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
