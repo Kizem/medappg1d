@@ -1,0 +1,18 @@
+.bannière{
+	box-shadow: 5px 5px 5px black;
+}
+
+.options{
+	margin:5%;
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+
+}
+
+.catégorie{
+	box-shadow: 3px 3px 3px black;
+	border: 1px solid black;
+	width:400px;
+}

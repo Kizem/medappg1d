@@ -10,6 +10,29 @@
     <header><?php include_once('includes/header.php'); ?></header>
     <div id = "main">
 
+      <div align="center">
+          <img class="bannière" src="ressources/page_admin.png" alt="Alt text"/>
+      </div>
+
+      <div class="options">
+        <div class="catégorie">
+
+          <p>test</p>
+
+        </div>
+
+        <div class="catégorie">
+          <p>test</p>
+
+        </div>
+
+        <div class="catégorie">
+          <p>test</p>
+          
+
+        </div>
+
+      </div>
 
 
 
