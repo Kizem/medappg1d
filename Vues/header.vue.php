@@ -20,7 +20,7 @@
                     <a class="at_coins" href="Inscription.php">Inscription</a>';
             }
             else{
-                echo '<a class="at_coins" href="connex.php">'.$_SESSION['login'].'</a>
+                echo '<a class="at_coins" href="Profil.php">'.$_SESSION['login'].'</a>
                       <a class="at_coins" href="deconnex.php">deconnexion</a>';
             }
             ?>
