@@ -102,7 +102,7 @@ nav > ul li:hover .sous{
 
 .sous li{
   float: none;
-  width: 103%;
+  width: 100%;
   text-align: left;
 }
 
@@ -129,5 +129,35 @@ nav > ul li:hover .sous{
 
 .deroulant_autre{
   font-size: 20px;
+  font-weight: bold;
+}
+
+/*-----Moteur de recherche & Modifier-----*/
+
+.recherche{
+  text-align: right;
+  margin-right: 10px;
+}
+
+.champ_saisie{
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: black;
+}
+
+.bouton_recherche{
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  background: #28292A;
+}
+
+.edit{
+  margin-left: 10px;
+}
+
+.bouton_modifier{
+  border-radius: 10px;
+  background: red;
   font-weight: bold;
 }

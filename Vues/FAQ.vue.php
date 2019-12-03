@@ -13,12 +13,21 @@
 
 	<body>
 
-		<h3>Foire aux questions</h3>
+		<section class="moteur_recherche">
+			<div class="edit">
+				<form method="post" action="edit_FAQ.php">
+					<input type="submit" value="Modifier" class="bouton_modifier">
+				</form>
+			</div>
+			<div class="recherche">
+				<form method="post" action="resultat_recherche.php">
+   					<input type="text" name="keywords" class="champ_saisie">
+    				<input type="submit" value="Rechercher" class="bouton_recherche">
+				</form>
+			</div>
+		</section>
 
-		<form method="post" action="resultat_recherche.php">
-   			<input type="text" name="keywords">
-    		<input type="submit" value="Rechercher">
-		</form>
+		<h3>Foire aux questions</h3>
 
 		<nav>
 			<ul>
