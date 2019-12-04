@@ -3,7 +3,9 @@ section{
   flex-direction: row;
   
 }
-
+p{
+	margin: 4px;
+}
 .tableInformations{
 display:table;
 margin: 5px;
@@ -83,7 +85,12 @@ display: flex;
 	background-color:#753991; 
 }
 
-.ConteneurInformation{
+.ConteneurInformationDeBase{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+.ConteneurInformationAvancee{
 	display: flex;
 	flex-direction: column;
     justify-content: center;
@@ -92,6 +99,8 @@ display: flex;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin-bottom: 8px;
+	margin-top: 8px;
 }
 
 .Entree{
