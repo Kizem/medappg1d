@@ -1,7 +1,9 @@
 html{
   scroll-behavior: smooth;
 }
-
+body{
+margin: 0px;
+}
 @font-face {
     font-family: 'BEBAS__';
     src: url('typos/BEBAS__.ttf');
