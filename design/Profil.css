@@ -3,27 +3,46 @@ section{
   flex-direction: row;
   
 }
+
 .tableInformations{
 display:table;
-margin: 8px;
+margin: 5px;
 padding: 10px;
 border-spacing: 5px;
-border :1px solid #aaa;
-border-collapse: separate;
-border-spacing: 2px;
+border :2px solid #aaa;
 border-radius: 3px;
 line-height: 1.2em;
+border-color: #00D4FF;
 }
 .texteAuCentre{
 	text-align: center;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
 }
-.photo{
-	background-image:url(ressources/PhotoDeProfil.png);
+.texteImportant{
+	text-align: center;
+	color:#398791;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	font-size: 18px;
+}
+.NomPrenom{
+	text-align: center;
+	color:#753991;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	font-size: 20px;
+}
+img{
+	max-width: 150px;
+	max-height: 150px;
 }
 tbody{
 	display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
+}
+th{
+	display: table-cell;
+    font-weight: bold;
+    text-align: left;
 }
 tr{
 	display: table-row;
@@ -44,4 +63,37 @@ margin: 12px  auto auto 0px;
 .photoUtilisateur{
 	height: 120px;
 	width: 120px;
+}
+.ConteneurCentral{
+display: flex;
+ flex-direction: column;
+ flex: 1;
+ border :2px solid #aaa;
+ border-radius: 3px;
+ border-color: #00D4FF;
+ margin: 5px;
+ padding: 10px;
+}
+.Titre{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	border :1px solid #753991;
+	border-radius: 8px;
+	background-color:#753991; 
+}
+
+.ConteneurInformation{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+.BoxPlusieursChamps{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.Entree{
+	margin: auto;
 }
