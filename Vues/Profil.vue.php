@@ -24,13 +24,13 @@
                     </tr>
                     <tr>
                         <td colspan="2" class="NomPrenom">
-                            <p>Prenom</p>
+                            <p><?php echo $Prenom ?></p>
                         </td>
                         
                     </tr>
                     <tr>
                         <td colspan="2" class="NomPrenom">
-                            <p>Nom</p>
+                            <p><?php echo $Nom ?></p>
                         </td>
                     </tr>
                     <tr>
@@ -48,7 +48,7 @@
                             Pseudo
                         </th>
                         <td>
-                            Mettre le pseudo
+                            <?php echo $login ?>
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +56,7 @@
                             Adresse e-mail
                         </th>
                         <td>
-                            Mettre l'email'
+                            <?php echo $Mail ?>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                             Sexe
                         </th>
                         <td>
-                            Homme/femme
+                            <?php echo $Sexe ?>
                         </td>
                     </tr>
                     <tr>
@@ -82,7 +82,7 @@
                             Date de naissance
                         </th>
                         <td>
-                            Date
+                            <?php echo $DateDeNaissance ?>
                         </td>
                     </tr>
                     <tr>
@@ -90,7 +90,7 @@
                             Taille
                         </th>
                         <td>
-                            2m
+                            <?php echo $Taille ?>
                         </td>
                     </tr>
                     <tr>
@@ -98,7 +98,7 @@
                             Poids
                         </th>
                         <td>
-                            1tonne
+                            <?php echo $Poids ?>
                         </td>
                     </tr>
                     
@@ -166,13 +166,18 @@
                     </div>
                     <div class="BoxPlusieursChamps">    
                         <div class="Entree">
-                            <label class="input-label" for="mail"><p class="champTexte">Sexe :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="mail" />
+                            <label class="input-label" for="listeSexe"><p class="champTexte">Sexe :  </p>
+                                    <FORM>
+                                        <SELECT class="entreeDeTexte" name="listeSexe" size="1">
+                                        <OPTION value=0>Homme</OPTION>
+                                        <OPTION value=1>Femme</OPTION>
+                                        <OPTION value=2>Autre</OPTION>
+                                        </SELECT>
                             </label> 
                         </div>
                         <div class="Entree">
                             <label class="input-label" for="DateDeNaissance"><p class="champTexte">Date de naissance :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="DateDeNaissance" />
+                                    <input class="entreeDeTexte" type="date" name="DateDeNaissance" />
                             </label> 
                         </div>
                     </div>

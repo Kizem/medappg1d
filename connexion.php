@@ -12,6 +12,9 @@
 			 
 			$Mdp_hash= $lesEnreg['Mdp'];
 			$Type=$lesEnreg['Type'];
+			$Mail=$lesEnreg['Mail'];
+			$Nom=$lesEnreg['Nom'];
+			$Prenom=$lesEnreg['Prenom'];
 			print_r($lesEnreg);
 			echo "$sql";
 			
@@ -21,6 +24,9 @@
 				$_SESSION['login']=$login;
 				$_SESSION['Mdp']=$Mdp;
 				$_SESSION['Type']=$Type;
+				$_SESSION['Mail']=$Mail;
+				$_SESSION['Prenom']=$Prenom;
+				$_SESSION['Nom']=$Nom;
 				header ('Location: index.php');
 			}
 			else{
