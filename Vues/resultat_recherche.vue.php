@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="design/resultat_recherche.css">
 		<title>Résultat de la recherche</title>
 	</head>
 		<header><?php include_once('includes/header.php'); ?></header>
@@ -10,32 +12,39 @@
 
 		<div>
 			<table style="width:80%">
-				<!--
+				
+				<thead>
 				<tr>
     				<th>Nom</th>
     				<th>Prénom</th>
+    				<th>Mail</th>
   				</tr>
-  				-->
-
+  				</thead>
+  				
+  				<tbody>
   				<?php 
   				if (count($fonction) > 0) {
   					for ($i=0; $i < count($fonction); $i++) {
+  						echo "<tr>";
+  						echo "<td>";
   						echo $fonction[$i]['Nom'], ' ';
-  						echo $fonction[$i]['Prenom'], ' ',"<br>";
+  						echo "</td>";
+  						echo "<td>";
+  						echo $fonction[$i]['Prenom'], ' ';
+  						echo "</td>";
+  						echo "<td>";
+  						echo $fonction[$i]['Mail'], ' ',"<br>";
+  						echo "</td>";
+  						echo "</tr>";
   					}
   				}
   				else{
-  					echo "Pas d'utilisateurs";
+  					echo "Aucun utilisateurs trouvés.";
   				}
   				
 
   				?>
-  				<!--
-  				<tr>
-  					<th> <?php echo $fonction[0]['Nom']; ?> </th>
-  					<th> <?php echo $fonction[0]['Prenom']; ?> </th>
-  				</tr>
-  				-->
+  				</tbody>
   				
 			</table>
 		</div>
