@@ -23,7 +23,7 @@ $Taille=$_SESSION['Taille'];
 $DateDeNaissance=$_SESSION['DateDeNaissance'];
 $Poids=$_SESSION['Poids'];
 $idUser=$_SESSION['idUser'];
-
+$cheminPhoto=$_SESSION['cheminPhoto'];
 if(isset($_FILES['photo']['name'])){
 	$extension=pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
 	if($extension=='jpg'){
@@ -37,7 +37,7 @@ if(isset($_FILES['photo']['name'])){
 					if(move_uploaded_file($_FILES['photo']['tmp_name'], TARGET.$nomImage)){
 		              $resultat = 'Upload réussi !';
 		              $cheminPhoto=TARGET.$nomImage;
-		              $req=modificationInformationUtilisateur($db, $cheminPhoto, 'Photo', $idUser);
+		              $req=modificationInformationUtilisateur($db, $cheminPhoto, 'Photos', $idUser);
 		            }
 		            else{
 		              // Sinon on affiche une erreur systeme

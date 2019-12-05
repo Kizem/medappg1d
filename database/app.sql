@@ -195,6 +195,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Taille` int(32) DEFAULT NULL,	
   `Poids` int(32) DEFAULT NULL,
   `DateDeNaissance`DATE DEFAULT NULL,
+  `Photos` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
   `codeInscription` varchar(255) COLLATE latin1_general_cs DEFAULT NULL,
   PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;

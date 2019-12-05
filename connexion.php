@@ -20,6 +20,7 @@
 			$Poids=$lesEnreg['Poids'];
 			$DateDeNaissance=$lesEnreg['DateDeNaissance'];
 			$idUser=$lesEnreg['idUser'];
+			$cheminPhoto=$lesEnreg['Photos'];
 			print_r($lesEnreg);
 			echo "$sql";
 			
@@ -37,6 +38,7 @@
 				$_SESSION['Poids']=$Poids;
 				$_SESSION['DateDeNaissance']=$DateDeNaissance;
 				$_SESSION['idUser']=$idUser;
+				$_SESSION['cheminPhoto']=$cheminPhoto;
 				header ('Location: index.php');
 			}
 			else{
