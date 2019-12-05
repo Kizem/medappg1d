@@ -13,17 +13,23 @@
         <!--BODY --------------------------------- -->
         <div class="ban" align="center">
           <img class="image" src="ressources/Nos_tests.png" alt="Alt text"/>
-          <a class="know_more" href="session_test.php">En savoir plus</a>
+          <div class="know_more">
+            <a class="enSavoirPlus"href="session_test.php">En savoir plus</a>
+          </div>
         </div>
 
         <div class="ban" align="center">
           <img class="image" src="ressources/ESPACE_UTILISATEUR.png" alt="Alt text"/>
-          <a class="go_connex_user" href="connexion.php">Je me connecte</a>
+          <div class="je_me_connecte">
+            <a class="go_connex_user" href="connexion.php">Je me connecte</a>
+          </div>
         </div>
 
         <div class="ban" align="center">
           <img class="image" src="ressources/ESPACE_GESTIONNAIRE.png" alt="Alt text"/>
-          <a class="go_connex_gest" href="connexion.php ">Je me connecte</a>
+          <div class="connect_guest">
+            <a class="go_connex_gest" href="connexion.php ">Je me connecte</a>
+          </div>
         </div>
         
 <!-- 
