@@ -15,6 +15,11 @@
 			$Mail=$lesEnreg['Mail'];
 			$Nom=$lesEnreg['Nom'];
 			$Prenom=$lesEnreg['Prenom'];
+			$Sexe=$lesEnreg['Sexe'];
+			$Taille=$lesEnreg['Taille'];
+			$Poids=$lesEnreg['Poids'];
+			$DateDeNaissance=$lesEnreg['DateDeNaissance'];
+			$idUser=$lesEnreg['idUser'];
 			print_r($lesEnreg);
 			echo "$sql";
 			
@@ -27,6 +32,11 @@
 				$_SESSION['Mail']=$Mail;
 				$_SESSION['Prenom']=$Prenom;
 				$_SESSION['Nom']=$Nom;
+				$_SESSION['Sexe']=$Sexe;
+				$_SESSION['Taille']=$Taille;
+				$_SESSION['Poids']=$Poids;
+				$_SESSION['DateDeNaissance']=$DateDeNaissance;
+				$_SESSION['idUser']=$idUser;
 				header ('Location: index.php');
 			}
 			else{
