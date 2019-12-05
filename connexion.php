@@ -10,7 +10,7 @@
 			$req->execute ();
 			$lesEnreg = $req->fetch();
 			 
-			$Mdp_hash= $lesEnreg['Mdp'];
+			$Mdp_hash=$lesEnreg['Mdp'];
 			$Type=$lesEnreg['Type'];
 			$Mail=$lesEnreg['Mail'];
 			$Nom=$lesEnreg['Nom'];
@@ -27,7 +27,7 @@
 			if (password_verify($Mdp, $Mdp_hash)) {
 				//session_start();
 				$_SESSION['login']=$login;
-				$_SESSION['Mdp']=$Mdp;
+				$_SESSION['Mdp']=$Mdp_hash;
 				$_SESSION['Type']=$Type;
 				$_SESSION['Mail']=$Mail;
 				$_SESSION['Prenom']=$Prenom;

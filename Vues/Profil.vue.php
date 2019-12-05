@@ -9,6 +9,14 @@
         <!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
+        <?php 
+            if(!empty($erreur)){
+                include_once('includes/alerte.php');
+            }
+            if(!empty($resultat)){
+                include_once('includes/validation.php');
+            }
+        ?>
         <section class="main">
             <table class="tableInformations">
                 <tbody>
@@ -90,7 +98,7 @@
                             Taille
                         </th>
                         <td>
-                            <?php echo $Taille ?>
+                            <?php echo $Taille ?>cm
                         </td>
                     </tr>
                     <tr>
@@ -98,7 +106,7 @@
                             Poids
                         </th>
                         <td>
-                            <?php echo $Poids ?>
+                            <?php echo $Poids ?>kg
                         </td>
                     </tr>
                     
@@ -124,36 +132,36 @@
                         <div class="BoxPlusieursChamps">
                             <div class="Entree">
                                 <label class="input-label" for="prenom"><p class="champTexte">Prenom :  </p>
-                                        <input class="entreeDeTexte" type="charset" name="prenom"required />
+                                        <input class="entreeDeTexte" type="charset" name="prenom" />
                                 </label> 
                             </div>
                             <div class="Entree">
                                 <label class="input-label" for="om"><p class="champTexte">Nom :  </p>
-                                        <input class="entreeDeTexte" type="charset" name="nom"required />
+                                        <input class="entreeDeTexte" type="charset" name="nom" />
                                 </label> 
                             </div>
                         </div>
                         <div class="BoxPlusieursChamps">    
                             <div class="Entree">
                                 <label class="input-label" for="mail"><p class="champTexte">Adresse E-mail :  </p>
-                                        <input class="entreeDeTexte" type="charset" name="mail" required/>
+                                        <input class="entreeDeTexte" type="charset" name="mail" />
                                 </label> 
                             </div>
                             <div class="Entree">
                                 <label class="input-label" for="login"><p class="champTexte">Pseudo :  </p>
-                                        <input class="entreeDeTexte" type="charset" name="login" required/>
+                                        <input class="entreeDeTexte" type="charset" name="login" />
                                 </label> 
                             </div>
                         </div>
                         <div class="BoxPlusieursChamps">
                             <div class="Entree">
                                 <label class="input-label" for="mdpActuel"><p class="champTexte">Mot de passe actuel :  </p>
-                                        <input class="entreeDeTexte" type="password" name="mdpActuel" required/>
+                                        <input class="entreeDeTexte" type="password" name="mdpActuel" />
                                 </label> 
                             </div>
                             <div class="Entree">
                                 <label class="input-label" for="nouveauMDP"><p class="champTexte">Nouveau mot de passe :  </p>
-                                        <input class="entreeDeTexte" type="password" name="nouveauMDP" required/>
+                                        <input class="entreeDeTexte" type="password" name="nouveauMDP" />
                                 </label> 
                             </div>
                         </div>
@@ -169,28 +177,29 @@
                             <div class="Entree">
                                 <label class="input-label" for="listeSexe"><p class="champTexte">Sexe :  </p>
                                         <FORM>
-                                            <SELECT class="entreeDeTexte" name="listeSexe" size="1" required>
-                                            <OPTION value=0>Homme</OPTION>
-                                            <OPTION value=1>Femme</OPTION>
-                                            <OPTION value=2>Autre</OPTION>
+                                            <SELECT class="entreeDeTexte" name="listeSexe" size="1" >
+                                            <OPTION value=0></OPTION>  
+                                            <OPTION value=1>Homme</OPTION>
+                                            <OPTION value=2>Femme</OPTION>
+                                            <OPTION value=3>Autre</OPTION>
                                             </SELECT>
                                 </label> 
                             </div>
                             <div class="Entree">
                                 <label class="input-label" for="DateDeNaissance"><p class="champTexte">Date de naissance :  </p>
-                                        <input class="entreeDeTexte" type="date" name="DateDeNaissance" required/>
+                                        <input class="entreeDeTexte" type="date" name="DateDeNaissance" />
                                 </label> 
                             </div>
                         </div>
                         <div class="BoxPlusieursChamps">    
                             <div class="Entree">
                                 <label class="input-label" for="Poids"><p class="champTexte">Poids (Kg) :  </p>
-                                        <input class="entreeDeTexte" type="charset" name="Poids" required/>
+                                        <input class="entreeDeTexte" type="number" name="Poids" />
                                 </label> 
                             </div>
                             <div class="Entree">
                                 <label class="input-label" for="Taille"><p class="champTexte">Taille (cm) :  </p>
-                                        <input class="entreeDeTexte" type="charset" name="Taille" required />
+                                        <input class="entreeDeTexte" type="number" name="Taille" />
                                 </label> 
                             </div>
                         </div>
@@ -207,7 +216,6 @@
                     </div>
                 </div>
             </FORM>
-            
             
         </section>
         <!-- FOOTER -->
