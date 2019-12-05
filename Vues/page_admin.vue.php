@@ -15,38 +15,56 @@
       </div>
 
       <div class="options">
+
+        <!-- GESTION DES UTILISATEURS DU SITE WEB -->
+
         <div class="catégorie">
-          <ul>
+
+          <p class="titre_catég"> Utilisateurs </p>
+
+            
             <?php while($u = $utilisateurs->fetch()){ ?>
-              <li><?= $u['idUser'] ?> : <?=$u['login'] ?>
-              - <?= $u['Mail'] ?></li>
-              <li class="liAction"><a href="page_admin.php?delete=<?= $u['idUser']?>">Supprimer</a></li>
 
+              <p class="membre"><?= $u['idUser'] ?> : <?=$u['login'] ?>
+              - <?= $u['Mail'] ?></p>
+              <ul class="Actions">
+                <li class="Suppr"><a href="page_admin.php?delete=<?= $u['idUser']?>">Supprimer</a></li>
+                <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
+                <li class="Ban"><a href="page_admin.php?ban=<?= $u['idUser']?>">Bannir</a> </li>
+              </ul>
             <?php } ?>
+        </div>
+
+        <!-- *********************************** -->
+
+
+        <!-- GESTION DES CAPTEURS -->
+
+        <div class="catégorie">
+          <p class="titre_catég"> Capteurs </p>
+
+
+        </div>
+        <!-- ******************** -->
+
+
+        <!-- GESTION DU SITE -->
+
+        <div class="catégorie">
+          <p class="titre_catég"> Gestion du site </p>
+
+          <ul class="Gestion_site">
+            <li><a class="gestion_FAQ" href="FAQ.php"> Gérer la FAQ </a></li>
+            <li><a class="gestion_CGU" href="CGUMentionLegales.php">Modifier les CGU </a></li>
           </ul>
-        <!--   <ul class="actions">
-
-            <li class="liAction"><?php<a href="index.php">Ajouter</a>?></li>
-            <li class="liAction"><a href="page_admin.php?delete=1>">Supprimer</a></li>
-            <li class="liAction"><a href="index.php">Modifier</a></li>
-            <li class="liAction"><a href="index.php">Bannir</a></li>
-
-
-
-          </ul> -->
-
-        </div>
-
-        <div class="catégorie">
-          <p>Gestion des capteurs</p>
-
-        </div>
-
-        <div class="catégorie">
-          <p>FAQ/CGU + Messagerie interne</p>
+          <center>
+            <a class="gestion_msg" href="Messagerie.php">Gérer la messagerie interne</a>
+          </center>
           
 
         </div>
+
+        <!-- *************** -->
 
       </div>
 

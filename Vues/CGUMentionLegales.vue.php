@@ -10,9 +10,15 @@
         <header><?php include_once('includes/header.php'); ?></header>
         <form method="post" action="CGUMentionLegalesEdition.php">
             <section class="section">
-                <div class="boxBoutonEdit">
-                    <input class="edit" type="submit" value="Edit">
-                </div>
+
+                <!-- Ce bouton de modification ne sera visible que par un administrateur -->
+                <?php if(isset($_SESSION) and $_SESSION['Type']=='Administrateur') {?>
+                    <div class="boxBoutonEdit">
+                        <input class="edit" type="submit" value="Edit">
+                    </div>
+                <?php } ?>
+
+                
                 <div class="titrePage">
                     <div class="titreP">
                         <h1>Mentions legales et Conditions generales d'utilisation</h1>

@@ -11,12 +11,150 @@ body{
 	display:flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-
-
 }
 
 .catégorie{
 	box-shadow: 3px 3px 3px black;
 	border: 1px solid black;
 	width:400px;
+	height: auto;
+}
+
+.titre_catég{
+
+	font-family: CaviarDreams-Bold;
+	font-size: 22px;
+	text-align: center;
+	color: #28292A;
+	background-color: hsl(210, 100%, 54%);
+  	box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+
+}
+
+
+/* ------------ GESTION MEMBRES -------------*/
+
+.Actions{
+	display:table;
+	width:auto;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+
+
+}
+
+.Actions li{
+	display: table-cell;
+}
+
+.Actions li a {
+  font-family: Roboto-Black;
+  display: block;
+  text-align: center;
+  color: white;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+  padding: 8px 8px 17px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+
+  transition: all .2s; /* on vient agir sur toutes les transitions du hover/focus */
+  
+}
+
+.Actions li a:hover{
+	border : 3px solid #28292A;
+}
+
+.Suppr{
+	background-color: #DC143C;
+}
+
+.Modif{
+	background-color: #0620A8;
+}
+
+
+.Ban{
+	background-color: black;
+}
+
+
+.membre {
+	font-family: Roboto-Black;
+	text-align: center;
+	color: #28292A;
+}
+
+
+/* ------------ GESITON CAPTEURS -------------*/
+
+
+
+
+
+
+/* ------------ GESTION DU SITE -------------*/
+
+.Gestion_site{
+	display:table;
+	width:auto;
+	margin:auto;
+	padding:0;
+	list-style-type: none;
+}
+
+.Gestion_site li{
+
+	display: table-cell;
+
+}
+
+.Gestion_site a {
+  font-family: Roboto-Black;
+  display: block;
+  text-align: center;
+  color: white;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+  padding: 8px 8px 17px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+
+  transition: all .2s; /* on vient agir sur toutes les transitions du hover/focus */
+  
+}
+
+.Gestion_site li a:hover{
+	border : 3px solid #28292A;
+}
+
+.gestion_FAQ{
+	background-color: #28292A;
+}
+
+.gestion_CGU{
+	background-color: hsl(210, 100%, 54%);
+}
+
+.gestion_msg{
+
+  font-family: Roboto-Black;
+  display: block;
+  text-align: center;
+  color: black;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+
+  margin-top: 5%;
+  background-color: #e9e8e8;
+  border-radius: 10px;
+  padding: 8px 8px 17px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+
+   box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+
+  transition: all .2s; /* on vient agir sur toutes les transitions du hover/focus */	
+
 }
