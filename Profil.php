@@ -1,9 +1,10 @@
 <?php
-/*
-index.php
 
-Page d'acceuil du site. Affichage des 4 derniers cours mis en ligne.
-*/
+define('TARGET', 'Photos/');    // Repertoire cible
+define('MAX_SIZE', 10000000);    // Taille max en octets du fichier
+define('WIDTH_MAX', 2000);    // Largeur max de l'image en pixels
+define('HEIGHT_MAX', 2000);
+
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
 if(!isset($_SESSION) OR $_SESSION['Type'] != 'Administrateur'){
@@ -23,9 +24,52 @@ $DateDeNaissance=$_SESSION['DateDeNaissance'];
 $Poids=$_SESSION['Poids'];
 $idUser=$_SESSION['idUser'];
 
+if(isset($_FILES['photo']['name'])){
+	$extension=pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
+	if($extension=='jpg'){
+		$infosImage = getimagesize($_FILES['photo']['tmp_name']);
+		if($infosImage[2] >= 1 && $infosImage[2] <= 14){
+			if(($infosImage[0] <= WIDTH_MAX) && ($infosImage[1] <= HEIGHT_MAX) && (filesize($_FILES['photo']['tmp_name']) <= MAX_SIZE)){
+				if(isset($_FILES['photo']['error']) && UPLOAD_ERR_OK === $_FILES['photo']['error']){
+					$nomImage=md5(uniqid()) .'.'. $extension;
+					
+					//upload du fichier
+					if(move_uploaded_file($_FILES['photo']['tmp_name'], TARGET.$nomImage)){
+		              $resultat = 'Upload réussi !';
+		              $cheminPhoto=TARGET.$nomImage;
+		              $req=modificationInformationUtilisateur($db, $cheminPhoto, 'Photo', $idUser);
+		            }
+		            else{
+		              // Sinon on affiche une erreur systeme
+		              $resultat = 'Problème lors de l\'upload !';
+		            }
+				}
+				else{
+					$erreur="Erreur lors de l'upload du fichier";
+				}
+          
+
+			}
+			else{
+				$erreur="La taille de votre fichier est trop grande ou le format est non admis";
+			}
+        
+		}
+		else{
+			$erreur="le fichier n'est pas une image";
+		}
+	}
+
+	else{
+		$erreur = "extension non permise";
+	}
+}
+else{
+
+	echo  json_encode($_POST);
+}
 if(!empty($_POST['Poids'])){
 	$Poids=$_POST['Poids'];
-	echo $Poids;
 	$req=modificationInformationUtilisateur($db, $Poids, 'Poids', $idUser);
 	if($resultat!=""){
 		$resultat .="-Votre Poids a bien été mis à jour.";
@@ -90,6 +134,6 @@ if(!empty($_POST['DateDeNaissance'])){
 		$resultat .="-Votre date de naissance a bien été mise à jour.";
 	}
 }
-echo $resultat;
+
 include_once('Vues/Profil.vue.php');
 ?>

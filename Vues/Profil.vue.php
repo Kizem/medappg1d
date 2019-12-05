@@ -112,7 +112,7 @@
                     
                 </tbody>
             </table>
-            <form method="post" action="Profil.php">
+            <form enctype="multipart/form-data" method="post" action="Profil.php">
                 <div class="ConteneurCentral">
                     <div class="Titre">
                         <h1>Editer vos informations</h1>
@@ -123,7 +123,7 @@
                         </div>
                         <div class="BoxPlusieursChamps">
                             <div class="Entree">
-                                <label class="input-label" for="prenom"><p class="champTexte">Photo de profil :  </p>
+                                <label class="input-label" for="photo"><p class="champTexte">Photo de profil :  </p>
                                     <input type="file" id="photo" name="photo" />
                                 </label> 
                             </div>
