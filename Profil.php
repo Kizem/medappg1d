@@ -2,8 +2,8 @@
 
 define('TARGET', 'Photos/');    // Repertoire cible
 define('MAX_SIZE', 10000000);    // Taille max en octets du fichier
-define('WIDTH_MAX', 2000);    // Largeur max de l'image en pixels
-define('HEIGHT_MAX', 2000);
+define('WIDTH_MAX', 3000);    // Largeur max de l'image en pixels
+define('HEIGHT_MAX', 3000);
 
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");

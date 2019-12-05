@@ -75,9 +75,9 @@ display: flex;
  flex: 1;
  border :2px solid #aaa;
  border-radius: 3px;
- border-color: #00D4FF;
+ border-color: #AB59C3;
  margin: 5px;
- padding: 10px;
+ 
 }
 form{
 	display: flex;
@@ -88,8 +88,8 @@ form{
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-	border :1px solid #753991;
-	border-radius: 8px;
+	
+	
 	background-color:#AB59C3; 
 }
 
