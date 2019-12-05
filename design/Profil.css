@@ -79,6 +79,11 @@ display: flex;
  margin: 5px;
  padding: 10px;
 }
+form{
+	display: flex;
+ flex-direction: column;
+ flex: 1;
+}
 .Titre{
 	display: flex;
 	flex-direction: column;
@@ -121,4 +126,13 @@ border-radius:5px;
 background:#fff
 margin:10px;
 width: 250px;
+}
+.Valider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #66B14B;
+  color:#eee;
+  border-color: #3090E3;
+  font:bold 13px Arial;
 }

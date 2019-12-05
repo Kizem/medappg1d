@@ -104,98 +104,110 @@
                     
                 </tbody>
             </table>
-            <div class="ConteneurCentral">
-                <div class="Titre">
-                    <h1>Editer vos informations</h1>
-                </div>
-                <div class="ConteneurInformationDeBase">
-                    <div>
-                        <h2>Informations de base</h2>
+            <form method="post" action="Profil.php">
+                <div class="ConteneurCentral">
+                    <div class="Titre">
+                        <h1>Editer vos informations</h1>
                     </div>
-                    <div class="BoxPlusieursChamps">
-                        <div class="Entree">
-                            <label class="input-label" for="prenom"><p class="champTexte">Photo de profil :  </p>
-                                <input type="file" id="photo" name="photo" />
-                            </label> 
+                    <div class="ConteneurInformationDeBase">
+                        <div>
+                            <h2>Informations de base</h2>
+                        </div>
+                        <div class="BoxPlusieursChamps">
+                            <div class="Entree">
+                                <label class="input-label" for="prenom"><p class="champTexte">Photo de profil :  </p>
+                                    <input type="file" id="photo" name="photo" />
+                                </label> 
+                            </div>
+                            
+                        </div>
+                        <div class="BoxPlusieursChamps">
+                            <div class="Entree">
+                                <label class="input-label" for="prenom"><p class="champTexte">Prenom :  </p>
+                                        <input class="entreeDeTexte" type="charset" name="prenom"required />
+                                </label> 
+                            </div>
+                            <div class="Entree">
+                                <label class="input-label" for="om"><p class="champTexte">Nom :  </p>
+                                        <input class="entreeDeTexte" type="charset" name="nom"required />
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="BoxPlusieursChamps">    
+                            <div class="Entree">
+                                <label class="input-label" for="mail"><p class="champTexte">Adresse E-mail :  </p>
+                                        <input class="entreeDeTexte" type="charset" name="mail" required/>
+                                </label> 
+                            </div>
+                            <div class="Entree">
+                                <label class="input-label" for="login"><p class="champTexte">Pseudo :  </p>
+                                        <input class="entreeDeTexte" type="charset" name="login" required/>
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="BoxPlusieursChamps">
+                            <div class="Entree">
+                                <label class="input-label" for="mdpActuel"><p class="champTexte">Mot de passe actuel :  </p>
+                                        <input class="entreeDeTexte" type="password" name="mdpActuel" required/>
+                                </label> 
+                            </div>
+                            <div class="Entree">
+                                <label class="input-label" for="nouveauMDP"><p class="champTexte">Nouveau mot de passe :  </p>
+                                        <input class="entreeDeTexte" type="password" name="nouveauMDP" required/>
+                                </label> 
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="ConteneurInformationAvancee">
+                        <div>
+                            <hr>
+                            <h2>Informations avancée</h2>
+                        </div>
+                        <div class="BoxPlusieursChamps">    
+                            <div class="Entree">
+                                <label class="input-label" for="listeSexe"><p class="champTexte">Sexe :  </p>
+                                        <FORM>
+                                            <SELECT class="entreeDeTexte" name="listeSexe" size="1" required>
+                                            <OPTION value=0>Homme</OPTION>
+                                            <OPTION value=1>Femme</OPTION>
+                                            <OPTION value=2>Autre</OPTION>
+                                            </SELECT>
+                                </label> 
+                            </div>
+                            <div class="Entree">
+                                <label class="input-label" for="DateDeNaissance"><p class="champTexte">Date de naissance :  </p>
+                                        <input class="entreeDeTexte" type="date" name="DateDeNaissance" required/>
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="BoxPlusieursChamps">    
+                            <div class="Entree">
+                                <label class="input-label" for="Poids"><p class="champTexte">Poids (Kg) :  </p>
+                                        <input class="entreeDeTexte" type="charset" name="Poids" required/>
+                                </label> 
+                            </div>
+                            <div class="Entree">
+                                <label class="input-label" for="Taille"><p class="champTexte">Taille (cm) :  </p>
+                                        <input class="entreeDeTexte" type="charset" name="Taille" required />
+                                </label> 
+                            </div>
                         </div>
                         
                     </div>
-                    <div class="BoxPlusieursChamps">
-                        <div class="Entree">
-                            <label class="input-label" for="prenom"><p class="champTexte">Prenom :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="prenom" />
-                            </label> 
+                    <div class="ConteneurValidation">
+                        <div>
+                            <hr>
+                            <h2>Valider vos données</h2>
                         </div>
-                        <div class="Entree">
-                            <label class="input-label" for="om"><p class="champTexte">Nom :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="nom" />
-                            </label> 
+                        <div class="BoxPlusieursChamps">
+                            <input class="Valider" type="submit" value="Valider">
                         </div>
                     </div>
-                    <div class="BoxPlusieursChamps">    
-                        <div class="Entree">
-                            <label class="input-label" for="mail"><p class="champTexte">Adresse E-mail :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="mail" />
-                            </label> 
-                        </div>
-                        <div class="Entree">
-                            <label class="input-label" for="login"><p class="champTexte">Pseudo :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="login" />
-                            </label> 
-                        </div>
-                    </div>
-                    <div class="BoxPlusieursChamps">
-                        <div class="Entree">
-                            <label class="input-label" for="mdpActuel"><p class="champTexte">Mot de passe actuel :  </p>
-                                    <input class="entreeDeTexte" type="password" name="mdpActuel" />
-                            </label> 
-                        </div>
-                        <div class="Entree">
-                            <label class="input-label" for="nouveauMDP"><p class="champTexte">Nouveau mot de passe :  </p>
-                                    <input class="entreeDeTexte" type="password" name="nouveauMDP" />
-                            </label> 
-                        </div>
-                    </div>
-                    
-
                 </div>
-                <div class="ConteneurInformationAvancee">
-                    <div>
-                        <hr>
-                        <h2>Informations avancée</h2>
-                    </div>
-                    <div class="BoxPlusieursChamps">    
-                        <div class="Entree">
-                            <label class="input-label" for="listeSexe"><p class="champTexte">Sexe :  </p>
-                                    <FORM>
-                                        <SELECT class="entreeDeTexte" name="listeSexe" size="1">
-                                        <OPTION value=0>Homme</OPTION>
-                                        <OPTION value=1>Femme</OPTION>
-                                        <OPTION value=2>Autre</OPTION>
-                                        </SELECT>
-                            </label> 
-                        </div>
-                        <div class="Entree">
-                            <label class="input-label" for="DateDeNaissance"><p class="champTexte">Date de naissance :  </p>
-                                    <input class="entreeDeTexte" type="date" name="DateDeNaissance" />
-                            </label> 
-                        </div>
-                    </div>
-                    <div class="BoxPlusieursChamps">    
-                        <div class="Entree">
-                            <label class="input-label" for="Poids"><p class="champTexte">Poids (Kg) :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="Poids" />
-                            </label> 
-                        </div>
-                        <div class="Entree">
-                            <label class="input-label" for="Taille"><p class="champTexte">Taille (cm) :  </p>
-                                    <input class="entreeDeTexte" type="charset" name="Taille" />
-                            </label> 
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+            </FORM>
+            
             
         </section>
         <!-- FOOTER -->

@@ -53,3 +53,10 @@ function rechercheUtilisateur($db, $keyword){
 	$req->execute();
 	return $req;
 }
+
+function modificationInformationUtilisateur($db, $nouvelleInfo, $info, $id){
+	$req = $db->prepare("UPDATE `utilisateur` SET $info='$nouvelleInfo' WHERE idUser='$id'");
+	$req->execute();
+	return $req;
+	
+}

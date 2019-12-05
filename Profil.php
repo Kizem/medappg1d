@@ -18,6 +18,12 @@ $Nom=$_SESSION['Nom'];
 $Sexe=$_SESSION['Sexe'];
 $Taille=$_SESSION['Taille'];
 $DateDeNaissance=$_SESSION['DateDeNaissance'];
-$Poids==$_SESSION['Poids'];
+$Poids=$_SESSION['Poids'];
+$idUser=$_SESSION['idUser'];
+if(!empty($_POST['Poids'])){
+	$Poids=$_POST['Poids'];
+	echo $Poids;
+	$req=modificationInformationUtilisateur($db, $Poids, 'Poids', $idUser);
+}
 include_once('Vues/Profil.vue.php');
 ?>
