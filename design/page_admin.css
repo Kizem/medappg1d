@@ -1,3 +1,7 @@
+body{
+	margin:0;
+}
+
 .bannière{
 	box-shadow: 5px 5px 5px black;
 }
