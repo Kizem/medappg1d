@@ -24,6 +24,9 @@ $DateDeNaissance=$_SESSION['DateDeNaissance'];
 $Poids=$_SESSION['Poids'];
 $idUser=$_SESSION['idUser'];
 $cheminPhoto=$_SESSION['cheminPhoto'];
+if(empty($cheminPhoto)){
+	$cheminPhoto="ressources/PhotoDeProfil.png";
+}
 if(isset($_FILES['photo']['name'])){
 	$extension=pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
 	if($extension=='jpg'){
@@ -64,10 +67,7 @@ if(isset($_FILES['photo']['name'])){
 		$erreur = "extension non permise";
 	}
 }
-else{
 
-	echo  json_encode($_POST);
-}
 if(!empty($_POST['Poids'])){
 	$Poids=$_POST['Poids'];
 	$req=modificationInformationUtilisateur($db, $Poids, 'Poids', $idUser);
@@ -120,7 +120,7 @@ if(!empty($_POST['listeSexe'])){
 }
 if(!empty($_POST['Taille'])){
 	$Taille=$_POST['Taille'];
-	echo $Taille;
+	
 	$req=modificationInformationUtilisateur($db, $Taille, 'Taille', $idUser);
 	if($resultat!=""){
 		$resultat .="-Votre taille a bien été mise à jour. /n";
@@ -128,7 +128,7 @@ if(!empty($_POST['Taille'])){
 }
 if(!empty($_POST['DateDeNaissance'])){
 	$DateDeNaissance=$_POST['DateDeNaissance'];
-	echo $DateDeNaissance;
+	
 	$req=modificationInformationUtilisateur($db, $DateDeNaissance, 'DateDeNaissance', $idUser);
 	if($resultat!=""){
 		$resultat .="-Votre date de naissance a bien été mise à jour.";

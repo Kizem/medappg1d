@@ -22,7 +22,7 @@
                 <tbody>
                 	<tr>
                         <td colspan="2" class=texteAuCentre>
-                            <img src="ressources/PhotoDeProfil.png" alt="Photo de profil">
+                            <img src= <?php echo $cheminPhoto ?> alt="Photo de profil">
                         </td>
                     </tr>
                     <tr>
