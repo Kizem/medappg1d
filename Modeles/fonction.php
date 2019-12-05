@@ -53,20 +53,3 @@ function rechercheUtilisateur($db, $keyword){
 	$req->execute();
 	return $req;
 }
-
-// fonction page admin
-function maj_session($db, $id){
-
-	$req = $db->prepare("SELECT * FROM utilisateur WHERE id=?");
-	$req -> execute(array($id));
-
-	$info_utilisateur = $req->fetch();
-	$_SESSION['idUser'] = $info_utilisateur['idUser'];
-	$_SESSION['Type'] = $info_utilisateur['Type'];
-	$_SESSION['login'] = $info_utilisateur['login'];
-	$_SESSION['Nom'] = $info_utilisateur['Nom'];
-	$_SESSION['Prenom'] = $info_utilisateur['Prenom'];
-	$_SESSION['Mail'] = $info_utilisateur['Mail'];
-
-}
-?>
