@@ -69,14 +69,6 @@
 					</ul>
 				</li>
 
-				<li class="deroulant_autre">
-					<a href="#ancre_contact">Nous contacter &ensp;</a>
-				</li>
-
-				<li class="deroulant_autre">
-					<a href="#ancre_propos">A propos &ensp;</a>
-				</li>
-
 			</ul>
 		</nav>
 
