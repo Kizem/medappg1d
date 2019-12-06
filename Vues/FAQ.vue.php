@@ -14,11 +14,19 @@
 	<body>
 
 		<section class="moteur_recherche">
-			<div class="edit">
-				<form method="post" action="edit_FAQ.php">
-					<input type="submit" value="Modifier" class="bouton_modifier">
-				</form>
-			</div>
+
+			<!-- seul l'administrateur peut voir le bouton de modification -->
+
+            <?php if(isset($_SESSION) and $_SESSION['Type']=='Administrateur') {?>
+
+				<div class="edit">
+					<form method="post" action="edit_FAQ.php">
+						<input type="submit" value="Edit" class="bouton_modifier">
+					</form>
+				</div>
+			<?php } ?>
+
+
 			<div class="recherche">
 				<form method="post" action="resultat_recherche.php">
    					<input type="text" name="keywords" class="champ_saisie">

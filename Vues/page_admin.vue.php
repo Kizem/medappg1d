@@ -43,6 +43,18 @@
         <div class="catégorie">
           <p class="titre_catég"> Capteurs </p>
 
+            <?php while($c = $capteurs->fetch()){ ?>
+
+              <p class="membre"><?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
+              / Seuil :  <?= $c['seuil'] ?></p>          
+
+          <ul class="Actions">
+            <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>">Supprimer</a> </li>
+            <li class="Modif_cap"><a href="page_admin.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
+          </ul>
+        <?php } ?>
+
+          <a class="Add_cap" href="add_capteur.php">Ajouter</a>
 
         </div>
         <!-- ******************** -->

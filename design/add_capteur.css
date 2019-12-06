@@ -1,0 +1,105 @@
+body{
+  margin: 0;
+}
+
+.titre_formulaire{
+  font-family : BEBAS__;
+  margin: auto;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*Element de page*/
+.art{
+  margin: auto;
+  max-width:500px;
+  width:100%;
+  
+  
+}
+.input-label{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+
+}
+.boxtotale{
+    background-color:#eee;
+    border:3px solid #e6e6e6;
+    border-radius:1px;margin:0 0 10px;
+    padding:50px;
+    margin: 12;
+    border-radius:10px;
+
+}
+
+
+.titrePage{
+  display:flex;
+  flex-direction:column
+  margin:auto;
+}
+.entreeDeTexte{
+font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+font-size:16px;
+display:inline-block;
+color:#222427;
+border:2px solid #d9d9d9;
+border-color:#3090E3;
+border-radius:5px;
+background:#fff
+margin:10px;
+width: 250px;
+}
+
+
+
+.entreesInformations{
+  display:flex;
+  flex-direction:column
+}
+
+.conteneurChamp{
+  display:flex;
+  flex-direction:row;
+  margin: 12px auto;
+
+}
+
+.boutonValider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #F6F1F0;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+  color:green;
+}
+
+.erreur{
+  color: #CD1F01;
+}
+
+form{
+  margin: 30px 30% 42px 30%;
+}
+.champTexte{
+  margin:0px;
+
+}
+
+.boutonValider:hover{
+  background: #66B14B;
+  color:#eee;
+}
+.boutonValider:active{
+  background: #66B14B;
+  border-color: #F6F1F0;
+  color:#eee;
+}
+
+
+

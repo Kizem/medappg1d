@@ -6,6 +6,13 @@ function insertUsers($db, $nom , $prenom, $mail, $mdp, $type, $pseudo){
 	return $req;
 }
 
+function insertCapteur($db, $type, $val_init, $seuil){
+	$req = $db->prepare("insert into capteur (Type,Valeur,seuil) values ('$type','$val_init','$seuil')");
+	$req->execute();
+	
+	return $req;
+}
+
 function mailDisponible($db, $mail){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE Mail='$mail'");
 	$req->execute();
