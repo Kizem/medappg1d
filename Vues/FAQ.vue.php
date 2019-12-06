@@ -17,22 +17,24 @@
 
 			<!-- seul l'administrateur peut voir le bouton de modification -->
 
-            <?php if(isset($_SESSION) and $_SESSION['Type']=='Administrateur') {?>
+            <?php if($_SESSION['Type']=='Administrateur') {?>
 
 				<div class="edit">
 					<form method="post" action="edit_FAQ.php">
 						<input type="submit" value="Edit" class="bouton_modifier">
 					</form>
 				</div>
-			<?php } ?>
-
-
-			<div class="recherche">
+							<div class="recherche">
 				<form method="post" action="resultat_recherche.php">
    					<input type="text" name="keywords" class="champ_saisie">
     				<input type="submit" value="Rechercher" class="bouton_recherche">
 				</form>
 			</div>
+			<?php } ?>
+
+
+
+
 		</section>
 
 		<h3>Foire aux questions</h3>
