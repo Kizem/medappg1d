@@ -26,24 +26,31 @@
             <tbody>
                 <tr>
                     <td>Fréquence cardiaque</td>
-                    <td><?php echo $donnees;?></td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
+                    <td>75</td>
+                    <td>65</td>
+                    <td>72</td>
+                    <td>90</td>
                 </tr>
                 <tr>
                     <td>Température du corps</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
+                    <td>36.8</td>
+                    <td>36.3</td>
+                    <td>37</td>
+                    <td>37.5</td>
+                </tr>
+                <tr>
+                    <td>Mémoire visuelle</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>10</td>
                 </tr>
                 <tr>
                     <td>Perception auditive</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
-                    <td>Valeurs</td>
+                    <td>8.5</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>10</td>
                 </tr>
             </tbody>    
         </table>    

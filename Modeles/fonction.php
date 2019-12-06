@@ -5,14 +5,12 @@ function insertUsers($db, $nom , $prenom, $mail, $mdp, $type, $pseudo){
 	
 	return $req;
 }
-
 function insertCapteur($db, $type, $val_init, $seuil){
 	$req = $db->prepare("insert into capteur (Type,Valeur,seuil) values ('$type','$val_init','$seuil')");
 	$req->execute();
 	
 	return $req;
 }
-
 function mailDisponible($db, $mail){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE Mail='$mail'");
 	$req->execute();
@@ -34,6 +32,45 @@ function pseudoDisponible($db, $pseudo){
 		return FALSE;
 	}
 	
+}
+function tableauTest($db) {
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
+	$req->execute();
+	echo "<table> 
+			<thead> 
+				<tr>
+					<th> </th>
+					<th>Dernière valeur</th>
+					<th>Valeur minimale</th>
+					<th>Valeur moyenne</th>
+					<th>Valeur maximale</th></tr>
+			</thead>";
+
+    while($row = $request->fetch()) {
+		echo "<tbody>
+			<tr>
+				<td>Fréquence cardiaque</td>
+				<td>" . $row['name'] . "</td>
+				<td>" . $row['date'] . "</td>
+				<td>" . $row['result'] . "</td>
+			</tr>";
+		echo "
+			<tr>
+				<td>Température du corps</td>
+				<td>" . $row['name'] . "</td>
+				<td>" . $row['date'] . "</td>
+				<td>" . $row['result'] . "</td>
+			</tr>";
+		echo "
+			<tr>
+				<td>Perception auditive</td>
+				<td>" . $row['name'] . "</td>
+				<td>" . $row['date'] . "</td>
+				<td>" . $row['result'] . "</td>
+			</tr>";		
+
+    }
+    echo "</tbody> </table>";
 }
 function detectionCode($db, $code){
 	$req = $db->prepare("SELECT * FROM codeInscription WHERE id='$code'");
@@ -60,7 +97,6 @@ function rechercheUtilisateur($db, $keyword){
 	$req->execute();
 	return $req;
 }
-
 function modificationInformationUtilisateur($db, $nouvelleInfo, $info, $id){
 	$req = $db->prepare("UPDATE `utilisateur` SET $info='$nouvelleInfo' WHERE idUser='$id'");
 	$req->execute();
