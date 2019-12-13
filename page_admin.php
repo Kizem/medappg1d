@@ -7,8 +7,6 @@ inclure la page administrateur
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
 
-//maj_session($db,$_SESSION['idUser']);
-
 //Si pas de connexion, ou pas administrateur
 if(!isset($_SESSION) OR $_SESSION['Type'] != 'Administrateur'){
 	exit();
@@ -27,11 +25,8 @@ if(isset($_GET['delete_cap']) AND !empty($_GET['delete_cap'])){
 	$req = $db->prepare('DELETE FROM capteur WHERE idCapteur = ?');
 	$req -> execute(array($_GET['delete_cap']));
 
-
 }
 
-
-//$idAdminCo = $_SESSION['idUser'];
 
 $utilisateurs = $db->query('SELECT * FROM utilisateur ORDER BY idUser DESC'); //permet de classer les users par ordre d'arrivée (les derniers en tête)
 

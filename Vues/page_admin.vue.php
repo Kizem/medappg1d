@@ -25,13 +25,16 @@
             
             <?php while($u = $utilisateurs->fetch()){ ?>
 
-              <p class="membre"><?= $u['idUser'] ?> : <?=$u['login'] ?>
-              - <?= $u['Mail'] ?></p>
-              <ul class="Actions">
-                <li class="Suppr"><a href="page_admin.php?delete=<?= $u['idUser']?>">Supprimer</a></li>
-                <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
-                <li class="Ban"><a href="page_admin.php?ban=<?= $u['idUser']?>">Bannir</a> </li>
-              </ul>
+              <!-- On affiche tous les utilisateurs sauf celui qui est connecté -->
+
+              <?php if($u['login']!=$_SESSION['login']){ ?>
+                <p class="membre"><?= $u['idUser'] ?> : <?=$u['login'] ?>
+                - <?= $u['Mail'] ?></p>
+                <ul class="Actions">
+                  <li class="Suppr"><a href="page_admin.php?delete=<?= $u['idUser']?>">Supprimer</a></li>
+                  <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
+                </ul>
+              <?php } else{} ?>
             <?php } ?>
         </div>
 
@@ -50,7 +53,7 @@
 
           <ul class="Actions">
             <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>">Supprimer</a> </li>
-            <li class="Modif_cap"><a href="page_admin.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
+            <li class="Modif_cap"><a href="page_capteur.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
           </ul>
         <?php } ?>
 

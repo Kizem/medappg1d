@@ -1,0 +1,18 @@
+body {
+	margin:0;
+}
+
+.bannière{
+	box-shadow: 5px 5px 5px black;
+}
+
+.affichage_top{
+	display:flex;
+	flex-direction:row;
+	border: 1px black inset;
+}
+
+.img_illu_cap{
+	width: 300px;
+	height:auto;
+}
