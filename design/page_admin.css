@@ -214,3 +214,38 @@ body{
 }
 
 
+/*-----Moteur de recherche & Modifier-----*/
+
+.titre_search {
+  font-family: Roboto-Black;
+  font-size:18px;
+  text-align: center;
+  color: #28292A;
+}
+
+.recherche{
+  margin-right: 10px;
+}
+
+.champ_saisie{
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: black;
+}
+
+.bouton_recherche{
+  border-radius: 10px;
+  font-weight: bold;
+  font-size:15px;
+  color: white;
+  background: #28292A;
+
+    transition: all .2s; /* on vient agir sur toutes les transitions du hover/focus */  
+
+}
+
+.bouton_recherche:hover{
+  background: white;
+  color: #28292A;
+}
+

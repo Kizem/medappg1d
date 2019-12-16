@@ -34,11 +34,11 @@ nav
     box-shadow:2px 2px 5px #aaa;
     position: fixed;
 }
-.boxBoutonEdit{
+/*.boxBoutonEdit{
   display:flex;
   flex-direction:column
   margin:auto;
-}
+}*/
 .titrePage
 {
   display:flex;
@@ -122,7 +122,7 @@ p{
   font:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
 }
 
-
+/*
 .edit {
   background:#fafafa;
   box-shadow:2px 2px 8px #aaa;
@@ -137,7 +137,7 @@ p{
   border-color: #555;
   background:#C63535;
   box-shadow:3px 3px 12px #C63535;
-}
+}*/
 
 
 

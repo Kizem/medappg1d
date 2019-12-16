@@ -12,8 +12,8 @@ if(isset($_POST['keywords']) && !empty($_POST['keywords'])) {
 	include('Vues/resultat_recherche.vue.php');
 }
 
-elseif (isset($_POST['keywords']) && empty($_POST['keywords'])) {
-	include('Vues/FAQ.vue.php');
+else if (isset($_POST['keywords']) && empty($_POST['keywords'])) {
+	header('Location: page_admin.php');
 }
 
 ?>

@@ -26,6 +26,7 @@
                 <div class="zoneArticle">
                         <h2 id="Debut ML">Mentions Légales</h2>
                         <textarea name="ML" rows="50" cols="70"  placeholder="Vos mentions légales..." required></textarea>
+                        
                         <h2 id="Debut CGU">Conditions generales d'utilisation</h2>   
                         <textarea name="CGU" rows="50" cols="70"  placeholder="Vos CGU..." required></textarea>
                 </div>

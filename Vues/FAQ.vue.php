@@ -24,12 +24,6 @@
 						<input type="submit" value="Edit" class="bouton_modifier">
 					</form>
 				</div>
-							<div class="recherche">
-				<form method="post" action="resultat_recherche.php">
-   					<input type="text" name="keywords" class="champ_saisie">
-    				<input type="submit" value="Rechercher" class="bouton_recherche">
-				</form>
-			</div>
 			<?php } ?>
 
 

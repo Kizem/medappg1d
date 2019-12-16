@@ -70,12 +70,26 @@
 
           <ul class="Gestion_site">
             <li><a class="gestion_FAQ" href="FAQ.php"> Gérer la FAQ </a></li>
-            <li><a class="gestion_CGU" href="CGUMentionLegales.php">Modifier les CGU </a></li>
+            <li><a class="gestion_CGU" href="CGUMentionLegalesEdition.php">Modifier les CGU </a></li>
           </ul>
           <center>
             <a class="gestion_msg" href="Messagerie.php">Gérer la messagerie interne</a>
           </center>
-          
+
+
+
+          <center>
+
+            <p class="titre_search"> Moteur de recherche </p>
+            <section class="moteur_recherche">
+              <div class="recherche">
+                <form method="post" action="resultat_recherche.php">
+                    <input type="text" name="keywords" class="champ_saisie"><br/>
+                    <input type="submit" value="Rechercher" class="bouton_recherche">
+                </form>
+              </div>
+            </section>
+          </center>
 
         </div>
 
