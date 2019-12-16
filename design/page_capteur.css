@@ -3,16 +3,39 @@ body {
 }
 
 .bannière{
-	box-shadow: 5px 5px 5px black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+	margin-bottom: 5%;
 }
 
 .affichage_top{
 	display:flex;
 	flex-direction:row;
+	justify-content: center;
+}
+
+.infos_cap{
+
 	border: 1px black inset;
+	margin-left: 2%;
+	padding-left:1%;
+	padding-right:1%;
+	font: bold 15px Roboto-Light;
+
+
 }
 
 .img_illu_cap{
-	width: 300px;
+	width: 500px;
 	height:auto;
+	border-radius : 10%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+    
+
+    
 }

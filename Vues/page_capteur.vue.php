@@ -39,11 +39,12 @@
 
         <div class="infos_cap">
 
-          <p> ID du capteur : <?= $icap['idCapteur'] ?> </p>
-          <p> Type du capteur : <?= $icap['Type'] ?> </p>
+          <p> Type de capteur : <?= $icap['Type'] ?> </p>
+          <p> ID du capteur : <?= $icap['idCapteur'] ?> </p>          
           <p> Seuil du capteur : <?= $icap['seuil'] ?> </p>
 
         </div>
+
 
       </div>
 
