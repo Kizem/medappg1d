@@ -13,21 +13,18 @@
 
 	<body>
 
-		<section class="moteur_recherche">
+		<section class="zoneAdmin">
 
 			<!-- seul l'administrateur peut voir le bouton de modification -->
 
             <?php if($_SESSION['Type']=='Administrateur') {?>
 
 				<div class="edit">
-					<form method="post" action="edit_FAQ.php">
+					<form method="post" action="Vues/Edition_FAQ.vue.php">
 						<input type="submit" value="Edit" class="bouton_modifier">
 					</form>
 				</div>
 			<?php } ?>
-
-
-
 
 		</section>
 
@@ -75,6 +72,9 @@
 
 			</ul>
 		</nav>
+
+
+		<?php ?>
 
 		<div class="theme">
 

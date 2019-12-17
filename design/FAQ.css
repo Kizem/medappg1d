@@ -134,7 +134,7 @@ nav > ul li:hover .sous{
 
 /*-----Moteur de recherche & Modifier-----*/
 
-.recherche{
+/*.recherche{
   text-align: right;
   margin-right: 10px;
 }
@@ -150,7 +150,7 @@ nav > ul li:hover .sous{
   font-weight: bold;
   color: white;
   background: #28292A;
-}
+}*/
 
 .edit{
   margin-left: 10px;
