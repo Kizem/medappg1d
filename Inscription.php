@@ -18,7 +18,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 	$codeInscription = htmlspecialchars($_POST['codeInscription']);
 
 	if(!empty($_POST['CGUaccepted'])){
-		if(pseudoDisponible($db, $login)){
+		if(pseudoDisponible($db, $login)==TRUE){
 			if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
 				if(mailDisponible($db, $mail)){
 					$req= detectionCode($db, $codeInscription);

@@ -21,6 +21,17 @@ function mailDisponible($db, $mail){
 		return FALSE;
 	}
 }
+function capteurDisponible($db, $Capteur){
+	$req = $db->prepare("SELECT * FROM capteur WHERE Type='$Capteur'");
+	$req->execute();
+	if($req->rowCount() == 0){
+		return FALSE;
+	}
+	else{
+		$donnee=$req->fetch();
+		return $donnee["idCapteur"];
+	}
+}
 
 function pseudoDisponible($db, $pseudo){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
@@ -29,7 +40,8 @@ function pseudoDisponible($db, $pseudo){
 		return TRUE;
 	}
 	else{
-		return FALSE;
+		$donnee=$req->fetch();
+		return $donnee["idUser"];
 	}
 	
 }
