@@ -30,7 +30,7 @@ if(!empty($_POST)){
 			include_once('Vues/Creation_test.vue.php');
 			}
 		else{
-			//inserer 
+			//inserer dans la base de donnee maintenant
 			$erreur="on connait";
 			include_once('Vues/Creation_test.vue.php');
 			}
