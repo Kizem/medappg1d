@@ -16,6 +16,13 @@ if(isset($_SESSION['Type'])){
 		header('Location: Utilisateur.php');
 		
 	}
+	else if($_SESSION['Type']=='Gestionnaire'){
+
+		//include('Utilisateur.php');
+		header('Location: Creation_test.php');
+		//mohammad pour l'instant, pour faire mes tests apres tu pourras mettre la page gestionnaire
+		
+	}
 	else{
 		include('connexion.php');
 	}
