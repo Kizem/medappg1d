@@ -11,14 +11,6 @@
         <form method="post" action="CGUMentionLegalesEdition.php">
             <section class="section">
 
-<!--                 Inutile car la page administrateur redirige directement vers la page de modification 
-                 Ce bouton de modification ne sera visible que par un administrateur 
-                <?php if(isset($_SESSION) and $_SESSION['Type']=='Administrateur') {?>
-                    <div class="boxBoutonEdit">
-                        <input class="edit" type="submit" value="Edit">
-                    </div>
-                <?php } ?>
- -->
                 
                 <div class="titrePage">
                     <div class="titreP">

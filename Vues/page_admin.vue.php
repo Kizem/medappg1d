@@ -69,7 +69,7 @@
           <p class="titre_catég"> Gestion du site </p>
 
           <ul class="Gestion_site">
-            <li><a class="gestion_FAQ" href="FAQ.php"> Gérer la FAQ </a></li>
+            <li><a class="gestion_FAQ" href="Edition_FAQ.php"> Gérer la FAQ </a></li>
             <li><a class="gestion_CGU" href="CGUMentionLegalesEdition.php">Modifier les CGU </a></li>
           </ul>
           <center>
