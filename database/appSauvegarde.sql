@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 06 jan. 2020 à 10:50
--- Version du serveur :  5.7.26
--- Version de PHP :  7.2.18
+-- Généré le :  mar. 03 déc. 2019 à 14:55
+-- Version du serveur :  5.7.21
+-- Version de PHP :  5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,22 +43,6 @@ CREATE TABLE IF NOT EXISTS `boitier` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `boitier_test`
---
-
-DROP TABLE IF EXISTS `boitier_test`;
-CREATE TABLE IF NOT EXISTS `boitier_test` (
-  `id_boitier_test` int(11) NOT NULL AUTO_INCREMENT,
-  `idCapteur` int(11) NOT NULL,
-  `idBoitier` int(11) NOT NULL,
-  PRIMARY KEY (`id_boitier_test`),
-  KEY `idCapteur` (`idCapteur`),
-  KEY `idBoitier` (`idBoitier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `capteur`
 --
 
@@ -69,57 +53,7 @@ CREATE TABLE IF NOT EXISTS `capteur` (
   `Valeur` double NOT NULL,
   `seuil` double NOT NULL,
   PRIMARY KEY (`idCapteur`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
---
--- Déchargement des données de la table `capteur`
---
-
-INSERT INTO `capteur` (`idCapteur`, `Type`, `Valeur`, `seuil`) VALUES
-(1, 'Pouls', 1, 85);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `cgu`
---
-
-DROP TABLE IF EXISTS `cgu`;
-CREATE TABLE IF NOT EXISTS `cgu` (
-  `idCGU` int(25) NOT NULL AUTO_INCREMENT,
-  `MentionLegales` mediumtext NOT NULL,
-  `CGU` mediumtext NOT NULL,
-  PRIMARY KEY (`idCGU`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `cgu`
---
-
-INSERT INTO `cgu` (`idCGU`, `MentionLegales`, `CGU`) VALUES
-(1, 'bonjour mounir le fdp mange ma banane', 'et mais toi tes voila la salope');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `codeinscription`
---
-
-DROP TABLE IF EXISTS `codeinscription`;
-CREATE TABLE IF NOT EXISTS `codeinscription` (
-  `id` varchar(25) NOT NULL,
-  `fonction` varchar(25) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `codeinscription`
---
-
-INSERT INTO `codeinscription` (`id`, `fonction`) VALUES
-('azerty', 'Utilisateur'),
-('qsdfgh', 'Gestionnaire'),
-('wxcvbn', 'Administrateur');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
 
@@ -177,7 +111,6 @@ DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `Date` date NOT NULL,
   `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `Code` varchar(10) CHARACTER SET latin1 NOT NULL,
   `Durée` datetime NOT NULL,
   `idUser` int(255) NOT NULL,
   PRIMARY KEY (`Date`),
@@ -199,6 +132,51 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
+/* Mohammad 03/12/19 : table pour les codes d'inscriptions. Surement à modifier*/
+--
+-- Structure de la table `codeInscription`
+--
+
+DROP TABLE IF EXISTS `codeInscription`;
+CREATE TABLE IF NOT EXISTS `codeInscription` (
+  `id` varchar(25) NOT NULL ,
+  `fonction` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `codeInscription` 
+--
+
+INSERT INTO codeInscription (id,fonction) VALUES
+('azerty','Utilisateur'),
+('qsdfgh','Gestionnaire'),
+('wxcvbn','Administrateur');
+
+-- --------------------------------------------------------
+/* Mohammad 03/12/19 : Table pour les cgu et ml*/
+--
+-- Structure de la table `CGU`
+--
+
+DROP TABLE IF EXISTS `CGU`;
+CREATE TABLE IF NOT EXISTS `CGU`(
+  `idCGU` INT(25) NOT NULL AUTO_INCREMENT,
+  `MentionLegales` TEXT(100000) NOT NULL,
+  `CGU` TEXT(100000) NOT NULL,
+  PRIMARY KEY (`idCGU`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/* Mohammad 03/12/19 : dumping data pour cgu*/
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO CGU (idCGU, MentionLegales, CGU) VALUES 
+('1', 'Vos Mentions legales...', 'Vos CGU...');
+
+
+-- --------------------------------------------------------
 
 --
 -- Structure de la table `utilisateur`
@@ -214,28 +192,22 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Prenom` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
   `Mail` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
   `Sexe` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
-  `Taille` int(32) DEFAULT NULL,
+  `Taille` int(32) DEFAULT NULL,	
   `Poids` int(32) DEFAULT NULL,
-  `DateDeNaissance` date DEFAULT NULL,
+  `DateDeNaissance`DATE DEFAULT NULL,
   `Photos` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
   `codeInscription` varchar(255) COLLATE latin1_general_cs DEFAULT NULL,
   PRIMARY KEY (`idUser`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
+/* Mohammad 03/12/19 : dumping data pour utilisateur*/
 --
--- Déchargement des données de la table `utilisateur`
+-- Dumping data for table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`idUser`, `Type`, `login`, `Mdp`, `Nom`, `Prenom`, `Mail`, `Sexe`, `Taille`, `Poids`, `DateDeNaissance`, `Photos`, `codeInscription`) VALUES
-(6, 'Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad', 'mohammad.amla.pro@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(7, 'Administrateur', 'NinjaCopieur', '$2y$10$ZDrcATi60cVsoos7YOyvGuAAE4/vQXNMOdV3c/zplSLdgr5fTrFta', 'HATAKE', 'Kakashi', 'hatake.kakashi@konoha.com', 'Homme', 179, 75, '1998-10-31', 'Photos/0ec01c1855b12f5119b4f53787a71f8f.jpg', NULL),
-(8, 'Utilisateur', 'moam61050', '$2y$10$t9Ub.NVSCU8jHExaNk2htO3k82MK2IWceskDMWo7DiRLVkZi/YepS', 'Aml', 'mo', 'mo@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(9, 'Administrateur', 'guigol', '$2y$10$Hdsm.tH/.MFwl43TOcrjX.HfEShdrM.exKSL0GBWB/jwBP7qFw13e', 'soukker', 'rayan', 'rayan.soukker@gmail.com', 'Autre', 100, 900, '1998-10-31', 'Photos/0041d51056896afcdf828d22d1936d2a.jpg', NULL),
-(10, 'Administrateur', 'momo', '$2y$10$bV8thEXlo58C.Gv77YUZu.jvzqciMi1CDzjD0uMGlD2GTLPKS1doS', 'Amla', 'Mohammad', 'gege@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(11, 'Utilisateur', 'gogole', '$2y$10$c2.yVZyLKRLlqCU6YpWq/uxXSoiUtqgNNxAIvB9RbGvVVujbUgahm', 'gf', 'gf', 'gf@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(12, 'Administrateur', 'admin', '$2y$10$s6C..sIveo4/eiKvt7/Xc.3q/qrzHHf19axr02lyLCNXEN55GA54u', 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(13, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL);
-
+INSERT INTO utilisateur (Type, login, Mdp, Nom, Prenom, Mail) VALUES 
+('Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad','mohammad.amla.pro@gmail.com');
+COMMIT;
 -- --------------------------------------------------------
 
 --
@@ -263,13 +235,6 @@ ALTER TABLE `boitier`
   ADD CONSTRAINT `boitier_ibfk_2` FOREIGN KEY (`Date`) REFERENCES `test` (`Date`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `boitier_test`
---
-ALTER TABLE `boitier_test`
-  ADD CONSTRAINT `boitier_test_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`),
-  ADD CONSTRAINT `boitier_test_ibfk_2` FOREIGN KEY (`idCapteur`) REFERENCES `capteur` (`idCapteur`);
-
---
 -- Contraintes pour la table `messageuser`
 --
 ALTER TABLE `messageuser`
@@ -279,7 +244,7 @@ ALTER TABLE `messageuser`
 -- Contraintes pour la table `test`
 --
 ALTER TABLE `test`
-  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Contraintes pour la table `utilisateur/entité`

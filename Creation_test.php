@@ -12,6 +12,8 @@ $date;
 $heure;
 $Pseudo;
 $Capteur;
+$i = 0;
+$ListesCapteurs = $db->query('SELECT * FROM capteur ORDER BY idCapteur DESC');
 if(!empty($_POST)){
 	$date=htmlspecialchars($_POST['Date']);
 	$heure=htmlspecialchars($_POST['heure']);
