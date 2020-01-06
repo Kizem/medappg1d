@@ -125,3 +125,6 @@ function genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmn
  }
  return $chaine;
 }
+
+
+?>
