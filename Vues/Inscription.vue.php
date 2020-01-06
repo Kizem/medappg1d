@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="design/Inscription.css"> 
-        <title>Page de connexion</title>
+        <title>Inscription</title>
     </head>
     <body>
         <!-- ENTETE -->
