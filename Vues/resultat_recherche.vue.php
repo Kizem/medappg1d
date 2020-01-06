@@ -41,16 +41,11 @@
   				else{
   					echo "Aucun utilisateurs trouvés.";
   				}
-  				
-
   				?>
   				</tbody>
   				
 			</table>
 		</div>
-
-
-
 		<footer><?php include_once('includes/footer.php'); ?></footer>
 	</body>
 </html>

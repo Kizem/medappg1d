@@ -20,7 +20,7 @@ if(!empty($_POST)){
 	$erreur='cetsbon';
 	$idCapteur=capteurDisponible($db, $Capteur);
 	$idUser=pseudoDisponible($db, $Pseudo);
-	if($idUser==TRUE){
+	if($idUser==FALSE){
 		$erreur="Utilisateur inconnu";
 			include_once('Vues/Creation_test.vue.php');
 	}
@@ -30,8 +30,11 @@ if(!empty($_POST)){
 			include_once('Vues/Creation_test.vue.php');
 			}
 		else{
-			//inserer dans la base de donnee maintenant
+			
 			$erreur="on connait";
+			$code = genererChaineAleatoire(10)
+			echo $code;
+			//inserer dans la base de donnee maintenant
 			include_once('Vues/Creation_test.vue.php');
 			}
 		}

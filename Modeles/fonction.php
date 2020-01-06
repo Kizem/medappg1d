@@ -37,7 +37,7 @@ function pseudoDisponible($db, $pseudo){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
 	$req->execute();
 	if($req->rowCount() == 0){
-		return TRUE;
+		return FALSE;
 	}
 	else{
 		$donnee=$req->fetch();
@@ -114,4 +114,14 @@ function modificationInformationUtilisateur($db, $nouvelleInfo, $info, $id){
 	$req->execute();
 	return $req;
 	
+}
+
+function genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+{
+ $chaine = '';
+ $max = mb_strlen($listeCar, '8bit') - 1;
+ for ($i = 0; $i < $longueur; ++$i) {
+ $chaine .= $listeCar[random_int(0, $max)];
+ }
+ return $chaine;
 }
