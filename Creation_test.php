@@ -32,7 +32,7 @@ if(!empty($_POST)){
 		else{
 			
 			$erreur="on connait";
-			$code = genererChaineAleatoire(10)
+			$code = genererChaineAleatoire(10);
 			echo $code;
 			//inserer dans la base de donnee maintenant
 			include_once('Vues/Creation_test.vue.php');
