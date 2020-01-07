@@ -70,6 +70,7 @@ CREATE TABLE IF NOT EXISTS `capteur` (
   `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Valeur` double NOT NULL,
   `seuil` double NOT NULL,
+  `Date` Date DEFAULT NULL,
   PRIMARY KEY (`idCapteur`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
