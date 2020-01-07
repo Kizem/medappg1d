@@ -98,16 +98,18 @@
         <!-- *************** -->
 
       </div>
-
+      <center>
       <div class="gest_entites">
 
         <p class="titre_catég"> Gestion des entités de l'application </p>
 
-          <ul class="Gestion_entite">
-            <li><a class="add_boitier" href=""></a></li>
+        <ul class="actions_entite">
+          <li><a class="add_boitier" href="new_boitier.php">Ajouter un nouveau boîtier</a></li>
           
-          </ul>
+        </ul>
+
       </div>
+    </center>
 
 
 
