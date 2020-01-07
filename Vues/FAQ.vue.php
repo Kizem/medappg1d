@@ -17,14 +17,16 @@
 
 			<!-- seul l'administrateur peut voir le bouton de modification -->
 
-            <?php if($_SESSION['Type']=='Administrateur') {?>
+            <?php 
+            	if (!isset($_SESSION)){
+	            	if($_SESSION['Type']=='Administrateur') {?>
 
-				<div class="edit">
-					<form method="post" action="Vues/Edition_FAQ.vue.php">
-						<input type="submit" value="Edit" class="bouton_modifier">
-					</form>
-				</div>
-			<?php } ?>
+					<div class="edit">
+						<form method="post" action="Vues/Edition_FAQ.vue.php">
+							<input type="submit" value="Edit" class="bouton_modifier">
+						</form>
+					</div>
+			<?php } } ?>
 
 		</section>
 
