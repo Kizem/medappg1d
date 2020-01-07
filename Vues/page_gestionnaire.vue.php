@@ -79,6 +79,13 @@
           <a class="création_test" href="affichageTest.php">Tous les tests</a>
             
         </div>
+        <div class="catégorie">
+
+          <p class="titre_catég"> Inscription </p>
+          <p class="intro"> Vous souhaitez ajouter un code d'inscriptions pour un de vos clients ?</p>
+          <a class="création_test" href="affichageTest.php">Gérer les codes d'inscriptions</a>
+            
+        </div>
 
         <!-- *********************************** -->
 
