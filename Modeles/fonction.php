@@ -69,7 +69,7 @@ function tableauTestTemperature($db){
 	while($row = $request->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
+				<td>Fréquence cardiaque</td>;
 				<td>" Dernière valeur "</td>";
 			}
 		
