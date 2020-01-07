@@ -230,6 +230,10 @@ function genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmn
  }
  return $chaine;
 }
-
+function getTest($db){
+	$req = $db->prepare("SELECT * FROM `utilisateur` t1 INNER JOIN `test` t2 ON t1/.idUser = t2/.idUser");
+	$req->execute();
+	return $req;
+}
 
 ?>

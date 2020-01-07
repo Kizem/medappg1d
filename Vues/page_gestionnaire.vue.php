@@ -72,6 +72,14 @@
             
         </div>
 
+        <div class="catégorie">
+
+          <p class="titre_catég"> Test </p>
+          <p class="intro"> Vous souhaitez voir les tests programmé ?</p>
+          <a class="création_test" href="affichageTest.php">Tous les tests</a>
+            
+        </div>
+
         <!-- *********************************** -->
 
 
