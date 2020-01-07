@@ -97,16 +97,19 @@ INSERT INTO `cgu` (`idCGU`, `MentionLegales`, `CGU`) VALUES
 
 DROP TABLE IF EXISTS `codeinscription`;
 CREATE TABLE IF NOT EXISTS `codeinscription` (
-  `id` varchar(25) NOT NULL,
+  `idCodeInscription` int(11) NOT NULL AUTO_INCREMENT,
   `fonction` varchar(25) NOT NULL,
-  PRIMARY KEY (`id`)
+  `code` varchar(25) NOT NULL,
+  `idEntité` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idCodeInscription`),
+  KEY `idEntité` (`idEntité`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `codeinscription`
 --
 
-INSERT INTO `codeinscription` (`id`, `fonction`) VALUES
+INSERT INTO `codeinscription` (`code`, `fonction`) VALUES
 ('azerty', 'Utilisateur'),
 ('qsdfgh', 'Gestionnaire'),
 ('wxcvbn', 'Administrateur');
@@ -245,6 +248,12 @@ ALTER TABLE `capteur`
 --
 ALTER TABLE `entit`
   ADD CONSTRAINT `entit_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE SET NULL;
+
+--
+-- Contraintes pour la table `codeinscription`
+--
+ALTER TABLE `codeinscription`
+  ADD CONSTRAINT `codeinscription_ibfk_1` FOREIGN KEY (`idEntité`) REFERENCES `entit` (`idEntité`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `messageuser`
