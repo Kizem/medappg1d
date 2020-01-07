@@ -236,4 +236,33 @@ function getTest($db){
 	return $req;
 }
 
+/* ------ Création d'entité/boitier */
+
+function entiteDisponible($db, $nom){
+	$req = $db->prepare("SELECT * FROM entite WHERE Nom='$nom'");
+	$req->execute();
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		$donnee=$req->fetch();
+		return $donnee["idEntité"];
+	}
+	
+}
+
+/* ------ A MODIFIER */
+
+function gestionnaireDisponible($db, $pseudo){
+
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
+	$req->execute();
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		return FALSE;
+	}
+
+}
 ?>
