@@ -267,7 +267,7 @@ ALTER TABLE `test`
 -- Contraintes pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE CASCADE;
+  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE SET NULL;
 
 --
 -- Contraintes pour la table `utilisateur/entité`

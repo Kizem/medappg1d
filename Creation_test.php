@@ -37,10 +37,8 @@ else{
 				include_once('Vues/Creation_test.vue.php');
 				}
 			else{
-				
-				$erreur="on connait";
+				$erreur="session de test créée";
 				$code = genererChaineAleatoire(10);
-				echo $code;
 				//inserer dans la base de donnee maintenant
 				insertTest($db, $date,$code,$idUser, $idBoitier);
 				include_once('Vues/Creation_test.vue.php');
