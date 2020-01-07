@@ -69,7 +69,7 @@ function tableauTestTemperature($db){
 	while($row = $req->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
+				<td>Température du corps</td>
 				<td>Dernière valeur</td>";
 			}
 		
@@ -111,7 +111,7 @@ function tableauTestPerception($db){
     while($row = $req->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
+				<td>Perception auditive</td>
 				<td>Dernière valeur</td>";
 			}
 
