@@ -39,6 +39,28 @@
 
         <!-- *************** -->
 
+        <!-- GESTION DES CAPTEURS LIES AU GESTIONNAIRE -->
+
+        <div class="catégorie">
+          <p class="titre_catég"> Capteurs </p>
+
+            <?php while($c = $capteurs->fetch()){ ?>
+
+              <p class="capteur"><?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
+              / Seuil :  <?= $c['seuil'] ?></p>          
+
+          <ul class="Actions">
+            
+            <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>" onclick="return confirm('Etes-vous sûr de vouloir effectuer la suppresion ?');">Supprimer</a></li>
+          
+            <li class="Modif_cap"><a href="page_capteur.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
+          </ul>
+          <?php } ?>
+
+          <a class="Add_cap" href="add_capteur.php">Ajouter</a>
+
+        </div>        
+
         <!-- GESTION DES UTILISATEURS DU SITE WEB -->
 
         <div class="catégorie">
