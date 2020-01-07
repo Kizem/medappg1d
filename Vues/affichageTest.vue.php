@@ -17,7 +17,10 @@
 				<tr>
     				<th>Nom</th>
     				<th>Prénom</th>
-    				<th>Mail</th>
+    				<th>Date</th>
+            <th>Type de test</th>
+            <th>Boitier</th>
+            <th>Code</th>
   				</tr>
   				</thead>
   				
@@ -33,9 +36,18 @@
   						echo $fonction[$i]['Prenom'], ' ';
   						echo "</td>";
   						echo "<td>";
-  						echo $fonction[$i]['Mail'], ' ',"<br>";
+  						echo $fonction[$i]['Date'], ' ';
   						echo "</td>";
-  						echo "</tr>";
+              echo "<td>";
+              echo $fonction[$i]['Type'], ' ';
+              echo "</td>";
+              echo "<td>";
+              echo $fonction[$i]['idBoitier'], ' ';
+              echo "</td>";
+              echo "<td>";
+              echo $fonction[$i]['Code'], ' ',"<br>";
+              echo "</td>";
+              echo "</tr>";
   					}
   				}
   				else{

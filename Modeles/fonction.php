@@ -11,8 +11,8 @@ function insertCapteur($db, $type, $val_init, $seuil){
 	
 	return $req;
 }
-function insertTest($db, $Date, $Code, $idUser, $idBoitier){
-	$req = $db->prepare("insert into test (Date,Code,idUser, idBoitier, Durée) values ('$Date','$Code','$idUser','$idBoitier','$Date')");
+function insertTest($db, $Date, $Code, $idUser, $idBoitier,$Type){
+	$req = $db->prepare("insert into test (Date,Code,idUser, idBoitier, Durée, Type) values ('$Date','$Code','$idUser','$idBoitier','$Date', '$Type')");
 	$req->execute();
 	
 	return $req;
@@ -231,7 +231,7 @@ function genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmn
  return $chaine;
 }
 function getTest($db){
-	$req = $db->prepare("SELECT * FROM `utilisateur` t1 INNER JOIN `test` t2 ON t1/.idUser = t2/.idUser");
+	$req = $db->prepare(addslashes("SELECT * FROM `utilisateur` t1 INNER JOIN `test` t2 ON t1.idUser = t2.idUser ORDER BY  t2.Date DESC"));
 	$req->execute();
 	return $req;
 }

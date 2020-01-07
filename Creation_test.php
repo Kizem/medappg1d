@@ -4,7 +4,7 @@ session_test.php
 
 Page de session test du site. Affichage des differents test et valeurs a rentrer pour effectuer ces tests.
 */
-require("Modeles/fonction.php");
+require_once("Modeles/fonction.php");
 require("includes/AccesBase.php");
 
 $erreur="";
@@ -40,8 +40,9 @@ else{
 				$erreur="session de test créée";
 				$code = genererChaineAleatoire(10);
 				//inserer dans la base de donnee maintenant
-				insertTest($db, $date,$code,$idUser, $idBoitier);
-				include_once('Vues/Creation_test.vue.php');
+				$TableauListeCapteurs = $ListesCapteurs->fetchall();
+				insertTest($db, $date,$code,$idUser, $idBoitier, $TableauListeCapteurs[(int)$_POST['listeDeroulante']]['Type']);
+				include_once('affichageTest.php');
 				}
 			}
 		}
