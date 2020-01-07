@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 06 jan. 2020 à 10:50
+-- Généré le :  mar. 07 jan. 2020 à 14:08
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -21,7 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `app`
 --
-
 CREATE DATABASE IF NOT EXISTS `app` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `app`;
 -- --------------------------------------------------------
@@ -32,9 +31,8 @@ USE `app`;
 
 DROP TABLE IF EXISTS `boitier`;
 CREATE TABLE IF NOT EXISTS `boitier` (
-  `idBoitier` int(11) NOT NULL,
+  `idBoitier` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idBoitier`)
-
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
@@ -44,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `boitier` (
 --
 
 DROP TABLE IF EXISTS `boitier_capteur`;
-CREATE TABLE IF NOT EXISTS `boitier_capteur`(
+CREATE TABLE IF NOT EXISTS `boitier_capteur` (
   `id_boitier_test` int(11) NOT NULL AUTO_INCREMENT,
   `idCapteur` int(11) NOT NULL,
   `idBoitier` int(11) NOT NULL,
@@ -204,20 +202,18 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `DateDeNaissance` date DEFAULT NULL,
   `Photos` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
   `codeInscription` varchar(255) COLLATE latin1_general_cs DEFAULT NULL,
-  PRIMARY KEY (`idUser`)
+  `idBoitier` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idUser`),
+  KEY `idBoitier` (`idBoitier`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`idUser`, `Type`, `login`, `Mdp`, `Nom`, `Prenom`, `Mail`, `Sexe`, `Taille`, `Poids`, `DateDeNaissance`, `Photos`, `codeInscription`) VALUES
-(6, 'Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad', 'mohammad.amla.pro@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(7, 'Administrateur', 'NinjaCopieur', '$2y$10$ZDrcATi60cVsoos7YOyvGuAAE4/vQXNMOdV3c/zplSLdgr5fTrFta', 'HATAKE', 'Kakashi', 'hatake.kakashi@konoha.com', 'Homme', 179, 75, '1998-10-31', 'Photos/0ec01c1855b12f5119b4f53787a71f8f.jpg', NULL),
-(8, 'Utilisateur', 'moam61050', '$2y$10$t9Ub.NVSCU8jHExaNk2htO3k82MK2IWceskDMWo7DiRLVkZi/YepS', 'Aml', 'mo', 'mo@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(10, 'Administrateur', 'momo', '$2y$10$bV8thEXlo58C.Gv77YUZu.jvzqciMi1CDzjD0uMGlD2GTLPKS1doS', 'Amla', 'Mohammad', 'gege@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(11, 'Administrateur', 'admin', '$2y$10$s6C..sIveo4/eiKvt7/Xc.3q/qrzHHf19axr02lyLCNXEN55GA54u', 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(12, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `utilisateur` (`idUser`, `Type`, `login`, `Mdp`, `Nom`, `Prenom`, `Mail`, `Sexe`, `Taille`, `Poids`, `DateDeNaissance`, `Photos`, `codeInscription`, `idBoitier`) VALUES
+(1, 'Administrateur', 'admin', '$2y$10$s6C..sIveo4/eiKvt7/Xc.3q/qrzHHf19axr02lyLCNXEN55GA54u', 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -238,7 +234,6 @@ CREATE TABLE IF NOT EXISTS `utilisateur/entité` (
 -- Contraintes pour les tables déchargées
 --
 
-
 --
 -- Contraintes pour la table `boitier_capteur`
 --
@@ -256,8 +251,15 @@ ALTER TABLE `messageuser`
 -- Contraintes pour la table `test`
 --
 ALTER TABLE `test`
-  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `idBoitier` FOREIGN KEY (`idBoitier` ) REFERENCES `boitier`(`idBoitier` );
+  ADD CONSTRAINT `idBoitier` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`),
+  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`);
+
 --
 -- Contraintes pour la table `utilisateur/entité`
 --
