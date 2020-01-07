@@ -22,7 +22,7 @@ if(!empty($_POST)){
 	$erreur='cetsbon';
 	$idCapteur=capteurDisponible($db, $Capteur);
 	$idUser=pseudoDisponible($db, $Pseudo);
-	if($idUser==FALSE){
+	if(is_bool($idUser) && $idUser==TRUE){
 		$erreur="Utilisateur inconnu";
 			include_once('Vues/Creation_test.vue.php');
 	}

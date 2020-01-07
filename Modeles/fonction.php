@@ -44,7 +44,7 @@ function pseudoDisponible($db, $pseudo){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
 	$req->execute();
 	if($req->rowCount() == 0){
-		return FALSE;
+		return TRUE;
 	}
 	else{
 		$donnee=$req->fetch();
