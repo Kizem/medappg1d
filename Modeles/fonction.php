@@ -70,7 +70,7 @@ function tableauTestTemperature($db){
 		echo "<tbody>
 			<tr>
 				<td>Fréquence cardiaque</td>;
-				<td>" Dernière valeur "</td>";
+				<td> Dernière valeur </td>";
 			}
 		
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Temperature' ");
