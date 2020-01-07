@@ -44,7 +44,7 @@ function pseudoDisponible($db, $pseudo){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE login='$pseudo'");
 	$req->execute();
 	if($req->rowCount() == 0){
-		return FALSE;
+		return TRUE;
 	}
 	else{
 		$donnee=$req->fetch();
@@ -69,8 +69,13 @@ function tableauTestTemperature($db){
 	while($row = $request->fetch()) {
 		echo "<tbody>
 			<tr>
+<<<<<<< HEAD
 				<td>Fréquence cardiaque</td>
 				<td>Dernière valeur</td>";
+=======
+				<td>Fréquence cardiaque</td>;
+				<td> Dernière valeur </td>";
+>>>>>>> master
 			}
 		
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Temperature' ");
@@ -111,8 +116,13 @@ function tableauTestPerception($db){
     while($row = $request->fetch()) {
 		echo "<tbody>
 			<tr>
+<<<<<<< HEAD
 				<td>Fréquence cardiaque</td>
 				<td>Dernière valeur</td>";
+=======
+				<td>Fréquence cardiaque</td>;
+				<td> Dernière valeur </td>";
+>>>>>>> master
 			}
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Perception' ");
@@ -153,8 +163,13 @@ function tableauTestFrequence($db) {
     while($row = $request->fetch()) {
 		echo "<tbody>
 			<tr>
+<<<<<<< HEAD
 				<td>Fréquence cardiaque</td>
 				<td>Dernière valeur</td>";
+=======
+				<td>Fréquence cardiaque</td>;
+				<td> Dernière valeur </td>";
+>>>>>>> master
 			}
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Frequence' ");
