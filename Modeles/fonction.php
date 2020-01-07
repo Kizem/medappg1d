@@ -202,6 +202,13 @@ function ecrireCGU($db, $id,$CGU,$ML){
 	return $req;
 }
 
+function changerNomTheme($db, $theme, $id){
+	$theme=addslashes($theme);
+	$req = $db->prepare("UPDATE 'thèmefaq' SET 'Theme'='$theme' WHERE 'id'='$id'");
+	$req->execute();
+	return $req;
+}
+
 function rechercheUtilisateur($db, $keyword){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE Nom LIKE '%$keyword%' OR Prenom LIKE '%$keyword%' ORDER BY Nom");
 	$req->execute();
