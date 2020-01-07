@@ -54,7 +54,7 @@
                 </tr>
             </tbody>    
         </table>    
-       
+       <?php tableauTestTemperature($db);tableauTestPerception($db);tableauTestFrequence($db) ?>
         <!-- FOOTER -->
         <footer><?php include_once('includes/footer.php');?>
 	</body>
