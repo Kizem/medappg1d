@@ -183,9 +183,16 @@ function tableauTestFrequence($db) {
 	}
 
 function detectionCode($db, $code){
-	$req = $db->prepare("SELECT * FROM codeInscription WHERE id='$code'");
+	$req = $db->prepare("SELECT * FROM codeInscription WHERE code='$code'");
 	$req->execute();
-	return $req;
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		$donnee=$req->fetch();
+		return $donnee;
+	}
+	
 }
 
 function lireCGU($db, $id){
