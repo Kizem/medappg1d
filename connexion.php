@@ -21,6 +21,7 @@
 			$DateDeNaissance=$lesEnreg['DateDeNaissance'];
 			$idUser=$lesEnreg['idUser'];
 			$cheminPhoto=$lesEnreg['Photos'];
+			$idBoitier=$lesEnreg['idBoitier'];
 			print_r($lesEnreg);
 			echo "$sql";
 			
@@ -39,6 +40,7 @@
 				$_SESSION['DateDeNaissance']=$DateDeNaissance;
 				$_SESSION['idUser']=$idUser;
 				$_SESSION['cheminPhoto']=$cheminPhoto;
+				$_SESSION['idBoitier']=$idBoitier;
 				header ('Location: index.php');
 			}
 			else{
