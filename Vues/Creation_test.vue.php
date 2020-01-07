@@ -53,12 +53,19 @@
                                 </div>
 
                                 <div class="conteneurChamp">
-                                    <label class="input-label" for="Capteur">
-                                        <p class="champTexte">Capteur : 
+                                    <label class="input-label"><p class="champTexte">Capteurs: 
                                         </p>
-                                        <input class="entreeDeTexte" type="charset" name="Capteur" required/>
+                                        <FORM>
+                                        <SELECT class="liste" name="listeDeroulante" size="1">
+                                            <?php while($c = $ListesCapteurs->fetch() ){ ?>
+                                                <OPTION value=<?php $idCapteur  ?> > <?php echo $c['idCapteur'] ?>-<?php echo $c['Type'] ?></OPTION>
+                                                <?php
+                                                $i++;
+
+                                            } ?>
+                                        </SELECT>
+                                    </FORM>
                                     </label>
-                                    
                                 </div>
 
                                 <div class="conteneurChamp">
@@ -66,7 +73,7 @@
                                 </div>
                             
                         </div>
-                        <div class="boiteErreur">
+                        <div class="boiteErreur"
                             <p class="erreur"><?php echo $erreur ?></p>
                         </div>
                     </div>

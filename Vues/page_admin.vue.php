@@ -31,7 +31,7 @@
                 <p class="membre"><?= $u['idUser'] ?> : <?=$u['login'] ?>
                 - <?= $u['Mail'] ?></p>
                 <ul class="Actions">
-                  <li class="Suppr"><a href="page_admin.php?delete=<?= $u['idUser']?>">Supprimer</a></li>
+                  <li class="Suppr"><a href="page_admin.php?delete=<?= $u['idUser']?>" onclick="return confirm('Etes-vous sûr de vouloir effectuer la suppresion ?');">Supprimer</a></li>
                   <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
                 </ul>
               <?php } else{} ?>
@@ -52,7 +52,9 @@
               / Seuil :  <?= $c['seuil'] ?></p>          
 
           <ul class="Actions">
-            <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>">Supprimer</a> </li>
+            
+            <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>" onclick="return confirm('Etes-vous sûr de vouloir effectuer la suppresion ?');">Supprimer</a></li>
+          
             <li class="Modif_cap"><a href="page_capteur.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
           </ul>
         <?php } ?>
