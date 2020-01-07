@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 07 jan. 2020 à 14:08
+-- Généré le :  mar. 07 jan. 2020 à 15:15
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -33,7 +33,14 @@ DROP TABLE IF EXISTS `boitier`;
 CREATE TABLE IF NOT EXISTS `boitier` (
   `idBoitier` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idBoitier`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Déchargement des données de la table `boitier`
+--
+
+INSERT INTO `boitier` (`idBoitier`) VALUES
+(1);
 
 -- --------------------------------------------------------
 
@@ -172,9 +179,9 @@ DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `Date` date NOT NULL,
   `idBoitier` int(11) NOT NULL,
-  `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `Type` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
   `Code` varchar(10) CHARACTER SET latin1 NOT NULL,
-  `Durée` datetime NOT NULL,
+  `Durée` datetime DEFAULT NULL,
   `idUser` int(255) NOT NULL,
   PRIMARY KEY (`Date`),
   KEY `idUser` (`idUser`),
@@ -205,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `idBoitier` int(11) DEFAULT NULL,
   PRIMARY KEY (`idUser`),
   KEY `idBoitier` (`idBoitier`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -213,7 +220,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`idUser`, `Type`, `login`, `Mdp`, `Nom`, `Prenom`, `Mail`, `Sexe`, `Taille`, `Poids`, `DateDeNaissance`, `Photos`, `codeInscription`, `idBoitier`) VALUES
 (1, 'Administrateur', 'admin', '$2y$10$s6C..sIveo4/eiKvt7/Xc.3q/qrzHHf19axr02lyLCNXEN55GA54u', 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(2, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 1),
+(14, 'Gestionnaire', 'gestionnaire2', '$2y$10$ItduDsRjV2KCbIFyOcB4Kusi.9xLOOC4N61oFK0oml9tsFj13Cdcy', 'gestionnaire', 'gestionnaire', 'gestionnaire2@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -238,33 +246,33 @@ CREATE TABLE IF NOT EXISTS `utilisateur/entité` (
 -- Contraintes pour la table `boitier_capteur`
 --
 ALTER TABLE `boitier_capteur`
-  ADD CONSTRAINT `boitier_test_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`),
-  ADD CONSTRAINT `boitier_test_ibfk_2` FOREIGN KEY (`idCapteur`) REFERENCES `capteur` (`idCapteur`);
+  ADD CONSTRAINT `boitier_test_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE CASCADE,
+  ADD CONSTRAINT `boitier_test_ibfk_2` FOREIGN KEY (`idCapteur`) REFERENCES `capteur` (`idCapteur`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `messageuser`
 --
 ALTER TABLE `messageuser`
-  ADD CONSTRAINT `messageuser_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `messageuser_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `test`
 --
 ALTER TABLE `test`
-  ADD CONSTRAINT `idBoitier` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`),
-  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `idBoitier` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE CASCADE,
+  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`);
+  ADD CONSTRAINT `utilisateur_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `utilisateur/entité`
 --
 ALTER TABLE `utilisateur/entité`
-  ADD CONSTRAINT `utilisateur/entité_ibfk_1` FOREIGN KEY (`idEntité`) REFERENCES `entit` (`idEntité`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `utilisateur/entité_ibfk_1` FOREIGN KEY (`idEntité`) REFERENCES `entit` (`idEntité`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

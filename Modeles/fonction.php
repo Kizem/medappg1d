@@ -11,8 +11,8 @@ function insertCapteur($db, $type, $val_init, $seuil){
 	
 	return $req;
 }
-function insertTest($db, $Date, $Code, $idUser){
-	$req = $db->prepare("insert into test (Date,Code,idUser) values ('$Date','$Code','$idUser')");
+function insertTest($db, $Date, $Code, $idUser, $idBoitier){
+	$req = $db->prepare("insert into test (Date,Code,idUser, idBoitier, Durée) values ('$Date','$Code','$idUser','$idBoitier','$Date')");
 	$req->execute();
 	
 	return $req;

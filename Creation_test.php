@@ -14,7 +14,7 @@ $Pseudo;
 $Capteur;
 $i = 0;
 $idBoitier=$_SESSION['idBoitier'];
-if(is_null(idBoitier)){
+if(is_null($idBoitier)){
 	echo "Vous ne possedez pas de boitier, contactez votre administrateur";
 }
 else{
@@ -42,7 +42,7 @@ else{
 				$code = genererChaineAleatoire(10);
 				echo $code;
 				//inserer dans la base de donnee maintenant
-				insertTest($db, $date,$code,$idUser);
+				insertTest($db, $date,$code,$idUser, $idBoitier);
 				include_once('Vues/Creation_test.vue.php');
 				}
 			}
