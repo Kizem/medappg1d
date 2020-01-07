@@ -33,21 +33,18 @@ USE `app`;
 DROP TABLE IF EXISTS `boitier`;
 CREATE TABLE IF NOT EXISTS `boitier` (
   `idBoitier` int(11) NOT NULL,
-  `Date` date NOT NULL,
-  `idCapteur` int(11) NOT NULL,
-  PRIMARY KEY (`idBoitier`),
-  KEY `idCapteur` (`idCapteur`),
-  KEY `Date` (`Date`)
+  PRIMARY KEY (`idBoitier`)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `boitier_test`
+-- Structure de la table `boitier_capteur`
 --
 
-DROP TABLE IF EXISTS `boitier_test`;
-CREATE TABLE IF NOT EXISTS `boitier_test` (
+DROP TABLE IF EXISTS `boitier_capteur`;
+CREATE TABLE IF NOT EXISTS `boitier_capteur`(
   `id_boitier_test` int(11) NOT NULL AUTO_INCREMENT,
   `idCapteur` int(11) NOT NULL,
   `idBoitier` int(11) NOT NULL,
@@ -176,27 +173,15 @@ CREATE TABLE IF NOT EXISTS `messageuser` (
 DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `Date` date NOT NULL,
+  `idBoitier` int(11) NOT NULL,
   `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Code` varchar(10) CHARACTER SET latin1 NOT NULL,
   `Durée` datetime NOT NULL,
   `idUser` int(255) NOT NULL,
   PRIMARY KEY (`Date`),
-  KEY `idUser` (`idUser`)
+  KEY `idUser` (`idUser`),
+  KEY `idBoitier` (`idBoitier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(25) NOT NULL,
-  `prenom` varchar(25) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -230,11 +215,9 @@ INSERT INTO `utilisateur` (`idUser`, `Type`, `login`, `Mdp`, `Nom`, `Prenom`, `M
 (6, 'Administrateur', 'Moh2a91', 'tqtpas', 'AMLA', 'Mohammad', 'mohammad.amla.pro@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
 (7, 'Administrateur', 'NinjaCopieur', '$2y$10$ZDrcATi60cVsoos7YOyvGuAAE4/vQXNMOdV3c/zplSLdgr5fTrFta', 'HATAKE', 'Kakashi', 'hatake.kakashi@konoha.com', 'Homme', 179, 75, '1998-10-31', 'Photos/0ec01c1855b12f5119b4f53787a71f8f.jpg', NULL),
 (8, 'Utilisateur', 'moam61050', '$2y$10$t9Ub.NVSCU8jHExaNk2htO3k82MK2IWceskDMWo7DiRLVkZi/YepS', 'Aml', 'mo', 'mo@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(9, 'Administrateur', 'guigol', '$2y$10$Hdsm.tH/.MFwl43TOcrjX.HfEShdrM.exKSL0GBWB/jwBP7qFw13e', 'soukker', 'rayan', 'rayan.soukker@gmail.com', 'Autre', 100, 900, '1998-10-31', 'Photos/0041d51056896afcdf828d22d1936d2a.jpg', NULL),
 (10, 'Administrateur', 'momo', '$2y$10$bV8thEXlo58C.Gv77YUZu.jvzqciMi1CDzjD0uMGlD2GTLPKS1doS', 'Amla', 'Mohammad', 'gege@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(11, 'Utilisateur', 'gogole', '$2y$10$c2.yVZyLKRLlqCU6YpWq/uxXSoiUtqgNNxAIvB9RbGvVVujbUgahm', 'gf', 'gf', 'gf@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(12, 'Administrateur', 'admin', '$2y$10$s6C..sIveo4/eiKvt7/Xc.3q/qrzHHf19axr02lyLCNXEN55GA54u', 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
-(13, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL);
+(11, 'Administrateur', 'admin', '$2y$10$s6C..sIveo4/eiKvt7/Xc.3q/qrzHHf19axr02lyLCNXEN55GA54u', 'admin', 'admin', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 'Gestionnaire', 'gestionnaire', '$2y$10$jhKE5AtJ7nez0yYtRn9iKuDwkdb3yrPIG9ophoxTVnuVAPbuI/4Gi', 'gestionnaire', 'gestionnaire', 'gestionnaire@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -255,17 +238,11 @@ CREATE TABLE IF NOT EXISTS `utilisateur/entité` (
 -- Contraintes pour les tables déchargées
 --
 
---
--- Contraintes pour la table `boitier`
---
-ALTER TABLE `boitier`
-  ADD CONSTRAINT `boitier_ibfk_1` FOREIGN KEY (`idCapteur`) REFERENCES `capteur` (`idCapteur`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `boitier_ibfk_2` FOREIGN KEY (`Date`) REFERENCES `test` (`Date`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `boitier_test`
+-- Contraintes pour la table `boitier_capteur`
 --
-ALTER TABLE `boitier_test`
+ALTER TABLE `boitier_capteur`
   ADD CONSTRAINT `boitier_test_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`),
   ADD CONSTRAINT `boitier_test_ibfk_2` FOREIGN KEY (`idCapteur`) REFERENCES `capteur` (`idCapteur`);
 
@@ -279,8 +256,8 @@ ALTER TABLE `messageuser`
 -- Contraintes pour la table `test`
 --
 ALTER TABLE `test`
-  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
+  ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `idBoitier` FOREIGN KEY (`idBoitier` ) REFERENCES `boitier`(`idBoitier` );
 --
 -- Contraintes pour la table `utilisateur/entité`
 --

@@ -11,6 +11,13 @@ function insertCapteur($db, $type, $val_init, $seuil){
 	
 	return $req;
 }
+function insertTest($db, $Date, $Code, $idUser){
+	$req = $db->prepare("insert into test (Date,Code,idUser) values ('$Date','$Code','$idUser')");
+	$req->execute();
+	
+	return $req;
+}
+
 function mailDisponible($db, $mail){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE Mail='$mail'");
 	$req->execute();
@@ -22,10 +29,10 @@ function mailDisponible($db, $mail){
 	}
 }
 function capteurDisponible($db, $Capteur){
-	$req = $db->prepare("SELECT * FROM capteur WHERE Type='$Capteur'");
+	$req = $db->prepare("SELECT * FROM capteur WHERE idCapteur='$Capteur'");
 	$req->execute();
 	if($req->rowCount() == 0){
-		return FALSE;
+		return TRUE;
 	}
 	else{
 		$donnee=$req->fetch();

@@ -58,7 +58,7 @@
                                         <FORM>
                                         <SELECT class="liste" name="listeDeroulante" size="1">
                                             <?php while($c = $ListesCapteurs->fetch() ){ ?>
-                                                <OPTION value=<?php $i  ?> > <?php echo $c['idCapteur'] ?>-<?php echo $c['Type'] ?></OPTION>
+                                                <OPTION value=<?php $idCapteur  ?> > <?php echo $c['idCapteur'] ?>-<?php echo $c['Type'] ?></OPTION>
                                                 <?php
                                                 $i++;
 

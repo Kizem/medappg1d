@@ -18,7 +18,7 @@ if(!empty($_POST)){
 	$date=htmlspecialchars($_POST['Date']);
 	$heure=htmlspecialchars($_POST['heure']);
 	$Pseudo=htmlspecialchars($_POST['Pseudo']);
-	$Capteur=htmlspecialchars($_POST['Capteur']);
+	$Capteur=htmlspecialchars($_POST['listeDeroulante']);
 	$erreur='cetsbon';
 	$idCapteur=capteurDisponible($db, $Capteur);
 	$idUser=pseudoDisponible($db, $Pseudo);
@@ -37,6 +37,7 @@ if(!empty($_POST)){
 			$code = genererChaineAleatoire(10);
 			echo $code;
 			//inserer dans la base de donnee maintenant
+			insertTest($db, $date,$code,$idUser);
 			include_once('Vues/Creation_test.vue.php');
 			}
 		}
