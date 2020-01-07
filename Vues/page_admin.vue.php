@@ -48,7 +48,7 @@
 
             <?php while($c = $capteurs->fetch()){ ?>
 
-              <p class="membre"><?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
+              <p class="membre"><?= $c['idCapteur'] ?> - <?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
               / Seuil :  <?= $c['seuil'] ?></p>          
 
           <ul class="Actions">
@@ -97,6 +97,16 @@
 
         <!-- *************** -->
 
+      </div>
+
+      <div class="gest_entites">
+
+        <p class="titre_catég"> Gestion des entités de l'application </p>
+
+          <ul class="Gestion_entite">
+            <li><a class="add_boitier" href=""></a></li>
+          
+          </ul>
       </div>
 
 
