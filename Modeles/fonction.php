@@ -111,8 +111,8 @@ function tableauTestPerception($db){
     while($row = $request->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
-				<td>" Dernière valeur "</td>";
+				<td>Fréquence cardiaque</td>;
+				<td> Dernière valeur </td>";
 			}
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Perception' ");
@@ -153,8 +153,8 @@ function tableauTestFrequence($db) {
     while($row = $request->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
-				<td>" Dernière valeur "</td>";
+				<td>Fréquence cardiaque</td>;
+				<td> Dernière valeur </td>";
 			}
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Frequence' ");
