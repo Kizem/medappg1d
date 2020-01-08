@@ -300,8 +300,8 @@ function insertBoitier($db, $ref){
 	return $req;
 }
 
-function insertEntite($db, $nom , $adresse, $type, $boitier){
-	$req = $db->prepare("insert into entit (Type,Nom,Adresse, idBoitier) values ('$type','$nom','$adresse','$boitier')");
+function insertEntite($db, $nom , $adresse, $type){
+	$req = $db->prepare("insert into entit (Type,Nom,Adresse) values ('$type','$nom','$adresse')");
 	$req->execute();
 	
 	return $req;
@@ -315,6 +315,9 @@ function majGestionnaire($db, $pseudo, $boitier){
 	return $req;
 
 }
+
+/*-------------------*/
+
 function getCodeEntite($db, $idEntite){
 	$req = $db->prepare("SELECT * FROM `codeinscription` WHERE idEntité='$idEntite'");
 	$req->execute();

@@ -279,7 +279,7 @@ body{
   text-align: center;
   color: black;/*rgba(0, 0, 0, .7); */
   text-decoration: none;
-
+  margin:2%;
   background-color: #e9e8e8;
   border-radius: 10px;
   padding: 8px 8px 17px 8px;

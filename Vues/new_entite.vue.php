@@ -2,17 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="design/new_boitier.css"> 
-        <title>Nouveau boîtier</title>
+    <link rel="stylesheet" type="text/css" href="design/new_entite.css"> 
+        <title>Nouvelle entité</title>
     </head>
     <body>
         <header><?php include_once('includes/header.php'); ?></header>
 
-        <form method="post" action="new_boitier.php">
+        <form method="post" action="new_entite.php">
             <article class="art">
                 <div class="boxtotale">
                         <div class="titrePage">
-                            <h1 class="titre_formulaire">Creation d'un nouveau boitier</h1>
+                            <h1 class="titre_formulaire">Creation d'une nouvelle entite</h1>
                         </div>
 
                         <div class="entreesInformations">
@@ -57,23 +57,23 @@
                                     
                                 </div>       
 
-                                <div class="conteneurChamp">
+<!--                                 <div class="conteneurChamp">
                                     <label class="input-label" for="reference">
                                         <p class="champTexte">Référence du boîtier* : 
                                         </p>
                                         <input class="entreeDeTexte" type="charset" name="reference"/>
                                     </label>
                                     
-                                </div>                         
+                                </div>    -->                      
 
-                                <div class="conteneurChamp">
+<!--                                 <div class="conteneurChamp">
                                     <label class="input-label" for="gestionnaire">
                                         <p class="champTexte">Pseudo du premier gestionnaire* : 
                                         </p>
                                         <input class="entreeDeTexte" type="charset" name="gestionnaire"/>
                                     </label>
                                     
-                                </div>
+                                </div> -->
 
                                 <div class="conteneurChamp">
                                     <input class="boutonValider" type="submit" value="Valider">

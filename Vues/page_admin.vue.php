@@ -104,8 +104,11 @@
         <p class="titre_catég"> Gestion des entités de l'application </p>
 
         <ul class="actions_entite">
+
+          <li><a class="add_boitier" href="new_entite.php">Ajouter une nouvelle entité</a></li>
+
           <li><a class="add_boitier" href="new_boitier.php">Ajouter un nouveau boîtier</a></li>
-          
+
         </ul>
 
       </div>
