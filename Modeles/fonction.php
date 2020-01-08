@@ -201,14 +201,13 @@ function lireCGU($db, $id){
 	return $req;
 }
 function login($db, $pseudo){
-	$req = $db->prepare ("SELECT * FROM Utilisateur WHERE  login= '$login'");
+	$req = $db->prepare ("SELECT * FROM Utilisateur WHERE  login= '$pseudo'");
 	$req->execute ();
 	return $req;
 }
 function inserUsersEntite($db, $idUser, $idEntite){
-	$req = $db->prepare(addslashes("insert into utilisateur/entité (idUser,idEntité) values ('$idUser','$idEntite')"));
+	$req = $db->prepare("INSERT INTO `utilisateur/entit` (idUser,idEntité) values ('$idUser','$idEntite')");
 	$req->execute();
-	
 	return $req;
 }
 function ecrireCGU($db, $id,$CGU,$ML){

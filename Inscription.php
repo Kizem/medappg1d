@@ -52,7 +52,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								if($fonction[$i]['fonction']==$typeUtilisateur){
 									$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
 									if(!is_null($fonction[$i]['idEntité'])){
-										$req=login($pseudo);
+										$req=login($db, $login);
 										$DonneeLogin = $req->fetch();
 										$req=inserUsersEntite($db, $DonneeLogin['idUser'],$fonction[$i]['idEntité']);
 
