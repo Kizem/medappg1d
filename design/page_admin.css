@@ -262,7 +262,7 @@ body{
   display:table;
   width:auto;
   margin:auto;
-
+  margin-bottom:2%;
   padding:0;
   list-style-type: none;
 }

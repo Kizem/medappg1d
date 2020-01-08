@@ -12,7 +12,7 @@
             <article class="art">
                 <div class="boxtotale">
                         <div class="titrePage">
-                            <h1 class="titre_formulaire">Création d'un nouveau boîtier</h1>
+                            <h1 class="titre_formulaire">Creation d'un nouveau boitier</h1>
                         </div>
 
                         <div class="entreesInformations">
@@ -21,7 +21,7 @@
                                     
                                     <div class="partieAfficher">
                                         <label class="input-label" for="nom">
-                                            <p class="champTexte">Nom* :  
+                                            <p class="champTexte">Nom de l'entité associée* :  
                                             </p>
                                             <input class="entreeDeTexte" type="charset" name="nom"/>
                                         </label>
@@ -34,7 +34,7 @@
 
                                 <div class="conteneurChamp">    
                                     <div class="partieAfficher">
-                                        <label class="input-label" for="adresse"><p class="champTexte">adresse* :  
+                                        <label class="input-label" for="adresse"><p class="champTexte">Adresse de l'entité* :  
                                     </p>
                                         <input class="entreeDeTexte" type="charset" name="adresse" />
                                         </label>      
@@ -55,11 +55,20 @@
                                     </FORM>
                                     </label>
                                     
-                                </div>                                
+                                </div>       
+
+                                <div class="conteneurChamp">
+                                    <label class="input-label" for="reference">
+                                        <p class="champTexte">Référence du boîtier* : 
+                                        </p>
+                                        <input class="entreeDeTexte" type="charset" name="reference"/>
+                                    </label>
+                                    
+                                </div>                         
 
                                 <div class="conteneurChamp">
                                     <label class="input-label" for="gestionnaire">
-                                        <p class="champTexte">Premier gestionnaire* : 
+                                        <p class="champTexte">Pseudo du premier gestionnaire* : 
                                         </p>
                                         <input class="entreeDeTexte" type="charset" name="gestionnaire"/>
                                     </label>
@@ -67,7 +76,7 @@
                                 </div>
 
                                 <div class="conteneurChamp">
-                                    <input class="boutonValider" type="submit" value="S'inscrire">
+                                    <input class="boutonValider" type="submit" value="Valider">
                                 </div>
                             
                         </div>

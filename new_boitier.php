@@ -11,9 +11,12 @@ if(!empty($_POST['nom']) AND !empty($_POST['adresse']) AND !empty($_POST['gestio
 	$adresse = htmlspecialchars($_POST['adresse']);
 	$gestionnaire = htmlspecialchars($_POST['gestionnaire']);
 	$typeEntite = htmlspecialchars($_POST['listeDeroulante']);
+	$ref = htmlspecialchars($_POST['reference']);
 
 		if(is_bool(entiteDisponible($db, $name)) && entiteDisponible($db, $name)==TRUE){
 				if(gestionnaireDisponible($db, $gestionnaire)){
+					if(boitierDisponible($db, $ref)){
+
 						switch ($typeEntite) {
 							case '1':
 								$typeEntite = "Auto-école";
@@ -25,49 +28,43 @@ if(!empty($_POST['nom']) AND !empty($_POST['adresse']) AND !empty($_POST['gestio
 								$typeEntite = "Auto-école";
 								break;
 						}
-						if(empty($fonction)){	
-							$erreur= "Code introuvable";
-							//include('Vues/Inscription.vue.php');
 
-						}
-						else if($fonction["fonction"]==$typeUtilisateur){
-							$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
-							$erreur="";
-							include('connexion.php');
+						$req = insertBoitier($db, $ref);
 
-						}
-						else{
-							$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
-							include('Vues/Inscription.vue.php');
-						}
+						$reqboit = $db->query("SELECT idBoitier FROM boitier WHERE Reference='$ref'");
+						$new_boit = $reqboit->fetch();
+
+
+						$req2 = insertEntite($db, $name, $adresse, $typeEntite, $new_boit);
+
+						$req3 = majGestionnaire($db, $gestionnaire, $new_boit);
+
+						$erreur="";
+						include('monEspace.php');
+						echo$new_boit;
+
 					}
 					else{
-						$erreur= "Les mots de passes ne correspondent pas";
-						include('Vues/Inscription.vue.php');
+						$erreur= "Ce boitier est déjà utilisé (Référence)";
+						include('Vues/new_boitier.vue.php');
 					}
+
 				}
 				else{
-					$erreur= "Cette adresse mail n'est pas disponible";
-					include('Vues/Inscription.vue.php');
+					$erreur= "Ce gestionnaire est déjà associé à une entité";
+					include('Vues/new_boitier.vue.php');
 				}
 		}
 		else{
 			$erreur= "Cette entité existe déjà";
-			include('Vues/Inscription.vue.php');
+			include('Vues/new_boitier.vue.php');
 		}
 	
 
 }
 else{
 	$erreur= "Veuillez remplir tous les champs";
-	include('Vues/Inscription.vue.php');
+	include('Vues/new_boitier.vue.php');
 	}
-	/*echo 'Votre nom est '.$_POST['nom'];
-}
-}
-else{
-	echo 'nom pas declare';*/
-
-
 
 ?>
