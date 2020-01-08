@@ -21,8 +21,8 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 		if(is_bool(pseudoDisponible($db, $login)) && pseudoDisponible($db, $login)==TRUE){
 			if(filter_var($mail, FILTER_VALIDATE_EMAIL)){
 				if(mailDisponible($db, $mail)){
-					$req= detectionCode($db, $codeInscription);
-					$fonction= $req->fetch();
+					$fonction= detectionCode($db, $codeInscription);
+					
 					
 					if($Mdp==$mdp2){
 						$Mdp = password_hash($Mdp,PASSWORD_DEFAULT);
@@ -40,21 +40,33 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								$typeUtilisateur = "Utilisateur";
 								break;
 						}
-						if(empty($fonction)){	
+						if($fonction==TRUE){	
 							$erreur= "Code introuvable";
 							//include('Vues/Inscription.vue.php');
 
 						}
-						else if($fonction["fonction"]==$typeUtilisateur){
-							$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
-							$erreur="";
-							include('connexion.php');
 
-						}
 						else{
-							$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
-							include('Vues/Inscription.vue.php');
-						}
+								for ($i=0; $i < count($fonction); $i++) {
+									if($fonction[i]['fonction']==$typeUtilisateur){
+										$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
+								        $erreur="";
+								        break;
+									}
+								}
+								if($fonction[i]['fonction']==$typeUtilisateur){
+									include('connexion.php');
+								}
+								else{
+									$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
+								include('Vues/Inscription.vue.php');
+								}
+							}
+						
+					}
+							
+							
+						
 					}
 					else{
 						$erreur= "Les mots de passes ne correspondent pas";
