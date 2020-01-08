@@ -22,8 +22,6 @@
 			$idUser=$lesEnreg['idUser'];
 			$cheminPhoto=$lesEnreg['Photos'];
 			$idBoitier=$lesEnreg['idBoitier'];
-			print_r($lesEnreg);
-			echo "$sql";
 			
 			
 			if (password_verify($Mdp, $Mdp_hash)) {

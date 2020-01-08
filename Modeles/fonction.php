@@ -189,7 +189,7 @@ function detectionCode($db, $code){
 		return TRUE;
 	}
 	else{
-		$donnee=$req->fetch();
+		$donnee=$req->fetchall();
 		return $donnee;
 	}
 	
@@ -200,7 +200,17 @@ function lireCGU($db, $id){
 	$req->execute();
 	return $req;
 }
-
+function login($db, $pseudo){
+	$req = $db->prepare ("SELECT * FROM Utilisateur WHERE  login= '$login'");
+	$req->execute ();
+	return $req;
+}
+function inserUsersEntite($db, $idUser, $idEntite){
+	$req = $db->prepare(addslashes("insert into utilisateur/entité (idUser,idEntité) values ('$idUser','$idEntite')"));
+	$req->execute();
+	
+	return $req;
+}
 function ecrireCGU($db, $id,$CGU,$ML){
 	$CGU=addslashes($CGU);
 	$ML=addslashes($ML);
