@@ -23,7 +23,7 @@
                echo '<input type="submit" value="Ajouter une question" class="bouton_ajouter">';
             }
 
-            elseif (condition) {
+            elseif ($requete==1) {
                 echo '<form action="index.php" method="get">
                     Question :  <textarea name="ML" rows="1" cols="70" required></textarea></br>
                     Réponse :  <textarea name="ML" rows="10" cols="70" required></textarea></br>
@@ -46,7 +46,7 @@
                echo '<input type="submit" value="Ajouter une question" class="bouton_ajouter">';
             }
 
-            elseif (condition) {
+            elseif ($requete==2) {
                 echo '<form action="index.php" method="get">
                     Question :  <textarea name="ML" rows="1" cols="70" required></textarea></br>
                     Réponse :  <textarea name="ML" rows="10" cols="70" required></textarea></br>
@@ -68,7 +68,7 @@
                echo '<input type="submit" value="Ajouter une question" class="bouton_ajouter">';
             }
 
-            elseif (condition) {
+            elseif ($requete==3) {
                 echo '<form action="index.php" method="get">
                     Question :  <textarea name="ML" rows="1" cols="70" required></textarea></br>
                     Réponse :  <textarea name="ML" rows="10" cols="70" required></textarea></br>
