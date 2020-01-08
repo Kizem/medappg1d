@@ -320,4 +320,15 @@ function getCodeEntite($db, $idEntite){
 	$req->execute();
 	return $req;
 }
+function deleteCodeInscription($db, $id){
+	$req = $db->prepare("DELETE FROM `codeinscription` WHERE idCodeInscription='$id'");
+	$req->execute();
+	return $req;
+}
+
+function addCodeUtilisateur($db, $code,$idEntité, $fonction){
+	$req = $db->prepare("INSERT INTO `codeinscription`(`fonction`, `code`, `idEntité`) VALUES ('$fonction','$code','$idEntité')");
+	$req->execute();
+	return $req;
+}
 ?>

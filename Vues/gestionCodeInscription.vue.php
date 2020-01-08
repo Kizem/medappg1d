@@ -28,6 +28,9 @@
   						echo "<tr>";
   						echo "<td>";
   						echo $fonction[$i]['code'], ' ';
+              echo "</td>";
+              echo "<td>";
+              echo '<a href="gestionCodeInscription.php?action=supprimer&id='.$fonction[$i]["idCodeInscription"].'">supprimer</a>';
 			        echo "</td>";
 			        echo "</tr>";
   					}
@@ -40,6 +43,7 @@
   				
 			</table>
 		</div>
+    <a href="gestionCodeInscription.php?action=ajouter"> ajouter </a>
 
 	</body>
 </html>
