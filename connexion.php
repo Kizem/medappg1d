@@ -22,6 +22,9 @@
 			$idUser=$lesEnreg['idUser'];
 			$cheminPhoto=$lesEnreg['Photos'];
 			$idBoitier=$lesEnreg['idBoitier'];
+			$req=$db->prepare ("SELECT idEntité FROM `utilisateur/entit` WHERE idUser='2'");
+			$req->execute ();
+			$idEntite=$req->fetch();
 			
 			
 			if (password_verify($Mdp, $Mdp_hash)) {
@@ -39,10 +42,12 @@
 				$_SESSION['idUser']=$idUser;
 				$_SESSION['cheminPhoto']=$cheminPhoto;
 				$_SESSION['idBoitier']=$idBoitier;
+				$_SESSION['idEntite']=$idEntite['idEntité'];
 				header ('Location: index.php');
+
 			}
 			else{
-			$erreur = "Mauavais mot de passe";
+			$erreur = "Mauvais mot de passe";
 			include_once('Vues/connexion.vue.php');
 
     			

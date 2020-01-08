@@ -2,7 +2,7 @@
 <html>
 	<head>
         <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="design/Utilisateur.css"> 
+    <link rel="stylesheet" type="text/css" href="design/resultat_recherche.css"> 
 		<title>Page gestion code</title>
 	</head>
     
@@ -18,7 +18,6 @@
 				<thead>
 				<tr>
     				<th>Code</th>
-    				<th>Entite</th>
   				</tr>
   				</thead>
   				
@@ -28,11 +27,9 @@
   					for ($i=0; $i < count($fonction); $i++) {
   						echo "<tr>";
   						echo "<td>";
-  						echo $fonction[$i]['Code'], ' ';
-  						
-			            echo $fonction[$i]['Nom'], ' ',"<br>";
-			            echo "</td>";
-			            echo "</tr>";
+  						echo $fonction[$i]['code'], ' ';
+			        echo "</td>";
+			        echo "</tr>";
   					}
   				}
   				else{

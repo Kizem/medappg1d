@@ -315,4 +315,9 @@ function majGestionnaire($db, $pseudo, $boitier){
 	return $req;
 
 }
+function getCodeEntite($db, $idEntite){
+	$req = $db->prepare("SELECT * FROM `codeinscription` WHERE idEntité='$idEntite'");
+	$req->execute();
+	return $req;
+}
 ?>
