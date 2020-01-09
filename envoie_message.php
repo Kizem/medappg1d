@@ -8,7 +8,7 @@ require("Modeles/fonction.php");
       $destinataire = $_POST['destinataire'];
       $message = $_POST['message'];
 
-      $donnees = chercheDestinataire($db, $destiantaire);
+      $donnees = chercheDestinataire($db, $destinataire);
 
       if(!$donnees)
       {

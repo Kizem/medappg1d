@@ -360,7 +360,7 @@ function addCodeUtilisateur($db, $code,$idEntité, $fonction){
 }
 
 function chercheDestinataire($db, $destinataire){
-	$requete = $bdd->prepare('SELECT * FROM messageuser WHERE idUser = :destinataire');
+	$requete = $db->prepare('SELECT * FROM messageuser WHERE idUser = :destinataire');
     $requete->execute(array('destinataire' => $destinataire));
     $donnees = $requete->fetch();
     $requete->CloseCursor();
@@ -368,7 +368,7 @@ function chercheDestinataire($db, $destinataire){
 }
 
 function envoieMessage($db, $date, $Heure, $message, $donnees){
-	$requete = $bdd->prepare('INSERT INTO message(idMessage, Date, Heure, contenu, idUser) VALUES(?,?,?,?)');
+	$requete = $db->prepare('INSERT INTO message(idMessage, Date, Heure, contenu, idUser) VALUES(?,?,?,?)');
     $requete->execute(array($_SESSION['id'], $date, $Heure, $message, $donnees['id']));
     $requete->CloseCursor();
 }
