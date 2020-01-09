@@ -30,7 +30,7 @@
   						echo $fonction[$i]['code'], ' ';
               echo "</td>";
               echo "<td>";
-              echo '<a href="gestionCodeInscription.php?action=supprimer&id='.$fonction[$i]["idCodeInscription"].'">supprimer</a>';
+              echo '<a class="lienSupp" href="gestionCodeInscription.php?action=supprimer&id='.$fonction[$i]["idCodeInscription"].'">supprimer</a>';
 			        echo "</td>";
 			        echo "</tr>";
   					}
@@ -43,7 +43,7 @@
   				
 			</table>
 		</div>
-    <a href="gestionCodeInscription.php?action=ajouter"> ajouter </a>
+    <a class="Ajouter"href="gestionCodeInscription.php?action=ajouter"> ajouter </a>
 
 	</body>
 </html>

@@ -68,3 +68,35 @@ table thead th {
 table thead th:first-child {
   border-left: none;
 }
+a.lienSupp{
+  border-radius: 10px;
+}
+a.lienSupp:link, a.lienSupp:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.lienSupp:hover, a.lienSupp:active {
+  background-color: hotpink;
+}
+
+a.Ajouter{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+a.Ajouter:link, a.Ajouter:visited {
+  background-color: #40B319;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.Ajouter:hover, a.Ajouter:active {
+  background-color: #66D342;
+}
