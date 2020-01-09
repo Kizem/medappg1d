@@ -7,7 +7,18 @@
 
   </head>
   <body>
-    <header><?php include_once('includes/header.php'); ?></header>
+    <header><?php include_once('includes/header.php'); ?>
+        
+    </header>
+       <?php 
+            if(!empty($erreur)){
+                include_once('includes/alerte.php');
+            }
+            if(!empty($resultat)){
+                include_once('includes/validation.php');
+            }
+        ?>
+
       <form method="post" action="Creation_test.php">
             <article class="art">
                     <div class="boxtotale">
@@ -72,9 +83,6 @@
                                     <input class="boutonValider" type="submit" value="Valider">
                                 </div>
                             
-                        </div>
-                        <div class="boiteErreur"
-                            <p class="erreur"><?php echo $erreur ?></p>
                         </div>
                     </div>
             </article>  
