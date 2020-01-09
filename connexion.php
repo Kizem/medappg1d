@@ -22,7 +22,7 @@
 			$idUser=$lesEnreg['idUser'];
 			$cheminPhoto=$lesEnreg['Photos'];
 			$idBoitier=$lesEnreg['idBoitier'];
-			$req=$db->prepare ("SELECT idEntité FROM `utilisateur/entit` WHERE idUser='2'");
+			$req=$db->prepare ("SELECT idEntité FROM `utilisateur/entité` WHERE idUser='$idUser'");
 			$req->execute ();
 			$idEntite=$req->fetch();
 			

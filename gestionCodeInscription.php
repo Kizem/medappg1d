@@ -11,6 +11,7 @@ if(isset($_GET["action"]) && ($_GET["action"]=="supprimer")) {
 if(isset($_GET["action"]) && ($_GET["action"]=="ajouter")) {
 	$reponse=addCodeUtilisateur($db,genererChaineAleatoire(10),$_SESSION['idEntite'],"Utilisateur");
 }
+
 $rep = getCodeEntite($db, $_SESSION['idEntite']);
 $fonction = $rep->fetchall();
 include_once('Vues/gestionCodeInscription.vue.php');
