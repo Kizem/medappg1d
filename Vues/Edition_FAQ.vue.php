@@ -25,8 +25,8 @@
 
             elseif ($requete==1) {
                 echo '<form action="index.php" method="get">
-                    Question :  <textarea name="ML" rows="1" cols="70" required></textarea></br>
-                    Réponse :  <textarea name="ML" rows="10" cols="70" required></textarea></br>
+                    Question :  <textarea name="question" rows="1" cols="70" required></textarea></br>
+                    Réponse :  <textarea name="réponse" rows="10" cols="70" required></textarea></br>
                     <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                     <input type="hidden" name="action" value="save"/>
                     <input type="submit"/>
@@ -48,8 +48,8 @@
 
             elseif ($requete==2) {
                 echo '<form action="index.php" method="get">
-                    Question :  <textarea name="ML" rows="1" cols="70" required></textarea></br>
-                    Réponse :  <textarea name="ML" rows="10" cols="70" required></textarea></br>
+                    Question :  <textarea name="question" rows="1" cols="70" required></textarea></br>
+                    Réponse :  <textarea name="réponse" rows="10" cols="70" required></textarea></br>
                     <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                     <input type="hidden" name="action" value="save"/>
                     <input type="submit"/>
@@ -70,8 +70,8 @@
 
             elseif ($requete==3) {
                 echo '<form action="index.php" method="get">
-                    Question :  <textarea name="ML" rows="1" cols="70" required></textarea></br>
-                    Réponse :  <textarea name="ML" rows="10" cols="70" required></textarea></br>
+                    Question :  <textarea name="question" rows="1" cols="70" required></textarea></br>
+                    Réponse :  <textarea name="réponse" rows="10" cols="70" required></textarea></br>
                     <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                     <input type="hidden" name="action" value="save"/>
                     <input type="submit"/>
