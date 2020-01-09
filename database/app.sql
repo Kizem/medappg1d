@@ -143,8 +143,9 @@ CREATE TABLE IF NOT EXISTS `message` (
   `Date` date NOT NULL,
   `Heure` datetime NOT NULL,
   `contenu` text CHARACTER SET latin1 NOT NULL,
-  `idUser` int(255) NOT NULL,
-  PRIMARY KEY (`idMessage`)
+  `idUser` int(11) NOT NULL,
+  PRIMARY KEY (`idMessage`),
+  KEY `idUser` (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
@@ -176,7 +177,8 @@ CREATE TABLE IF NOT EXISTS `test` (
   `Type` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
   `Code` varchar(10) CHARACTER SET latin1 NOT NULL,
   `Durée` datetime DEFAULT NULL,
-  `idUser` int(255) NOT NULL,
+  `Score` int(255) DEFAULT NULL,
+  `idUser` int(11) NOT NULL,
   PRIMARY KEY (`Date`),
   KEY `idUser` (`idUser`),
   KEY `idBoitier` (`idBoitier`)
@@ -260,7 +262,8 @@ ALTER TABLE `codeinscription`
 -- Contraintes pour la table `messageuser`
 --
 ALTER TABLE `messageuser`
-  ADD CONSTRAINT `messageuser_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE;
+  ADD CONSTRAINT `messageuser_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE,
+  ADD CONSTRAINT `messageuser_ibfk_2` FOREIGN KEY (`idMessage`) REFERENCES `message` (`idMessage`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `test`
@@ -268,6 +271,12 @@ ALTER TABLE `messageuser`
 ALTER TABLE `test`
   ADD CONSTRAINT `idBoitier` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE CASCADE,
   ADD CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE;
+
+--
+-- Contraintes pour la table `message`
+--
+ALTER TABLE `message`
+  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `utilisateur` (`idUser`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `utilisateur`
