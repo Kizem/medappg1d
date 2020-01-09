@@ -41,11 +41,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 						if(is_bool($fonction) && $fonction==TRUE){	
 							$erreur= "Code introuvable";
 							include('Vues/Inscription.vue.php');
-
 						}
-
-
-
 						else{
 							//print_r($fonction);
 							for ($i=0; $i < count($fonction); $i++) {
@@ -67,18 +63,10 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 								}
 
 								else{
-									$erreur="code ne correspond pas a ce privilège";
+									$erreur="Le code ne correspond pas à ce privilège";
 									include('Vues/Inscription.vue.php');
 								}
 							}
-							
-							/*if($fonction[i]['fonction']==$typeUtilisateur){
-								include('connexion.php');
-							}
-							else{
-								$erreur= "Ce code ne vous permet pas d'obtenir le privilège saisie";
-							    
-							}*/
 						}
 					}
 							
@@ -111,7 +99,7 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 	}
 }
 else{
-	$erreur= "Veuillez remplir tous les champs";
+	//$erreur= "Veuillez remplir tous les champs";
 	include('Vues/Inscription.vue.php');
 	}
 	/*echo 'Votre nom est '.$_POST['nom'];

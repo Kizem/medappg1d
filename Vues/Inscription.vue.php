@@ -9,6 +9,14 @@
         <!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
+        <?php 
+            if(!empty($erreur)){
+                include_once('includes/alerte.php');
+            }
+            if(!empty($resultat)){
+                include_once('includes/validation.php');
+            }
+        ?>
         <form method="post" action="Inscription.php">
             <article class="art">
                 <div class="boxtotale">
@@ -24,7 +32,7 @@
                                         <label class="input-label" for="nom">
                                             <p class="champTexte">Nom* :  
                                             </p>
-                                            <input class="entreeDeTexte" type="charset" name="nom"/>
+                                            <input class="entreeDeTexte" type="charset" name="nom"required/>
                                         </label>
                                     </div>
 
@@ -37,7 +45,7 @@
                                     <div class="partieAfficher">
                                         <label class="input-label" for="prenom"><p class="champTexte">Prenom* :  
                                     </p>
-                                        <input class="entreeDeTexte" type="charset" name="prenom" />
+                                        <input class="entreeDeTexte" type="charset" name="prenom" required/>
                                         </label>      
                                     </div>
                                         <div class="partieCachee">
@@ -50,7 +58,7 @@
                                     <label class="input-label" for="mail">
                                         <p class="champTexte">Adresse E-mail* : 
                                         </p>
-                                        <input class="entreeDeTexte" type="charset" name="mail"/>
+                                        <input class="entreeDeTexte" type="charset" name="mail"required/>
                                     </label>
                                     
                                 </div>
@@ -59,7 +67,7 @@
                                     <label class="input-label" for="login">
                                         <p class="champTexte">Pseudo* : 
                                         </p>
-                                        <input class="entreeDeTexte" type="charset" name="login"/>
+                                        <input class="entreeDeTexte" type="charset" name="login"required/>
                                     </label>
                                     
                                 </div>
@@ -69,23 +77,22 @@
                                     <label class="input-label">
                                         <p class="champTexte">Mot de passe* : 
                                         </p>
-                                        <input class="entreeDeTexte" type="password" name="motDePasse"/>
+                                        <input class="entreeDeTexte" type="password" name="motDePasse"required/>
                                     </label>
                                 </div>
                                 <div class="conteneurChamp">
                                     <label class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
                                         </p>
-                                        <input class="entreeDeTexte" type="password" name="confirmMDP"/>
+                                        <input class="entreeDeTexte" type="password" name="confirmMDP"required/>
                                     </label>
                                 </div>
                                     
                                 
                                 <div class="conteneurChamp">
-                                    <label class="input-label"><p class="champTexte">Type d'utilisateur* : 
+                                    <label class="input-label"><p class="champTexte" >Type d'utilisateur* : 
                                         </p>
                                         <FORM>
                                         <SELECT class="liste" name="listeDeroulante" size="1">
-                                        <OPTION value=0></OPTION>
                                         <OPTION value=1>Utilisateur</OPTION>
                                         <OPTION value=2>Gestionnaire</OPTION>
                                         <OPTION value=3>Administrateur</OPTION>
@@ -106,25 +113,23 @@
                                                 </div>
                                             </div>
                                             
-                                            <input class="entreeDeTexte" type="charset" name="codeInscription"/>
+                                            <input class="entreeDeTexte" type="charset" name="codeInscription"required/>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="conteneurChampCGU">
-                                    <input type="checkbox" name="CGUaccepted" value="1">
+                                    <input type="checkbox" name="CGUaccepted" value="1" required>
                                         <label>J'accepte les <a href="CGUMentionLegales.php">termes et conditions d'utilisation</a>
                                         </label>
 
                                 </div>
 
                                 <div class="conteneurChamp">
-                                    <input class="boutonValider" type="submit" value="S'inscrire">
+                                    <input class="boutonValider" type="submit" value="S'inscrire" required="">
                                 </div>
                             
                         </div>
-                        <div class="boiteErreur">
-                            <p class="erreur"><?php echo $erreur ?> !</p>
-                        </div>
+                        
 
                         <div class="asterix">
                             <p>* Champs obligatoire</p>
