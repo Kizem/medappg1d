@@ -24,11 +24,30 @@
                                         <input class="entreeDeTexte" type="charset" name="reference"/>
                                     </label>
                                     
-                                </div>                         
+                                </div>    
+
+                                <div class="conteneurChamp">
+                                    <label class="input-label"><p class="champTexte">Entité associée* :
+                                        </p>
+                                        <FORM>
+                                        <SELECT class="liste" name="listeDeroulante" size="1">
+                                            <OPTION value=0></OPTION>
+                                            <?php while($e = $ListeEntite->fetch() ){ ?>
+                                                <OPTION value=<?php $i ?>> <?php echo $e['idEntité'] ?>-<?php echo $e['Nom'] ?></OPTION>
+                                                <?php 
+                                                $i++;
+                                            }
+                                             ?>
+                                        </SELECT>
+                                    </FORM>
+                                    </label>
+                                </div>                        
 
                                 <div class="conteneurChamp">
                                     <input class="boutonValider" type="submit" value="Valider">
                                 </div>
+
+
                             
                         </div>
                         <div class="boiteErreur">

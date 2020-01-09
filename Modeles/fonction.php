@@ -254,18 +254,6 @@ function getTest($db){
 
 /* ------ Création d'entité/boitier */
 
-// function entiteDisponible($db, $nom){
-// 	$req = $db->prepare("SELECT * FROM entit WHERE Nom='$nom'");
-// 	$req->execute();
-// 	if($req->rowCount() == 0){
-// 		return TRUE;
-// 	}
-// 	else{
-// 		$donnee=$req->fetch();
-// 		return $donnee["idEntité"];
-// 	}
-	
-// }
 
 function gestionnaireDisponible($db, $pseudo){
 
@@ -296,7 +284,7 @@ function boitierDisponible($db, $ref){
 
 function entiteDisponible($db, $entite){
 
-	$req = $db->prepare("SELECT * FROM entite WHERE idEntité='$entite'");
+	$req = $db->prepare("SELECT * FROM entit WHERE idEntité=$entite");
 	$req->execute();
 	if($req->rowCount() == 0){
 		return TRUE;
@@ -307,9 +295,9 @@ function entiteDisponible($db, $entite){
 	}
 
 }
-function insertBoitier($db, $ref){
+function insertBoitier($db, $ref, $boitier){
 
-	$req = $db->prepare("insert into boitier (Reference) values ('$ref')");
+	$req = $db->prepare("insert into boitier (Reference,idEntité) values ('$ref','$boitier')");
 	$req->execute();
 
 	return $req;
@@ -325,15 +313,6 @@ function insertEntite($db, $nom , $adresse, $type){
 function majGestionnaire($db, $pseudo, $boitier){
 
 	$req = $db->prepare("UPDATE utilisateur SET idBoitier='$boitier' WHERE (login='$pseudo')");
-	$req->execute();
-
-	return $req;
-
-}
-
-function majEntite($db, $boitier, $entite){
-
-	$req = $db->prepare("UPDATE entit SET idBoitier='$boitier' WHERE (idEntité='$entite'");
 	$req->execute();
 
 	return $req;

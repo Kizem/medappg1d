@@ -16,24 +16,7 @@
                         </div>
 
                         <div class="entreesInformations">
-<!-- 
-                                <div class="conteneurChamp">
-                                    <label class="input-label"><p class="champTexte">Entité associée au boîtier et au gestionnaire* :
-                                        </p>
-                                        <FORM>
-                                        <SELECT class="liste" name="listeDeroulante" size="1">
-                                            <OPTION value=0></OPTION>
-                                            <?php // while($e = $ListeEntite->fetch() ){ ?>
-                                                <OPTION value=<?php $i ?> > <?php// echo $e['idEntité'] ?>-<?php // echo $e['Nom'] ?></OPTION>
-                                                <?php 
-                                               // $i++;
-                                            
-                                             ?>
-                                        </SELECT>
-                                    </FORM>
-                                    </label>
-                                </div>      
-                            --> 
+
 
                                 <div class="conteneurChamp">
                                     <label class="input-label" for="reference">
@@ -52,17 +35,6 @@
                                     </label>
                                     
                                 </div>         
-
-                   
-
-<!--                                 <div class="conteneurChamp">
-                                    <label class="input-label" for="gestionnaire">
-                                        <p class="champTexte">Pseudo du premier gestionnaire* : 
-                                        </p>
-                                        <input class="entreeDeTexte" type="charset" name="gestionnaire"/>
-                                    </label>
-                                    
-                                </div> -->
 
                                 <div class="conteneurChamp">
                                     <input class="boutonValider" type="submit" value="Valider">
