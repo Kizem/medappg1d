@@ -109,6 +109,9 @@
 
           <li><a class="add_boitier" href="new_boitier.php">Ajouter un nouveau boîtier</a></li>
 
+          <li><a class="add_boitier" href="gestionnaire_boit.php">Associer un gestionnaire à un boîtier</a></li>
+
+
         </ul>
 
       </div>
