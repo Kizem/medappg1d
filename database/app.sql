@@ -33,7 +33,9 @@ DROP TABLE IF EXISTS `boitier`;
 CREATE TABLE IF NOT EXISTS `boitier` (
   `idBoitier` int(11) NOT NULL AUTO_INCREMENT,
   `Reference` varchar(100) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`idBoitier`)
+  `idEntité` int(11) DEFAULT NULL,  
+  PRIMARY KEY (`idBoitier`),
+  KEY `idEntité` (`idEntité`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
@@ -126,9 +128,7 @@ CREATE TABLE IF NOT EXISTS `entit` (
   `Type` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Nom` varchar(100) CHARACTER SET latin1 NOT NULL,
   `Adresse` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `idBoitier`int(11) DEFAULT NULL,
-  PRIMARY KEY (`idEntité`),
-  KEY `idBoitier` (`idBoitier`)
+  PRIMARY KEY (`idEntité`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 -- --------------------------------------------------------
@@ -238,16 +238,17 @@ CREATE TABLE IF NOT EXISTS `utilisateur/entité` (
 --
 
 --
+-- Contraintes pour la table `boitier`
+--
+ALTER TABLE `boitier`
+  ADD CONSTRAINT `boitier_ibfk_1` FOREIGN KEY (`idEntité`) REFERENCES `entit` (`idEntité`) ON DELETE SET NULL;
+
+--
 -- Contraintes pour la table `capteur`
 --
 ALTER TABLE `capteur`
   ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE CASCADE;
 
---
--- Contraintes pour la table `entit`
---
-ALTER TABLE `entit`
-  ADD CONSTRAINT `entit_ibfk_1` FOREIGN KEY (`idBoitier`) REFERENCES `boitier` (`idBoitier`) ON DELETE SET NULL;
 
 --
 -- Contraintes pour la table `codeinscription`
