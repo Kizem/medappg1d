@@ -115,11 +115,11 @@
             <form enctype="multipart/form-data" method="post" action="Profil.php">
                 <div class="ConteneurCentral">
                     <div class="Titre">
-                        <h1>Editer vos informations</h1>
+                        <h1 class="titrePage">Editer vos informations</h1>
                     </div>
                     <div class="ConteneurInformationDeBase">
                         <div>
-                            <h2>Informations de base</h2>
+                            <h2 class="titreSecondaire" >Informations de base</h2>
                         </div>
                         <div class="BoxPlusieursChamps">
                             <div class="Entree">
@@ -171,7 +171,7 @@
                     <div class="ConteneurInformationAvancee">
                         <div>
                             <hr>
-                            <h2>Informations avancée</h2>
+                            <h2 class="titreSecondaire">Informations avancée</h2>
                         </div>
                         <div class="BoxPlusieursChamps">    
                             <div class="Entree">
@@ -208,7 +208,7 @@
                     <div class="ConteneurValidation">
                         <div>
                             <hr>
-                            <h2>Valider vos données</h2>
+                            <h2 class="titreSecondaire">Valider vos données</h2>
                         </div>
                         <div class="BoxPlusieursChamps">
                             <input class="Valider" type="submit" value="Valider">

@@ -27,7 +27,7 @@ $cheminPhoto=$_SESSION['cheminPhoto'];
 if(empty($cheminPhoto)){
 	$cheminPhoto="ressources/PhotoDeProfil.png";
 }
-if(isset($_FILES['photo']['name'])){
+if(!empty($_FILES['photo']['name'])){
 	$extension=pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
 	if($extension=='jpg' || $extension=='jpeg'|| $extension=='png'){
 		$infosImage = getimagesize($_FILES['photo']['tmp_name']);
