@@ -12,12 +12,13 @@
         <!--corp-->
         
         
-       <div>
+       <div class="boxtotale">
 			<table style="width:80%">
 				
 				<thead>
 				<tr>
     				<th>Code</th>
+            <th>Action</th>
   				</tr>
   				</thead>
   				
@@ -42,8 +43,12 @@
   				</tbody>
   				
 			</table>
-		</div>
-    <a class="Ajouter"href="gestionCodeInscription.php?action=ajouter"> ajouter </a>
+		
+      <div class="ConteneurBoutonValider">
+        <a class="Ajouter"href="gestionCodeInscription.php?action=ajouter"> ajouter </a>
+      </div>
+    </div>
+    
 
 	</body>
 </html>
