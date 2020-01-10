@@ -10,7 +10,7 @@ p{
 	margin: 4px;
 }
 .tableInformations{
-display:table;
+display:block;
 margin: 5px;
 padding: 10px;
 border-spacing: 5px;
