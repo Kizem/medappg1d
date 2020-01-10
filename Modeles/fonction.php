@@ -66,29 +66,29 @@ function tableauTestTemperature($db){
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Temperature' ");
 	$req->execute();
-	while($row = $request->fetch()) {
+	while($row = $req->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
+				<td>Température du corps</td>
 				<td>Dernière valeur</td>";
 			}
 		
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Temperature' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}
 		
 	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = 'Temperature' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}
 		
 	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = 'Temperature' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}		
 					
 		echo "</tr></tbody></table>";			
@@ -108,30 +108,29 @@ function tableauTestPerception($db){
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Perception' ");
 	$req->execute();
-    while($row = $request->fetch()) {
+    while($row = $req->fetch()) {
 		echo "<tbody>
 			<tr>
-				<td>Fréquence cardiaque</td>
+				<td>Perception auditive</td>
 				<td>Dernière valeur</td>";
-
 			}
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Perception' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}
 
 	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = 'Perception' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}
 
 	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = 'Perception' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}		
 			
 		echo "</tr></tbody></table>";
@@ -151,32 +150,29 @@ function tableauTestFrequence($db) {
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Frequence' ");
 	$req->execute();
-    while($row = $request->fetch()) {
+    while($row = $req->fetch()) {
 		echo "<tbody>
 			<tr>
 				<td>Fréquence cardiaque</td>
 				<td>Dernière valeur</td>";
-
-
-
 			}
 
 	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Frequence' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}
 
 	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = 'Frequence' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}
 
 	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = 'Frequence' ");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		echo"<td>" . $row[0] . "</td>";
 	}		
 			
 		echo "</tr></tbody></table>";
