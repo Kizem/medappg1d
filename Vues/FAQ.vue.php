@@ -308,7 +308,7 @@
                                                 <div class="partieAfficher">
                                                     <label class="input-label" for="nom">
                                                     	<p>email:</p>
-                                                        <input type="text" name="from">
+                                                        <input type="text" name="from" required>
                                                     </label>
                                                 </div>
 
@@ -319,14 +319,14 @@
                                             <div class="conteneurChamp">
                                                 <label class="input-label">
                                                 	<p> Subject:</p>
-                                                    <input type="text" name="subject"><p>
+                                                    <input type="text" name="subject" required><p>
                                                 </label>
                                             </div>
                                   			
                                   			<div class="conteneurChamp">
                                                 <label class="input-label">
                                                 	<p id="msg">Votre message</p>
-                                                    <textarea name="message"></textarea><p>
+                                                    <textarea name="message" required=""></textarea><p>
                                                 </label>
                                             </div>
 
