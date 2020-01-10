@@ -181,3 +181,22 @@ body{
 .Actions li a:hover{
   border : 3px solid #28292A;
 }
+
+.chip {
+  padding: 0 25px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin: auto;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

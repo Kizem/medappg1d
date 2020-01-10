@@ -1,7 +1,12 @@
 <?php
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
-
+$nom=$_SESSION['Nom'];
+$prenom=$_SESSION['Prenom'];
+$cheminPhoto=$_SESSION['cheminPhoto'];
+if(empty($cheminPhoto)){
+	$cheminPhoto="ressources/PhotoDeProfil.png";
+}
 if(isset($_GET['delete_cap']) AND !empty($_GET['delete_cap'])){
 	//on vient supprimer l'utilisateur qui a pour id la valeur de ? dans l'url
 	$req = $db->prepare('DELETE FROM capteur WHERE idCapteur = ?');
