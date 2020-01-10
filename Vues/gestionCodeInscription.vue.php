@@ -45,8 +45,19 @@
 			</table>
 		
       <div class="ConteneurBoutonValider">
-        <a class="Ajouter"href="gestionCodeInscription.php?action=ajouter"> ajouter </a>
+        <a class="Ajouter"href="gestionCodeInscription.php?action=ajouter"> NewUtilisateur </a>
       </div>
+      <?php  
+      if($bool){
+        echo "<div class=\"ConteneurBoutonValider\">
+        <a class=\"Ajouter\"href=\"gestionCodeInscription.php?action=ajouterAdmin\"> NewAdmin </a>
+      </div>";
+        echo "<div class=\"ConteneurBoutonValider\">
+          <a class=\"Ajouter\"href=\"gestionCodeInscription.php?action=ajouterGestion\"> NewGestion </a>
+        </div>";
+
+      }
+      ?>
     </div>
     
 
