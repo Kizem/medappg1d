@@ -50,6 +50,27 @@
                                 </div>
 
                                 <div class="conteneurChamp">
+                                    <label class="input-label"><p class="champTexte">Boîtier associé* :
+                                        </p>
+                                        <FORM>
+                                        <SELECT class="liste" name="listeDeroulante" size="1">
+                                            <OPTION value=0></OPTION>
+                                            <?php while($b = $ListeBoitier->fetch() ){ ?>
+                                                <OPTION value=<?php $i ?>> 
+                                                
+                                                <?php echo $b['idBoitier'] ?>-<?php echo $b['Reference']; ?>
+                                                       
+                                                </OPTION>
+                                                <?php 
+                                                $i++;
+                                            }
+                                             ?>
+                                        </SELECT>
+                                    </FORM>
+                                    </label>
+                                </div>                                  
+
+                                <div class="conteneurChamp">
                                     <input class="boutonValider" type="submit" value="Valider">
                                 </div>
                             

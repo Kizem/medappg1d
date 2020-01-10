@@ -10,9 +10,9 @@ include_once('Vues/FAQ.vue.php');
 
 
 
-$from = $_POST['from'];
 
-$headers = "From: $from";
+
+
 
 //$from = $_POST['from'];
 
@@ -24,6 +24,7 @@ if(!empty($_POST)){
 	$to = "MedAppG1D@gmail.com";
 	$subject = $_POST['subject'];
 	$message = $_POST['message'];
+	$headers = $_POST['from'];
 	mail($to, $subject, $message, $headers);
 }
 
