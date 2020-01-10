@@ -20,7 +20,6 @@ if(!empty($_POST['Type']) AND !empty($_POST['Valeur_init']) AND !empty($_POST['S
 
 }
 else{
-	$erreur= "Veuillez remplir tous les champs";
 	include('Vues/add_capteur.vue.php');
 	}
 

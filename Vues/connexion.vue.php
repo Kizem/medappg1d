@@ -11,6 +11,14 @@
 		<header>
             <?php include_once('includes/header.php'); ?>
         </header>	
+        <?php 
+            if(!empty($erreur)){
+                include_once('includes/alerte.php');
+            }
+            if(!empty($resultat)){
+                include_once('includes/validation.php');
+            }
+        ?>
 
 		<!-- Le contenu (1 seule section suffit) -->		
 		<section>
@@ -66,9 +74,8 @@
 		</section>
 
 		<footer>
-            <div class="footer_connexion">
-            <?php include_once('includes/footer.php'); ?>
-            </div> 
+            <?php //include_once('includes/footer.php'); ?>
+ 
         </footer>
 	</body>
 </html>
