@@ -161,3 +161,83 @@ nav > ul li:hover .sous{
   background: red;
   font-weight: bold;
 }
+
+/*#mail{
+  margin: auto;
+  max-width: 300px;
+  width: 30%;
+  background-color:#eee;
+  border:3px solid #e6e6e6;
+  border-radius:1px;margin:10 0 0px;
+  padding:50px;
+  margin: 12;
+  border-radius:10px;
+}*/
+#mail{
+  margin: 30px 30% 42px 30%;
+}
+
+.email{
+  margin: auto;
+  max-width:500px;
+  width:100%;  
+}
+
+.boxtotale{
+    background-color:#eee;
+    border:3px solid #e6e6e6;
+    border-radius:1px;margin:0 0 10px;
+    padding:50px;
+    margin: 12;
+    border-radius:10px;
+
+}
+
+.boxtotale_2{
+  justify-content: center;
+  width: 100%;
+  background-color:#eee;
+  border:3px solid #e6e6e6;
+  border-radius:1px;margin:0 0 10px;
+  padding: 20px 10px 20px 10px;
+  margin: 12;
+  border-radius:10px;
+
+}
+
+.submit{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #F6F1F0;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+  color:black;
+}
+
+.conteneurChamp{
+  display:flex;
+  justify-content: center;
+  flex-direction:row;
+  margin: 12px auto;
+
+}
+
+.input-label{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+}
+
+.input-label+p{
+  margin-bottom: 0px;
+}
+
+#msg{
+  justify-content: center;
+}
+
+textarea{
+  width: 220%;
+  height: 150px;
+  margin-left: -60%;
+}

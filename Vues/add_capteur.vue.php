@@ -23,7 +23,7 @@
                                         <label class="input-label" for="Type">
                                             <p class="champTexte">Type :  
                                             </p>
-                                            <input class="entreeDeTexte" type="charset" name="Type"/>
+                                            <input class="entreeDeTexte" type="charset" name="Type" required/>
                                         </label>
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@
                                         <label class="input-label" for="Valeur_init">
                                         	<p class="champTexte">Valeur initiale :  
                                     		</p>
-                                        	<input class="entreeDeTexte" type="charset" name="Valeur_init" />
+                                        	<input class="entreeDeTexte" type="charset" name="Valeur_init"required />
                                         </label>      
                                     </div>
 
@@ -44,7 +44,7 @@
                                     <label class="input-label" for="Seuil">
                                         <p class="champTexte">Seuil du capteur : 
                                         </p>
-                                        <input class="entreeDeTexte" type="charset" name="Seuil"/>
+                                        <input class="entreeDeTexte" type="charset" name="Seuil"required/>
                                     </label>
                                     
                                 </div>
@@ -55,7 +55,7 @@
                             
                         </div>
                         <div class="boiteErreur">
-                            <p class="erreur"><?php echo $erreur ?> !</p>
+                            <p class="erreur"><?php echo $erreur ?></p>
                         </div>
                     </div>
             </article>  

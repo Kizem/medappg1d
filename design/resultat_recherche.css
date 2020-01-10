@@ -35,12 +35,16 @@ table thead th {
 table thead th:first-child {
   border-left: none;
 }*/
+body{
+margin: 0px;
+}
 table {
   border: 4px solid #28292A;
   background-color: #555555;
   width: 400px;
   text-align: center;
   border-collapse: collapse;
+  margin: auto;
 }
 table td, table th {
   border: 1px solid #28292A;
@@ -67,4 +71,60 @@ table thead th {
 }
 table thead th:first-child {
   border-left: none;
+}
+a.lienSupp{
+  border-radius: 10px;
+}
+a.lienSupp:link, a.lienSupp:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.lienSupp:hover, a.lienSupp:active {
+  background-color: hotpink;
+}
+
+a.Ajouter{
+  border-radius: 10px;
+  margin-top: 10px
+  
+  
+
+}
+a.Ajouter:link, a.Ajouter:visited {
+  background-color: #40B319;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.Ajouter:hover, a.Ajouter:active {
+  background-color: #66D342;
+}
+
+.ConteneurTable{
+  margin: auto;
+}
+h2.TitrePage{
+  text-align: center;
+}
+
+.ConteneurBoutonValider{
+  text-align: center;
+}
+
+.boxtotale{
+    background-color:#eee;
+    border:3px solid #e6e6e6;
+    border-radius:1px;margin:0 0 10px;
+    padding:50px;
+    margin: 20px;
+    border-radius:10px;
+
 }

@@ -296,7 +296,48 @@
 		</div>
 
 		<p>
-			<h2 id="ancre_contact">Nous contacter</h2>
+							<h2 id="ancre_contact">Nous contacter</h2>
+							<form id="mail" action="FAQ.php" method="POST">
+								<article class="email">
+						            <div class="boxtotale_2">
+
+            			                        <div class="entreesInformations">
+                                        
+                                            <div class="conteneurChamp">
+                                                
+                                                <div class="partieAfficher">
+                                                    <label class="input-label" for="nom">
+                                                    	<p>email:</p>
+                                                        <input type="text" name="from" required>
+                                                    </label>
+                                                </div>
+
+                                                <div class="partieCachee">
+                                                </div>
+                                            </div>
+                                                
+                                            <div class="conteneurChamp">
+                                                <label class="input-label">
+                                                	<p> Subject:</p>
+                                                    <input type="text" name="subject" required><p>
+                                                </label>
+                                            </div>
+                                  			
+                                  			<div class="conteneurChamp">
+                                                <label class="input-label">
+                                                	<p id="msg">Votre message</p>
+                                                    <textarea name="message" required=""></textarea><p>
+                                                </label>
+                                            </div>
+
+
+                                           	<div class="conteneurChamp">
+                                            	<input type="submit" class="submit" value="Envoyer">				
+                                            </div>
+                                            
+
+						        </article>
+							</form>
 		</p>
 
 

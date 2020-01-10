@@ -9,41 +9,51 @@
 			//$marqueur= array('login'=>$login,'Mdp'=>$Mdp_hash);
 			$req->execute ();
 			$lesEnreg = $req->fetch();
-			 
-			$Mdp_hash=$lesEnreg['Mdp'];
-			$Type=$lesEnreg['Type'];
-			$Mail=$lesEnreg['Mail'];
-			$Nom=$lesEnreg['Nom'];
-			$Prenom=$lesEnreg['Prenom'];
-			$Sexe=$lesEnreg['Sexe'];
-			$Taille=$lesEnreg['Taille'];
-			$Poids=$lesEnreg['Poids'];
-			$DateDeNaissance=$lesEnreg['DateDeNaissance'];
-			$idUser=$lesEnreg['idUser'];
-			$cheminPhoto=$lesEnreg['Photos'];
-			print_r($lesEnreg);
-			echo "$sql";
-			
-			
-			if (password_verify($Mdp, $Mdp_hash)) {
-				//session_start();
-				$_SESSION['login']=$login;
-				$_SESSION['Mdp']=$Mdp_hash;
-				$_SESSION['Type']=$Type;
-				$_SESSION['Mail']=$Mail;
-				$_SESSION['Prenom']=$Prenom;
-				$_SESSION['Nom']=$Nom;
-				$_SESSION['Sexe']=$Sexe;
-				$_SESSION['Taille']=$Taille;
-				$_SESSION['Poids']=$Poids;
-				$_SESSION['DateDeNaissance']=$DateDeNaissance;
-				$_SESSION['idUser']=$idUser;
-				$_SESSION['cheminPhoto']=$cheminPhoto;
-				header ('Location: index.php');
+			if(empty($lesEnreg)){
+				$erreur="Pseudo inconnu";
+				include_once('Vues/connexion.vue.php');
 			}
 			else{
-			$erreur = "Mauavais mot de passe";
-			include_once('Vues/connexion.vue.php');
+				$Mdp_hash=$lesEnreg['Mdp'];
+				$Type=$lesEnreg['Type'];
+				$Mail=$lesEnreg['Mail'];
+				$Nom=$lesEnreg['Nom'];
+				$Prenom=$lesEnreg['Prenom'];
+				$Sexe=$lesEnreg['Sexe'];
+				$Taille=$lesEnreg['Taille'];
+				$Poids=$lesEnreg['Poids'];
+				$DateDeNaissance=$lesEnreg['DateDeNaissance'];
+				$idUser=$lesEnreg['idUser'];
+				$cheminPhoto=$lesEnreg['Photos'];
+				$idBoitier=$lesEnreg['idBoitier'];
+				$req=$db->prepare ("SELECT idEntité FROM `utilisateur/entité` WHERE idUser='$idUser'");
+				$req->execute ();
+				$idEntite=$req->fetch();
+				
+				
+				if (password_verify($Mdp, $Mdp_hash)) {
+					//session_start();
+					$_SESSION['login']=$login;
+					$_SESSION['Mdp']=$Mdp_hash;
+					$_SESSION['Type']=$Type;
+					$_SESSION['Mail']=$Mail;
+					$_SESSION['Prenom']=$Prenom;
+					$_SESSION['Nom']=$Nom;
+					$_SESSION['Sexe']=$Sexe;
+					$_SESSION['Taille']=$Taille;
+					$_SESSION['Poids']=$Poids;
+					$_SESSION['DateDeNaissance']=$DateDeNaissance;
+					$_SESSION['idUser']=$idUser;
+					$_SESSION['cheminPhoto']=$cheminPhoto;
+					$_SESSION['idBoitier']=$idBoitier;
+					$_SESSION['idEntite']=$idEntite['idEntité'];
+					header ('Location: index.php');
+
+				}
+				else{
+				$erreur = "Mauvais mot de passe";
+				include_once('Vues/connexion.vue.php');
+			}
 
     			
 			}

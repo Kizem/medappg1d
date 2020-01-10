@@ -8,6 +8,10 @@
   </head>
   <body>
     <header><?php include_once('includes/header.php'); ?></header>
+    <div class="chip">
+      <img <?php echo "src='$cheminPhoto'";  ?> alt="Person" width="96" height="96">
+      <p><?php  echo $nom;echo " "; echo $prenom;?></p>
+    </div>
     <div id = "main">
 
       <div align="center">
@@ -39,6 +43,28 @@
 
         <!-- *************** -->
 
+        <!-- GESTION DES CAPTEURS LIES AU GESTIONNAIRE -->
+
+        <div class="catégorie">
+          <p class="titre_catég"> Capteurs </p>
+
+            <?php while($c = $capteurs->fetch()){ ?>
+
+              <p class="capteur"><?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
+              / Seuil :  <?= $c['seuil'] ?></p>          
+
+          <ul class="Actions">
+            
+            <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>" onclick="return confirm('Etes-vous sûr de vouloir effectuer la suppresion ?');">Supprimer</a></li>
+          
+            <li class="Modif_cap"><a href="page_capteur.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
+          </ul>
+          <?php } ?>
+
+          <a class="Add_cap" href="add_capteur.php">Ajouter</a>
+
+        </div>        
+
         <!-- GESTION DES UTILISATEURS DU SITE WEB -->
 
         <div class="catégorie">
@@ -47,6 +73,21 @@
           <p class="intro"> Vous souhaitez programmer une session de test à une date particulière ? Cliquez sur ce bouton, remplissez le formulaire
           qui apparaîtra, puis communiquez le code de session à votre utilisateur pour lui permettre de réaliser ce test. </p>
           <a class="création_test" href="Creation_test.php">Créer une session</a>
+            
+        </div>
+
+        <div class="catégorie">
+
+          <p class="titre_catég"> Test </p>
+          <p class="intro"> Vous souhaitez voir les tests programmé ?</p>
+          <a class="création_test" href="affichageTest.php">Tous les tests</a>
+            
+        </div>
+        <div class="catégorie">
+
+          <p class="titre_catég"> Inscription </p>
+          <p class="intro"> Vous souhaitez ajouter un code d'inscriptions pour un de vos clients ?</p>
+          <a class="création_test" href="gestionCodeInscription.php">Gérer les codes d'inscriptions</a>
             
         </div>
 

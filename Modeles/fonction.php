@@ -11,8 +11,8 @@ function insertCapteur($db, $type, $val_init, $seuil){
 	
 	return $req;
 }
-function insertTest($db, $Date, $Code, $idUser){
-	$req = $db->prepare("insert into test (Date,Code,idUser) values ('$Date','$Code','$idUser')");
+function insertTest($db, $Date, $Code, $idUser, $idBoitier,$Type){
+	$req = $db->prepare("insert into test (Date,Code,idUser, idBoitier, Durée, Type) values ('$Date','$Code','$idUser','$idBoitier','$Date', '$Type')");
 	$req->execute();
 	
 	return $req;
@@ -179,9 +179,16 @@ function tableauTestFrequence($db) {
 	}
 
 function detectionCode($db, $code){
-	$req = $db->prepare("SELECT * FROM codeInscription WHERE id='$code'");
+	$req = $db->prepare("SELECT * FROM codeInscription WHERE code='$code'");
 	$req->execute();
-	return $req;
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		$donnee=$req->fetchall();
+		return $donnee;
+	}
+	
 }
 
 function lireCGU($db, $id){
@@ -189,11 +196,27 @@ function lireCGU($db, $id){
 	$req->execute();
 	return $req;
 }
-
+function login($db, $pseudo){
+	$req = $db->prepare ("SELECT * FROM Utilisateur WHERE  login= '$pseudo'");
+	$req->execute ();
+	return $req;
+}
+function inserUsersEntite($db, $idUser, $idEntite){
+	$req = $db->prepare("INSERT INTO `utilisateur/entit` (idUser,idEntité) values ('$idUser','$idEntite')");
+	$req->execute();
+	return $req;
+}
 function ecrireCGU($db, $id,$CGU,$ML){
 	$CGU=addslashes($CGU);
 	$ML=addslashes($ML);
 	$req = $db->prepare("UPDATE `cgu` SET `idCGU`='$id',`MentionLegales`='$ML',`CGU`='$CGU'");
+	$req->execute();
+	return $req;
+}
+
+function changerNomTheme($db, $theme, $id){
+	$theme=addslashes($theme);
+	$req = $db->prepare("UPDATE 'thèmefaq' SET 'Theme'='$theme' WHERE 'id'='$id'");
 	$req->execute();
 	return $req;
 }
@@ -219,6 +242,110 @@ function genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmn
  }
  return $chaine;
 }
+function getTest($db){
+	$req = $db->prepare(addslashes("SELECT * FROM `utilisateur` t1 INNER JOIN `test` t2 ON t1.idUser = t2.idUser ORDER BY  t2.Date DESC"));
+	$req->execute();
+	return $req;
+}
 
+/* ------ Création d'entité/boitier */
+
+
+function gestionnaireDisponible($db, $pseudo){
+
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE (Type='Gestionnaire') AND (idBoitier!='NULL')");
+	$req->execute();
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		return FALSE;
+	}
+
+}
+
+function boitierDisponible($db, $ref){
+
+	$req = $db->prepare("SELECT * FROM boitier WHERE Reference='$ref'");
+	$req->execute();
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		$donnee=$req->fetch();
+ 		return $donnee["idBoitier"];
+	}
+
+}
+
+function entiteDisponible($db, $entite){
+
+	$req = $db->prepare("SELECT * FROM entit WHERE idEntité=$entite");
+	$req->execute();
+	if($req->rowCount() == 0){
+		return TRUE;
+	}
+	else{
+		$donnee=$req->fetch();
+ 		return $donnee["idEntité"];
+	}
+
+}
+function insertBoitier($db, $ref, $boitier){
+
+	$req = $db->prepare("insert into boitier (Reference,idEntité) values ('$ref','$boitier')");
+	$req->execute();
+
+	return $req;
+}
+
+function insertEntite($db, $nom , $adresse, $type){
+	$req = $db->prepare("insert into entit (Type,Nom,Adresse) values ('$type','$nom','$adresse')");
+	$req->execute();
+	
+	return $req;
+}
+
+function majGestionnaire($db, $pseudo, $boitier){
+
+	$req = $db->prepare("UPDATE utilisateur SET idBoitier='$boitier' WHERE (login='$pseudo')");
+	$req->execute();
+
+	return $req;
+
+}
+
+/*-------------------*/
+
+function getCodeEntite($db, $idEntite){
+	$req = $db->prepare("SELECT * FROM `codeinscription` WHERE idEntité='$idEntite'");
+	$req->execute();
+	return $req;
+}
+function deleteCodeInscription($db, $id){
+	$req = $db->prepare("DELETE FROM `codeinscription` WHERE idCodeInscription='$id'");
+	$req->execute();
+	return $req;
+}
+
+function addCodeUtilisateur($db, $code,$idEntité, $fonction){
+	$req = $db->prepare("INSERT INTO `codeinscription`(`fonction`, `code`, `idEntité`) VALUES ('$fonction','$code','$idEntité')");
+	$req->execute();
+	return $req;
+}
+
+function chercheDestinataire($db, $destinataire){
+	$requete = $db->prepare('SELECT * FROM messageuser WHERE idUser = :destinataire');
+    $requete->execute(array('destinataire' => $destinataire));
+    $donnees = $requete->fetch();
+    $requete->CloseCursor();
+    return $donnees;
+}
+
+function envoieMessage($db, $date, $Heure, $message, $donnees){
+	$requete = $db->prepare('INSERT INTO message(idMessage, Date, Heure, contenu, idUser) VALUES(?,?,?,?)');
+    $requete->execute(array($_SESSION['id'], $date, $Heure, $message, $donnees['id']));
+    $requete->CloseCursor();
+}
 
 ?>
