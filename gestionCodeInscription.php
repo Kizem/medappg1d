@@ -3,7 +3,7 @@
 include_once('includes/AccesBase.php');
 include_once('Modeles/fonction.php');
 $bool = false;
-if($_SESSION['Type']=='Administrateur'{
+if($_SESSION['Type']=='Administrateur'){
 	$bool=TRUE;
 }
 if(isset($_GET["action"]) && ($_GET["action"]=="supprimer")) {
