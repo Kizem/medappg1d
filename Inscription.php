@@ -47,9 +47,10 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 							for ($i=0; $i < count($fonction); $i++) {
 								if($fonction[$i]['fonction']==$typeUtilisateur){
 									$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
-									if($fonction[$i]['fonction']=="Utilisateur"){
+									$req=deleteCodeInscription($db,$fonction[$i]['idCodeInscription']);
+									/*if($fonction[$i]['fonction']=="Utilisateur"){
 										$req=deleteCodeInscription($db,$fonction[$i]['idCodeInscription']);
-									}
+									}*/
 									if(!is_null($fonction[$i]['idEntité'])){
 										$req=login($db, $login);
 										$DonneeLogin = $req->fetch();

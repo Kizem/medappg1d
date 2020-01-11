@@ -5,7 +5,17 @@ include_once('Modeles/fonction.php');
 $bool = false;
 if($_SESSION['Type']=='Administrateur'){
 	$bool=TRUE;
+	$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+	$req->execute();
+	
+	$fonction = $req->fetchall();
+	
 }
+else if($_SESSION['Type']=='Gestionnaire'){
+	$rep = getCodeEntite($db, $_SESSION['idEntite']);
+	$fonction = $rep->fetchall();
+
+	}
 if(isset($_GET["action"]) && ($_GET["action"]=="supprimer")) {
 		$reponse=deleteCodeInscription($db,$_GET["id"]);
 	}
@@ -23,7 +33,6 @@ if(isset($_GET["action"]) ) {
 	
 }
 
-$rep = getCodeEntite($db, $_SESSION['idEntite']);
-$fonction = $rep->fetchall();
+
 include_once('Vues/gestionCodeInscription.vue.php');
 ?>

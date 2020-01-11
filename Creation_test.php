@@ -23,9 +23,11 @@ else{
 	$ListesCapteurs = $db->query('SELECT * FROM capteur ORDER BY idCapteur DESC');
 	$liste=$db->query('SELECT login FROM utilisateur');
 	$liste=$liste->fetchall();
+	
 	for($i=0;$i<count($liste); $i++ ){
 		$listePseudo[$i]=$liste[$i]['login'];
 	}
+	
 	
 	if(!empty($_POST)){
 		$date=htmlspecialchars($_POST['Date']);

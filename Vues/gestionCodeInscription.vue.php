@@ -17,7 +17,8 @@
 				
 				<thead>
 				<tr>
-    				<th>Code</th>
+    				<th>Fonction</th>
+            <th>Code</th>
             <th>Action</th>
   				</tr>
   				</thead>
@@ -28,6 +29,9 @@
   					for ($i=0; $i < count($fonction); $i++) {
   						echo "<tr>";
   						echo "<td>";
+              echo $fonction[$i]['fonction'], ' ';
+              echo "</td>";
+              echo "<td>";
   						echo $fonction[$i]['code'], ' ';
               echo "</td>";
               echo "<td>";

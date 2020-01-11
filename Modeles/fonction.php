@@ -333,7 +333,13 @@ function deleteCodeInscription($db, $id){
 }
 
 function addCodeUtilisateur($db, $code,$idEntité, $fonction){
-	$req = $db->prepare("INSERT INTO `codeinscription`(`fonction`, `code`, `idEntité`) VALUES ('$fonction','$code','$idEntité')");
+	if(is_null($idEntité)){
+		$demande="INSERT INTO `codeinscription`(`fonction`, `code`) VALUES ('$fonction','$code')";
+	}
+	else{
+		$demande="INSERT INTO `codeinscription`(`fonction`, `code`, `idEntité`) VALUES ('$fonction','$code','$idEntité')";
+	}
+	$req = $db->prepare($demande);
 	$req->execute();
 	return $req;
 }
