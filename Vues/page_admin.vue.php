@@ -36,6 +36,8 @@
                 </ul>
               <?php } else{} ?>
             <?php } ?>
+
+            <a class="code" href="gestionCodeInscription.php"> Gérer les codes d'inscription</a>
         </div>
 
         <!-- *********************************** -->
@@ -105,14 +107,16 @@
 
         <ul class="actions_entite">
 
-          <li><a class="add_boitier" href="new_entite.php">Ajouter une nouvelle entité</a></li>
+          <li><a class="act" href="new_entite.php">Ajouter une nouvelle entité</a></li>
 
-          <li><a class="add_boitier" href="new_boitier.php">Ajouter un nouveau boîtier</a></li>
+          <li><a class="act" href="new_boitier.php">Ajouter un nouveau boîtier</a></li>
 
-          <li><a class="add_boitier" href="gestionnaire_boit.php">Associer un gestionnaire à un boîtier</a></li>
+          <li><a class="act" href="gestionnaire_boit.php">Associer un gestionnaire à un boîtier</a></li>
 
 
         </ul>
+
+        
 
       </div>
     </center>
