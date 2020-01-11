@@ -24,7 +24,7 @@ if(!empty($_POST)){
 	$to = "MedAppG1D@gmail.com";
 	$subject = $_POST['subject'];
 	$message = $_POST['message'];
-	$headers = $_POST['from'];
+	$headers = "From: yourwebsite@app.fr";
 	mail($to, $subject, $message, $headers);
 }
 
