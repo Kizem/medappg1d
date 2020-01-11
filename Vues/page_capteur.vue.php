@@ -43,6 +43,8 @@
           <p> ID du capteur : <?= $icap['idCapteur'] ?> </p>          
           <p> Seuil du capteur : <?= $icap['seuil'] ?> </p>
 
+          <a href="modif_capteur.php?cap_a_modif=<?= $idCap?>">Modifier</a>
+
         </div>
 
 
