@@ -19,7 +19,7 @@
             }
         ?>
 
-      <form method="post" action="Creation_test.php">
+      <form autocomplete="off" method="post" action="Creation_test.php">
             <article class="art">
                     <div class="boxtotale">
                         <div class="titrePage">
@@ -34,7 +34,10 @@
                                         <label class="input-label" for="Pseudo">
                                             <p class="champTexte">Pseudo :  
                                             </p>
-                                            <input class="entreeDeTexte" type="charset" name="Pseudo"required/>
+
+                                            <input id="pseudoCreationSessionDeTest" class="entreeDeTexte" type="charset" name="Pseudo"required/>
+                                                
+                                                
                                         </label>
                                     </div>
                                 </div>
@@ -88,5 +91,10 @@
             </article>  
         </form>
     <footer><?php include_once('includes/footer.php'); ?></footer>
+    <script src="autoCompletion.js"></script>
+    
+    <script>
+        autocomplete(document.getElementById("pseudoCreationSessionDeTest"), <?php echo json_encode($listePseudo); ?>);
+    </script>
   </body>
 </html>
