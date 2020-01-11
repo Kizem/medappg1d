@@ -33,6 +33,12 @@ $utilisateurs = $db->query('SELECT * FROM utilisateur ORDER BY idUser DESC'); //
 
 $capteurs = $db->query('SELECT * FROM capteur ORDER BY idCapteur DESC'); //permet de classer les capteurs par ordre d'ajout(les derniers en tête)
 
+$entites = $db->query('SELECT * FROM entit ORDER BY idEntité DESC');
+
+$boitier = $db->query('SELECT * FROM boitier ORDER BY idBoitier DESC');
+
+$gestionnaires = $db->query("SELECT * FROM utilisateur WHERE Type='Gestionnaire' ORDER BY idBoitier DESC");
+
 
 include_once('Vues/page_admin.vue.php');
 ?>

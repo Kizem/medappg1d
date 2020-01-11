@@ -115,6 +115,44 @@
 
 
         </ul>
+        <center>
+          <div class="tab_affiche">
+
+            <p class="titre_affiche"> Liste des entités associées à l'application </p>
+
+            <div class="affich_all">
+
+            <?php while($e = $entites->fetch()){ ?>
+              <?php $boitier = $db->query('SELECT * FROM boitier ORDER BY idBoitier DESC'); ?>
+                <p class="entite"><?= $e['Type'] ?> , <?=$e['Nom'] ?></p>
+                <ul class="Liés">
+                  
+                      
+                    <?php while($b=$boitier->fetch()){ 
+                      if($b['idEntité']==$e['idEntité']){ 
+                      $gestionnaires = $db->query("SELECT * FROM utilisateur WHERE Type='Gestionnaire' ORDER BY idBoitier DESC"); ?>
+
+                       <li class="linked_boit">Boitier: <?=$b['idBoitier']?> - <?=$b['Reference']?></li>
+                        <?php while($g=$gestionnaires->fetch()){ 
+                          if($g['idBoitier']==$b['idBoitier']){ ?>
+                            <li class="linked_gest">Gestionnaire: <?=$g['idUser']?> - <?=$g['login']?></li>
+                          <?php } else{} 
+                        } ?>
+
+                      <?php } else{} ?>
+
+                      
+
+                    <?php } ?>
+                </ul>
+              
+            <?php } ?>              
+
+
+            </div>
+
+          </div>
+        </center>
 
         
 

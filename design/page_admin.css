@@ -24,7 +24,8 @@ body{
 }
 
 .titre_catég{
-
+  margin:0;
+  margin-bottom:20px;
 	font-family: CaviarDreams-Bold;
 	font-size: 22px;
 	text-align: center;
@@ -282,6 +283,8 @@ body{
   box-shadow: 3px 1px 5px grey;
   border: 1px solid black;
   height: auto;
+  padding-bottom:5%;
+  margin-bottom: 2%;
 }
 .actions_entite{
   display:table;
@@ -321,4 +324,60 @@ body{
 .act:hover{
   background-color: #28292A;
   color: #e9e8e8;
+}
+
+.tab_affiche{
+  box-shadow: 3px 1px 5px grey;
+  border: 1px solid black;
+  width:400px;
+  height: auto;
+}
+
+.titre_affiche{
+  font-family: CaviarDreams-Bold;
+  font-size: 15px;
+  text-align: center;
+  color: hsl(210, 100%, 54%);
+  background-color: #28292A;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+  margin:0;
+  margin-bottom:20px;
+}
+
+.Liés{
+  width:auto;
+  margin:auto;
+  margin-bottom:2%;
+  padding:0;
+  list-style-type: none;
+}
+
+.entite{
+    font-family: Roboto-Black;
+  text-align: center;
+  color: #28292A;
+}
+
+.linked_boit{
+
+  font-family: Roboto-Black;
+  text-align: center;
+  color: black;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+  padding: 8px 8px 17px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+  background-color: #1E90FF;
+}
+.linked_gest{
+
+  font-family: Roboto-Black;
+  text-align: center;
+  color: black;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+  padding: 8px 8px 17px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+  background-color: #FFA500;
 }
