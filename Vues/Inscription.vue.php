@@ -77,13 +77,13 @@
                                     <label class="input-label">
                                         <p class="champTexte">Mot de passe* : 
                                         </p>
-                                        <input class="entreeDeTexte" type="password" name="motDePasse"required/>
+                                        <input id="IMdp1" class="entreeDeTexte" type="password" name="motDePasse" value='zero'required/>
                                     </label>
                                 </div>
                                 <div class="conteneurChamp">
-                                    <label class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
+                                    <label  class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
                                         </p>
-                                        <input class="entreeDeTexte" type="password" name="confirmMDP"required/>
+                                        <input id="IMdp2" class="entreeDeTexte" type="password" name="confirmMDP" value='zero' required/>
                                     </label>
                                 </div>
                                     
@@ -139,6 +139,9 @@
             </article>  
         </form>
         <footer><?php include_once('includes/footer.php'); ?></footer>
-        
+        <script src="Inscription.js"></script>
+        <script type="text/javascript">
+            sameMdp(document.getElementById('IMdp1'),document.getElementById('IMdp2'));
+        </script>
     </body>
 </html>
