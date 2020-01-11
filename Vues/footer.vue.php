@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="design/footer.css"> 
-<div class="conteneur">
+<div class="conteneurFooter">
 	<div class="boutons">
 		<ul>
 		      <a class="bouton_footer" href="FAQ.php">FAQ</a>
