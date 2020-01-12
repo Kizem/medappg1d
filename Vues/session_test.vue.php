@@ -52,7 +52,7 @@
             notamment votre niveau de stress</p>
             </p>
             
-            <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
+            <a href="nos_tests.php"></a><a href="monEspace.php" class="do_tests">realiser le test</a>
           </div>
 
           <div class="test2" align="center">
@@ -61,7 +61,7 @@
               <p class="table">Ce test de temparature va nous permettre d'obtenir plusieurs valeurs,
               qui combiné a votre frequence cardiaque va nous donner une valeur precise de votre niveau de stress</p>
             </p>
-            <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
+            <a href="nos_tests.php"></a><a href="monEspace.php" class="do_tests">realiser le test</a>
           </div>
 
           <div class="test3" align="center">
@@ -69,7 +69,7 @@
             <p class="table_header">TEST SUR L'ACCUITÉE AUDITIVE 
               <p class="table">L'audition est très importante pour la conduite de tout véhicule et même pour l'orientation dans l'espace grâce à l'oreille interne</p>
             </p>
-            <a href="nos_tests.php"></a><button class="do_tests">realiser le test</button>
+            <a href="nos_tests.php"></a><a href="monEspace.php" class="do_tests">realiser le test</a>
           </div>
         </div>
     <!--FOOTER -------------------------------- -->

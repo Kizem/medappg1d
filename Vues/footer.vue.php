@@ -4,7 +4,7 @@
 		<ul>
 		      <a class="bouton_footer" href="FAQ.php">FAQ</a>
 		      <a class="bouton_footer" href="CGUMentionLegales.php">CGU & Mentions Légales</a>
-		      <a class="bouton_footer" href="InfoContact">Infos de contact</a>
+		      <a class="bouton_footer" href="FAQ.php#ancre_contact">Infos de contact</a>
 		 </ul>
 	</div> 
 </div>

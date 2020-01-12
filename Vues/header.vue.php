@@ -36,7 +36,7 @@
 	  <li class="limenu"><a href="session_test.php">Nos tests</a></li>
 	  <li class="limenu"><a href="monEspace.php">Mon espace</a></li>
 	  <li class="limenu"><a href="#do_test">Participer à un test</a></li>
-	  <li class="limenu"><a href="#a_propos">A propos</a></li>
+	  <li class="limenu"><a href="FAQ.php#ancre_propos">A propos</a></li>
 	</ul>
 
 </div>
