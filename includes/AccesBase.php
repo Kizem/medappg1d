@@ -5,6 +5,7 @@
 	
 
 	try {
+		//Le PDO nous permet d'éviter les injections sql de premier ordre
 			$db = new PDO("mysql:host=localhost;dbname=app","root","");//accès à la base de donnée
 			$db->exec('SET NAMES utf8');
 		}

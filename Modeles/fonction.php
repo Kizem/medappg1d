@@ -1,4 +1,6 @@
 <?php  
+
+//Le PDO nous permet d'éviter les injections sql de premier ordre
 function insertUsers($db, $nom , $prenom, $mail, $mdp, $type, $pseudo){
 	$req = $db->prepare("insert into utilisateur (Type,login,Mdp,Nom,Prenom,Mail) values ('$type','$pseudo','$mdp','$nom','$prenom','$mail')");
 	$req->execute();
@@ -356,6 +358,12 @@ function envoieMessage($db, $date, $Heure, $message, $donnees){
 	$requete = $db->prepare('INSERT INTO message(idMessage, Date, Heure, contenu, idUser) VALUES(?,?,?,?)');
     $requete->execute(array($_SESSION['id'], $date, $Heure, $message, $donnees['id']));
     $requete->CloseCursor();
+}
+
+function br2nl($str)
+{
+	//br2nl : nl2br opposite
+    return preg_replace('#&lt;br\s*/?>#i', "\n", $str);
 }
 
 ?>

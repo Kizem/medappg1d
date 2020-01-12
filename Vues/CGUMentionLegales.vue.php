@@ -26,10 +26,10 @@
                 <article class="texte">
                     <div class="zoneArticle">
                             <h2 id="Debut ML">Mentions Légales</h2>
-                            <output name="MentionLegale"><?php  echo $ML?></output>
+                            <output name="MentionLegale"><?php  echo nl2br($ML)?></output>
 
                             <h2 id="Debut CGU">Modèle de CGU</h2>
-                            <output name="CGU"><?php  echo $CGU ?></output>
+                            <output name="CGU"><?php  echo nl2br($CGU); ?></output>
                         </div>
                 </article>
             </section>
