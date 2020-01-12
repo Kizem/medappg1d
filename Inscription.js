@@ -1,19 +1,34 @@
 function sameMdp(divmdp2,Inputmdp1, Inputmdp2) {
-    var mdp1=Inputmdp1.getAttribute('value');
-    var mdp2=Inputmdp2.getAttribute('value');
-    divmdp2.addEventListener("input", function(e) {
+	//var mdp2=Inputmdp2.getAttribute('value');
+	var mdp1, mdp2;
+    Inputmdp2.addEventListener("input", function(e) {
+    	//mdp1=Inputmdp1.value;
+    	mdp2=this.value;
 	    if(mdp2 && mdp1){
 	    	a = document.createElement("p");
-	    	a.setAttribute("class", "texteMdpDifferent");
+	    	
+	    	a.setAttribute("id", "texteMdpDifferent");
 	    	if(mdp2==mdp1){
+	    		
 	    		a.innerHTML="Mots de passe identiques";
+	    		a.setAttribute("class", "vert");
 	    	}
 	    	else{
 	    		a.innerHTML="Mots de passe differents";
+	    		a.setAttribute("class", "rouge");
 	    	}
-
-	    	this.parentNode.appendChild(a);
+	    	var x = document.getElementById("texteMdpDifferent");
+	    	
+	    	if (x) {
+	    		x.remove();
+	    	}
+	    	
+	    	divmdp2.appendChild(a);
 	    }
+	});
+	Inputmdp1.addEventListener("input", function(e) {
+		mdp1=this.value;
+
 	});
 
 }

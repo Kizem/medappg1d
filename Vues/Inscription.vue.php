@@ -77,13 +77,13 @@
                                     <label class="input-label">
                                         <p class="champTexte">Mot de passe* : 
                                         </p>
-                                        <input id="IMdp1" class="entreeDeTexte" type="password" name="motDePasse" value='zero'required/>
+                                        <input id="IMdp1" class="entreeDeTexte" type="password" name="motDePasse" required/>
                                     </label>
                                 </div>
                                 <div id="divmdp2"class="conteneurChamp">
                                     <label  class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
                                         </p>
-                                        <input id="IMdp2" class="entreeDeTexte" type="password" name="confirmMDP" value='zero' required/>
+                                        <input id="IMdp2" class="entreeDeTexte" type="password" name="confirmMDP" required/>
                                     </label>
                                 </div>
                                     
