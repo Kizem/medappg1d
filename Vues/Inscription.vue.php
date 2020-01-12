@@ -72,7 +72,7 @@
                                     
                                 </div>
 
-                                <div class="conteneurChamp">
+                                <div id="divmdp1" class="conteneurChamp">
                                     
                                     <label class="input-label">
                                         <p class="champTexte">Mot de passe* : 
@@ -142,6 +142,7 @@
         <script src="Inscription.js"></script>
         <script type="text/javascript">
             sameMdp(document.getElementById('divmdp2'),document.getElementById('IMdp1'),document.getElementById('IMdp2'));
+            securiteMdp(document.getElementById('divmdp1'),document.getElementById('IMdp1'))
         </script>
     </body>
 </html>

@@ -189,4 +189,17 @@ form{
   color: green;
 }
 
+.fort{
+  color: #2D913B;
+}
+.avancé{
+  color: #31BD45;
+}
+.moyen{
+  color: orange;
+}
+.faible{
+  color: red;
+}
+
 
