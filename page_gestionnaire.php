@@ -1,6 +1,9 @@
 <?php
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
+if(empty($_SESSION)){
+	exit();
+}
 $nom=$_SESSION['Nom'];
 $prenom=$_SESSION['Prenom'];
 $cheminPhoto=$_SESSION['cheminPhoto'];

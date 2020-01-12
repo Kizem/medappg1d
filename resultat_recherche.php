@@ -3,7 +3,9 @@
 require("includes/AccesBase.php");
 require("Modeles/fonction.php");
 
-
+if(!empty($_SESSION)){
+	//exit();
+}
 
 if(isset($_POST['keywords']) && !empty($_POST['keywords'])) {
 	$rep = rechercheUtilisateur($db, $_POST['keywords']);

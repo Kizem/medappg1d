@@ -7,6 +7,7 @@ define('HEIGHT_MAX', 3000);
 
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
+
 if(!isset($_SESSION) /*OR $_SESSION['Type'] != 'Administrateur'*/){
 	exit();
 }
