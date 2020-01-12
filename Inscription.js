@@ -10,11 +10,11 @@ function sameMdp(divmdp2,Inputmdp1, Inputmdp2) {
 	    	a.setAttribute("id", "texteMdpDifferent");
 	    	if(mdp2==mdp1){
 	    		
-	    		a.innerHTML="Mots de passe identiques";
+	    		a.innerHTML="Mots de passe identiques &#10004;";
 	    		a.setAttribute("class", "vert");
 	    	}
 	    	else{
-	    		a.innerHTML="Mots de passe differents";
+	    		a.innerHTML="Mots de passe differents &#10008;";
 	    		a.setAttribute("class", "rouge");
 	    	}
 	    	var x = document.getElementById("texteMdpDifferent");
