@@ -19,17 +19,34 @@ if(!empty($_SESSION)){
 		}
 	if(isset($_GET["action"]) && ($_GET["action"]=="supprimer")) {
 			$reponse=deleteCodeInscription($db,$_GET["id"]);
+			//on met a jour la fonction
+			$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+			$req->execute();
+			$fonction = $req->fetchall();
 		}
 
 	if(isset($_GET["action"]) ) {
 		if(($_GET["action"]=="ajouter")){
 			$reponse=addCodeUtilisateur($db,genererChaineAleatoire(10),$_SESSION['idEntite'],"Utilisateur");
+			//on met a jour la fonction
+			$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+			$req->execute();
+			$fonction = $req->fetchall();
+
 		}
 		if(($_GET["action"]=="ajouterAdmin")){
 			$reponse=addCodeUtilisateur($db,genererChaineAleatoire(10),$_SESSION['idEntite'],"Administrateur");
+			//on met a jour la fonction
+			$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+			$req->execute();
+			$fonction = $req->fetchall();
 		}
 		if(($_GET["action"]=="ajouterGestion")){
 			$reponse=addCodeUtilisateur($db,genererChaineAleatoire(10),$_SESSION['idEntite'],"Gestionnaire");
+			//on met a jour la fonction
+			$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+			$req->execute();
+			$fonction = $req->fetchall();
 		}
 		
 	}
