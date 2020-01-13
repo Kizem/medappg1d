@@ -31,7 +31,7 @@
             <a class="go_connex_gest" href="connexion.php ">Je me connecte</a>
           </div>
         </div>
-        <a href="graphique.php"> graphique</a>
+        
         
 <!-- 
         <center>
