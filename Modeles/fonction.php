@@ -366,4 +366,28 @@ function br2nl($str)
     return preg_replace('#&lt;br\s*/?>#i', "\n", $str);
 }
 
+function selectTest($db, $idUser,$Type){
+	$req = $db->prepare("SELECT `Date`, `Score` FROM `test` WHERE idUser='$idUser' AND Type='$Type'ORDER BY 'Date'");
+	$req->execute();
+	return $req;
+}
+
+function convertDataToChartForm($data)
+{
+    $newData = array();
+    $firstLine = true;
+    foreach ($data as $dataRow)
+    {
+        if ($firstLine)
+        {
+            $newData[] = array_keys($dataRow);
+            $firstLine = false;
+        }
+
+        $newData[] = array_values($dataRow);
+    }
+
+    return $newData;
+}
+
 ?>

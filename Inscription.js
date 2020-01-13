@@ -91,7 +91,6 @@ function securiteMdp(divmdp1,Inputmdp1){
 	    if (x) {
 	    	x.remove();
 	    }
-	    	
 	    divmdp1.appendChild(a);
 
 	});
