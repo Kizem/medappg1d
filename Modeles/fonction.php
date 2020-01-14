@@ -54,7 +54,7 @@ function pseudoDisponible($db, $pseudo){
 	}
 	
 }
-function tableauTestTemperature($db){
+function tableauTest($db,$id,$type) {
 	
 	echo "<table> 
 			<thead> 
