@@ -10,7 +10,12 @@
 		<!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
-       <?php tableauTestTemperature($db);tableauTestPerception($db);tableauTestFrequence($db) ?>
+	   <?php $id = $_SESSION['idUser'];
+	   tableauTest($db,$id,'Frequence');
+	   tableauTest($db,$id,'Perception');
+	   tableauTest($db,$id,'Temperature');
+	   ?>
+	   
         <!-- FOOTER -->
         <footer><?php include_once('includes/footer.php');?>
 	</body>
