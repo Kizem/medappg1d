@@ -54,6 +54,21 @@ function pseudoDisponible($db, $pseudo){
 	}
 	
 }
+function graphtest($db,$id){
+
+}
+function tableauTestFinale($db,$id){
+	$req = $db->prepare("SELECT DISTINCT `Type` FROM `test` WHERE (`idUser` = '$id') ");
+	$req->execute();
+	
+	
+	while($row = $req->fetch()) {	
+		for($i = 0; $i < count($row)-1; ++$i) {
+			tableauTest($db,$id,$row[$i]);
+		}
+	}
+}
+
 function tableauTest($db,$id,$type) {
 	
 	echo "<table> 

@@ -14,6 +14,7 @@
 	   tableauTest($db,$id,'Frequence');
 	   tableauTest($db,$id,'Perception');
 	   tableauTest($db,$id,'Temperature');
+	   tableauTestFinale($db,$id)
 	   ?>
 	   
         <!-- FOOTER -->
