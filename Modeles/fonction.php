@@ -190,6 +190,13 @@ function gestionnaireDisponible($db, $pseudo){
 
 }
 
+function updateCapteurJS($db, $type, $seuil, $idCap){
+	$req = $db->prepare("UPDATE capteur SET Type='$type', seuil='$seuil' WHERE idCapteur='$idCap'");
+	$req->execute();
+
+	return $req;
+}
+
 function boitierDisponible($db, $ref){
 
 	$req = $db->prepare("SELECT * FROM boitier WHERE Reference='$ref'");

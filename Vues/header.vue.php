@@ -32,10 +32,10 @@
 
 	<ul class="menu">
 	  <li class="limenu"><a class="title_menu" href="index.php">Accueil</a></li>
-	  <li class="limenu"><a href="#news">News</a></li>
+	  <li class="limenu"><a href="Profil.php">Mon profil</a></li>
 	  <li class="limenu"><a href="session_test.php">Nos tests</a></li>
 	  <li class="limenu"><a href="monEspace.php">Mon espace</a></li>
-	  <li class="limenu"><a href="#do_test">Participer à un test</a></li>
+	  <li class="limenu"><a href="participerTest.php">Participer à un test</a></li>
 	  <li class="limenu"><a href="FAQ.php#ancre_propos">A propos</a></li>
 	</ul>
 
