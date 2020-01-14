@@ -43,7 +43,19 @@
           <p> ID du capteur : <?= $icap['idCapteur'] ?> </p>          
           <p> Seuil du capteur : <?= $icap['seuil'] ?> </p>
 
-          <a href="modif_capteur.php?cap_a_modif=<?= $idCap?>">Modifier</a>
+          <a href="modif_capteur.php?cap_a_modif=<?= $icap['idCapteur']?>">Modifier</a>
+
+          <button onclick="modif()">Modifier avec JS</button>
+
+          <script>
+
+            function modif(){
+              var new_type = prompt("Entrez le type du capteur");
+              var new_seuil = prompt("Entrez le nouveau seuil");
+            }
+            updateCapteurJS($db, new_type, new_seuil, $icap['idCapteur'];
+
+          </script>
 
         </div>
 

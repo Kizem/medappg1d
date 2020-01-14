@@ -54,7 +54,7 @@ function pseudoDisponible($db, $pseudo){
 	}
 	
 }
-function tableauTestTemperature($db){
+function tableauTest($db,$id,$type) {
 	
 	echo "<table> 
 			<thead> 
@@ -65,124 +65,44 @@ function tableauTestTemperature($db){
 					<th>Valeur moyenne</th>
 					<th>Valeur maximale</th></tr>
 			</thead>";
+	echo"<tbody>
+	<tr>
+	<td>".$type."</td>";		
 
-	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Temperature' ");
+	$req = $db->prepare("SELECT Date FROM `test` WHERE (`idUser` = '$id') AND (Type = '$type') ORDER BY `Date` DESC LIMIT 1 ");
 	$req->execute();
-	while($row = $request->fetch()) {
-		echo "<tbody>
-			<tr>
-				<td>Fréquence cardiaque</td>
-				<td>Dernière valeur</td>";
-			}
-		
-	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Temperature' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}
-		
-	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = 'Temperature' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}
-		
-	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = 'Temperature' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}		
-					
-		echo "</tr></tbody></table>";			
-
-}
-function tableauTestPerception($db){
+	while($row = $req->fetch()) {	
+		$requ = $db->prepare("SELECT Valeur FROM capteur WHERE (`Date` = '$row[0]' ) AND (Type = '$type')");
+		$requ->execute();
+		while($row2 = $requ->fetch()){
+			if(empty($row2[0])){	echo"<td>Pas de valeurs</td>";	}
+			else{	echo"<td>" . $row2[0] . "</td>";	}			
+		}
 	
-	echo "<table> 
-			<thead> 
-				<tr>
-					<th> </th>
-					<th>Dernière valeur</th>
-					<th>Valeur minimale</th>
-					<th>Valeur moyenne</th>
-					<th>Valeur maximale</th></tr>
-			</thead>";
-
-	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Perception' ");
-	$req->execute();
-    while($row = $request->fetch()) {
-		echo "<tbody>
-			<tr>
-				<td>Fréquence cardiaque</td>
-				<td>Dernière valeur</td>";
-
-			}
-
-	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Perception' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
 	}
 
-	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = 'Perception' ");
+	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = '$type'");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
+	while($row = $req->fetch()) {	
+		if(empty($row[0])){	echo"<td>Pas de valeurs</td>";	}
+		else{	echo"<td>" . $row[0] . "</td>";	}
 	}
 
-	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = 'Perception' ");
+	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = '$type'");
 	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}		
-			
+	while($row = $req->fetch()) {	
+		if(empty($row[0])){	echo"<td>Pas de valeurs</td>";	}
+		else{	echo"<td>" . $row[0] . "</td>";	}
+	}
+
+	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = '$type'");
+	$req->execute();
+	while($row = $req->fetch()) {	
+		if(empty($row[0])){	echo"<td>Pas de valeurs</td>";	}
+		else{	echo"<td>" . $row[0] . "</td>";	}
+	}			
 		echo "</tr></tbody></table>";
-				
 }
-function tableauTestFrequence($db) {
-	
-	echo "<table> 
-			<thead> 
-				<tr>
-					<th> </th>
-					<th>Dernière valeur</th>
-					<th>Valeur minimale</th>
-					<th>Valeur moyenne</th>
-					<th>Valeur maximale</th></tr>
-			</thead>";
-
-	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Frequence' ");
-	$req->execute();
-    while($row = $request->fetch()) {
-		echo "<tbody>
-			<tr>
-				<td>Fréquence cardiaque</td>
-				<td>Dernière valeur</td>";
-
-
-
-			}
-
-	$req = $db->prepare("SELECT MIN(Valeur) FROM capteur WHERE Type = 'Frequence' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}
-
-	$req = $db->prepare("SELECT AVG(Valeur) FROM capteur WHERE Type = 'Frequence' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}
-
-	$req = $db->prepare("SELECT MAX(Valeur) FROM capteur WHERE Type = 'Frequence' ");
-	$req->execute();
-	while($row = $request->fetch()) {	
-		echo"<td>" . $row . "</td>";
-	}		
-			
-		echo "</tr></tbody></table>";
-	}
 
 function detectionCode($db, $code){
 	$req = $db->prepare("SELECT * FROM codeInscription WHERE code='$code'");
