@@ -21,7 +21,7 @@
             <article class="art">
                 <div class="boxtotale">
                         <div class="titrePage">
-                            <h1 class="titre_formulaire">Participation à un test</h1>
+                            <h1 class="titre_formulaire">Participation a un test</h1>
                         </div>
 
                         <div class="entreesInformations">
@@ -30,7 +30,7 @@
                                     
                                     <div class="partieAfficher">
                                         <label class="input-label" for="nom">
-                                            <p class="champTexte">Nom* :  
+                                            <p class="champTexte">Nom :  
                                             </p>
                                             <input class="entreeDeTexte" type="charset" name="nom"required/>
                                         </label>
@@ -43,7 +43,7 @@
 
                                 <div class="conteneurChamp">    
                                     <div class="partieAfficher">
-                                        <label class="input-label" for="prenom"><p class="champTexte">Prenom* :  
+                                        <label class="input-label" for="prenom"><p class="champTexte">Prenom :  
                                     </p>
                                         <input class="entreeDeTexte" type="charset" name="prenom" required/>
                                         </label>      
@@ -52,20 +52,10 @@
                                         </div>
                                 </div>
 
-                                
-
-                                <div class="conteneurChamp">
-                                    <label class="input-label" for="mail">
-                                        <p class="champTexte">Adresse E-mail* : 
-                                        </p>
-                                        <input class="entreeDeTexte" type="charset" name="mail"required/>
-                                    </label>
-                                    
-                                </div>
 
                                 <div class="conteneurChamp">
                                     <label class="input-label" for="login">
-                                        <p class="champTexte">Pseudo* : 
+                                        <p class="champTexte">Pseudo : 
                                         </p>
                                         <input class="entreeDeTexte" type="charset" name="login"required/>
                                     </label>
@@ -75,52 +65,18 @@
                                 <div id="divmdp1" class="conteneurChamp">
                                     
                                     <label class="input-label">
-                                        <p class="champTexte">Mot de passe* : 
+                                        <p class="champTexte">Code* : 
                                         </p>
-                                        <input id="IMdp1" class="entreeDeTexte" type="password" name="motDePasse" required/>
+                                        <input id="IMdp1" class="entreeDeTexte" type="charset" name="Code" required/>
                                     </label>
                                 </div>
-                                <div id="divmdp2"class="conteneurChamp">
-                                    <label  class="input-label"><p class="champTexte">Confirmez le mot de passe* : 
-                                        </p>
-                                        <input id="IMdp2" class="entreeDeTexte" type="password" name="confirmMDP" required/>
-                                    </label>
-                                </div>
-                                    
                                 
                                 <div class="conteneurChamp">
-                                    <label class="input-label"><p class="champTexte" >Type d'utilisateur* : 
-                                        </p>
-                                        <FORM>
-                                        <SELECT class="liste" name="listeDeroulante" size="1">
-                                        <OPTION value=1>Utilisateur</OPTION>
-                                        <OPTION value=2>Gestionnaire</OPTION>
-                                        <OPTION value=3>Administrateur</OPTION>
-                                        </SELECT>
-                                    </FORM>
-                                    </label>
-                                    
+                                    <input class="boutonValider" type="submit" value="Participer" required>
                                 </div>
-                                <div class="conteneurChamp">
-                                    <div class="champSepare">
-                                        <label class="input-label">
-                                            <div class="textePlusInfoBulle">
-                                                <p class="champTexte">Code d'inscription* :    
-                                                </p>
-                                                <div class="infobulle"> 
-                                                    <img src="ressources/aide.png" alt=" ? " style=width:13px;/> 
-                                                    <span>Code fourni par votre établissement d'examen</span> 
-                                                </div>
-                                            </div>
-                                            
-                                            <input class="entreeDeTexte" type="charset" name="codeInscription"required/>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="conteneurChamp">
-                                    <input class="boutonValider" type="submit" value="S'inscrire" required="">
-                                </div>
-                            
+                        </div>
+                        <div class="asterix">
+                            <p>*Code fourni par votre établissement</p>
                         </div>
                     </div>
             </article>  
