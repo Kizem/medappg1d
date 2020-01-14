@@ -1,0 +1,205 @@
+
+body{
+  
+  background-image:url(fond.jpg);
+  background-repeat:;
+  margin: 0px;
+}
+
+.titre_formulaire{
+  font-family : BEBAS__;
+  margin: auto;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+}
+
+
+/*Element de page*/
+.art{
+  margin: auto;
+  max-width:500px;
+  width:100%;
+  
+  
+}
+.input-label{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+
+}
+.boxtotale{
+    background-color:#eee;
+    border:3px solid #e6e6e6;
+    border-radius:1px;margin:0 0 10px;
+    padding:50px;
+    margin: 12;
+    border-radius:10px;
+
+}
+
+.boxtotale_2{
+  justify-content: center;
+  width: 100%;
+  background-color:#eee;
+  border:3px solid #e6e6e6;
+  border-radius:1px;margin:0 0 10px;
+  padding:50px 0px 50px 0px;
+  margin: 12;
+  border-radius:10px;
+
+}
+.titrePage{
+  display:flex;
+  flex-direction:column
+  margin:auto;
+}
+.entreeDeTexte{
+font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+font-size:16px;
+display:inline-block;
+color:#222427;
+border:2px solid #d9d9d9;
+border-color:#3090E3;
+border-radius:5px;
+background:#fff
+margin:10px;
+width: 250px;
+}
+
+.liste{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+  display:inline-block;
+  color:#222427;
+  border:2px solid #d9d9d9;
+  border-color:#3090E3;
+  border-radius:5px;
+  background:#fff
+  margin:10px;
+}
+
+.entreesInformations{
+  display:flex;
+  flex-direction:column
+}
+
+.conteneurChamp{
+  display:flex;
+  flex-direction:column;
+  margin: 12px auto;
+
+}
+.Mdp_oublié{
+  display:flex;
+  flex-direction:row;
+  margin: 12px auto;
+}
+
+.conteneurChampCGU{
+  display:flex;
+  flex-direction:row;
+  margin: 12px auto;
+}
+.textePlusInfoBulle{
+  display:flex;
+  flex-direction:row;
+}
+
+.boutonValider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #F6F1F0;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+  color:#CD1F01;
+}
+.erreur{
+  color: #CD1F01;
+}
+form{
+  margin: 30px 30% 42px 30%;
+}
+.champTexte{
+  margin:0px;
+
+}
+
+.boutonValider:hover{
+  background: #66B14B;
+  color:#eee;
+}
+.boutonValider:active{
+  background: #66B14B;
+  border-color: #F6F1F0;
+  color:#eee;
+}
+.infobulle { 
+
+  text-decoration:none; 
+  position:relative; 
+}
+.infobulle span { 
+  display:none; 
+  -moz-border-radius:6px; 
+  -webkit-border-radius:6px; 
+  border-radius:6px; 
+  color:black; 
+  background-color: #eff1f3; 
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+  font-style:italic; 
+} 
+.infobulle span img { 
+  float:left; 
+  margin:0px 8px 8px 0; 
+} 
+
+.infobulle:hover span { 
+  display:block; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  z-index:1000; 
+  width:250px; 
+  /* max-width:200px; */ 
+  min-height:20px; 
+  border:1px solid black; 
+  margin-top:12px; 
+  margin-left:32px; 
+  overflow:hidden; 
+  
+}
+.asterix{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:10px;
+}
+
+.rouge{
+  color: red;
+}
+.vert{
+  color: green;
+}
+
+.fort{
+  color: #2D913B;
+}
+.avancé{
+  color: #31BD45;
+}
+.moyen{
+  color: orange;
+}
+.faible{
+  color: red;
+}
+
+
