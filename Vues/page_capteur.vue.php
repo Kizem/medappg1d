@@ -52,10 +52,10 @@
               // var new_seuil = prompt("Entrez le nouveau seuil");
               
               var new_type = prompt("Entrez le type du capteur");
-              var new_seuil = prompt("Entrez le nouveau seuil")
-              updateCapteurJS($db, $new_type, $new_seuil, $icap['idCapteur']);
-              
-              
+              var new_seuil = prompt("Entrez le nouveau seuil");
+              <?php
+              updateCapteurJS($db, new_type, new_seuil, $icap['idCapteur']);
+              ?>
             }
 
           </script>

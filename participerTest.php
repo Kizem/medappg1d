@@ -7,7 +7,7 @@ if(empty($_SESSION)){
 	include('Vues/connexion.vue.php');
 }
 else{
-	if(!empty($_POST){
+	if(!empty($_POST)){
 
 	}
 	include('Vues/participerTest.vue.php');
