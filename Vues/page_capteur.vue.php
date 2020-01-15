@@ -77,9 +77,9 @@
               xmlhttp.send();
             }
           </script>    
-
-          <a onclick="modif()" href="monEspace.php">Modifier</a>
-
+          <center>
+          <a class="modif_cap"onclick="modif()" href="monEspace.php">Modifier</a>
+          </center>
 
  
 
