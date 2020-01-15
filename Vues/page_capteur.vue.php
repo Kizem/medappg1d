@@ -42,6 +42,7 @@
           <p> Type de capteur : <?= $icap['Type'] ?> </p>
           <p> ID du capteur : <?= $icap['idCapteur'] ?> </p>          
           <p> Seuil du capteur : <?= $icap['seuil'] ?> </p>
+          <p> idBoitier associé : <?= $icap['idBoitier'] ?> </p>
 
 
         <!-- Voir pourquoi je ne peux pas le placer dans un fichier js à part et l'inclure dans le head -->
