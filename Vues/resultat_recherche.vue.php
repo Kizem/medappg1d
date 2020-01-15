@@ -17,6 +17,7 @@
 				<tr>
     				<th>Nom</th>
     				<th>Prénom</th>
+            <th>Pseudo</th>
     				<th>Mail</th>
   				</tr>
   				</thead>
@@ -33,6 +34,12 @@
   						echo $fonction[$i]['Prenom'], ' ';
   						echo "</td>";
   						echo "<td>";
+
+              // echo '<a class="link_profil" href="Profil.php">'.$fonction[$i]['login'].'</a>';
+
+              echo $fonction[$i]['login'], ' ';
+              echo "</td>";
+              echo "<td>";
   						echo $fonction[$i]['Mail'], ' ',"<br>";
   						echo "</td>";
   						echo "</tr>";
