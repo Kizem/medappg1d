@@ -20,7 +20,7 @@ if(!empty($_SESSION)){
 		$req = insertCapteur($db, $type_cap, $val_init, $seuil, $TabAllBoitier[(int)$_POST['listeDeroulante']]['idBoitier']);
 		$erreur="";
 
-		include('Vues/add_capteur.vue.php');
+		include('monEspace.php');
 
 	}
 	else{

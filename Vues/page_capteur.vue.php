@@ -2,8 +2,8 @@
 <html>
   <head>
         <meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="design/page_capteur.css">
-  <title>MedApp Project</title>
+	     <link rel="stylesheet" type="text/css" href="design/page_capteur.css">
+        <title>MedApp Project</title>
 
   </head>
   <body>
@@ -43,26 +43,44 @@
           <p> ID du capteur : <?= $icap['idCapteur'] ?> </p>          
           <p> Seuil du capteur : <?= $icap['seuil'] ?> </p>
 
-          <a href="modif_capteur.php?cap_a_modif=<?= $icap['idCapteur']?>">Modifier</a>
 
-          <script type="text/javascript">
+        <!-- Voir pourquoi je ne peux pas le placer dans un fichier js à part et l'inclure dans le head -->
 
-            function modif(){
-              // var new_type = prompt("Entrez le type du capteur");
-              // var new_seuil = prompt("Entrez le nouveau seuil");
-              
-              var new_type = prompt("Entrez le type du capteur");
-              var new_seuil = prompt("Entrez le nouveau seuil");
-              <?php
-              updateCapteurJS($db, new_type, new_seuil, $icap['idCapteur']);
-              ?>
+         <script type="text/javascript">
+           function modif(){
+            // var new_type = prompt("Entrez le type du capteur");
+            // var new_seuil = prompt("Entrez le nouveau seuil");
+            
+            var new_type = prompt("Entrez le type du capteur");
+            var new_seuil = prompt("Entrez le nouveau seuil");
+            var icap = <?php echo json_encode($icap['idCapteur']); ?>;
+
+            // Création d'un objet XMLHttpRequest selon le navigateur
+
+            if (window.XMLHttpRequest) {
+                xmlhttp= new XMLHttpRequest();
+            } else {
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+              }
+
+              xmlhttp.open("GET", "modif_capteur.php?type=" + new_type + "&seuil=" + new_seuil + "&cap=" + icap, true);
+              xmlhttp.send();
             }
+          </script>    
 
-          </script>
+          <a onclick="modif()" href="monEspace.php">Modifier</a>
 
-          <button onclick="modif()">Modifier avec JS</button>
 
-  
+ 
 
         </div>
 
