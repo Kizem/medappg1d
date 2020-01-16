@@ -18,14 +18,17 @@
             }
         ?>
         <section class="main">
+            <div align="center">
+                <img class="bannière" src="ressources/page_user.png" alt="Alt text"/>
+            </div>
             <center>
                 <table class="tableInformations">
                     <tbody>
                         <tr>
-                            <th scope="row">
+                            <th class="label" scope="row">
                                 Pseudo
                             </th>
-                            <td>
+                            <td class="Info">
                                 <?php echo $login ?>
                             </td>
                         </tr>
@@ -35,13 +38,15 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="NomPrenom">
+                            <th class="label">Prénom</th>
+                            <td colspan="2" class="Info">
                                 <p><?php echo $Prenom ?></p>
                             </td>
                             
                         </tr>
                         <tr>
-                            <td colspan="2" class="NomPrenom">
+                            <th class="label">Nom</th>
+                            <td colspan="2" class="Info">
                                 <p><?php echo $Nom ?></p>
                             </td>
                         </tr>
@@ -50,17 +55,12 @@
                                 <hr>
                             </td>
                         </tr>
-                        <tr>
-                            <td colspan="2" class="texteImportant">
-                                <p>Informations de base</p>
-                            </td>
-                        </tr>
      
                         <tr>
-                            <th scope="row">
+                            <th class="label" scope="row">
                                 Adresse e-mail
                             </th>
-                            <td>
+                            <td class="Info">
                                 <?php echo $Mail ?>
                             </td>
                         </tr>
@@ -74,18 +74,19 @@
                     </tbody>
                 </table>
 
-                <p class="infos"> Si vous souhaitez modifier le mot de passe de cet utilisateur, veuillez procéder à la modification de ses caractérstiques et saisissez-le nouveau mot de passe dans le champ correspondant.</p>
+                <p class="label"> Si vous souhaitez modifier le mot de passe de cet utilisateur, veuillez procéder à la modification de ses caractérstiques et saisissez-le nouveau mot de passe dans le champ correspondant.</p>
 
 
 
                 <script type="text/javascript">
-                   function modif(){
+                   function modifUser(){
                     // var new_type = prompt("Entrez le type du capteur");
                     // var new_seuil = prompt("Entrez le nouveau seuil");
                     
-                    var new_type = prompt("Entrez le type du capteur");
-                    var new_seuil = prompt("Entrez le nouveau seuil");
-                    var icap = <?php echo json_encode($icap['idCapteur']); ?>;
+                    var new_login = prompt("Entrez le login souhaité");
+                    var new_mail = prompt("Entrez le mail souhaité");
+                    var new_mdp = prompt("Entrez le mot de passe souhaité");
+                    var icap = <?php echo json_encode($idUser); ?>;
 
                     // Création d'un objet XMLHttpRequest selon le navigateur
 
@@ -104,12 +105,12 @@
                             }
                       }
 
-                      xmlhttp.open("GET", "modif_capteur.php?type=" + new_type + "&seuil=" + new_seuil + "&cap=" + icap, true);
+                      xmlhttp.open("GET", "modif_user.php?login=" + new_login + "&mail=" + new_mail + "&mdp="+ new_mdp + "&user=" + icap, true);
                       xmlhttp.send();
                     }
                 </script>    
                 <center>
-                <a class="modif_user"onclick="modif()" href="monEspace.php">Modifier les caractéristiques de cet utilisateur</a>
+                <a class="modif_user"onclick="modifUser()" href="monEspace.php">Modifier les caractéristiques de cet utilisateur</a>
                 </center>
             </center>
             

@@ -2,6 +2,32 @@ body{
 margin: 0px;
 }
 
+.bannière{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+	margin-bottom: 5%;
+}
+
+.label{
+	font-family: Roboto-Black;
+	text-align: center;
+	color: #28292A;
+}
+
+.Info{
+	font-family: Roboto-Light;
+	color: #28292A;
+	font-size: 18px;
+}
+.NomPrenom{
+	text-align: center;
+	color:#753991;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	font-size: 20px;
+}
+
 .modif_user{
 
   font-family: Roboto-Black;
