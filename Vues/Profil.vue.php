@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="design/Profil.css"> 
-        <title>Page de connexion</title>
+        <title>Page de profil</title>
     </head>
     <body>
         <!-- ENTETE -->

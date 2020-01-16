@@ -21,12 +21,16 @@ if(isset($_GET['delete']) AND !empty($_GET['delete'])){
 }
 
 if(isset($_GET['delete_cap']) AND !empty($_GET['delete_cap'])){
-	//on vient supprimer l'utilisateur qui a pour id la valeur de ? dans l'url
+	//on vient supprimer le capteur qui a pour id la valeur de ? dans l'url
 	$req = $db->prepare('DELETE FROM capteur WHERE idCapteur = ?');
 	$req -> execute(array($_GET['delete_cap']));
 
 }
 
+if(isset($_GET['modifier']) AND !empty($_GET['modifier'])){
+	$see_user = $_GET['modifier'];
+	header("Location: page_user.php?user=$see_user");
+}
 
 $utilisateurs = $db->query('SELECT * FROM utilisateur ORDER BY idUser DESC'); //permet de classer les users par ordre d'arrivée (les derniers en tête)
 
