@@ -143,7 +143,7 @@ function login($db, $pseudo){
 	return $req;
 }
 function inserUsersEntite($db, $idUser, $idEntite){
-	$req = $db->prepare("INSERT INTO `utilisateur/entit` (idUser,idEntité) values ('$idUser','$idEntite')");
+	$req = $db->prepare("INSERT INTO `utilisateur/entité` (idUser,idEntité) values ('$idUser','$idEntite')");
 	$req->execute();
 	return $req;
 }

@@ -15,11 +15,22 @@ if(!empty($_SESSION)){
 		$ref_boit = htmlspecialchars($_POST['reference']);
 
 		$Pseudo=htmlspecialchars($_POST['pseudo']);
-		$idUser=pseudoDisponible($db, $Pseudo);
+		$Userexiste=pseudoDisponible($db, $Pseudo);
 
+		//On vient récupérer l'id gesitonnaire associé au pseudo entré
+
+		$user = $db->query("SELECT * FROM utilisateur WHERE login='$Pseudo'");
+		$i_user = $user->fetch();
+		$idUser = $i_user['idUser'];
+
+		//On vient récupérer l'id entité associé à la référence de boîtier entrée
+
+		$entit = $db->query("SELECT * FROM boitier WHERE Reference='$ref_boit'");
+		$i_entit = $entit->fetch();
+		$idEntité = $i_entit['idEntité'];
 
 			if(!is_bool(boitierDisponible($db, $ref_boit))){
-				if(is_bool($idUser) && $idUser==TRUE){
+				if(is_bool($Userexiste) && $Userexiste==TRUE){
 					$erreur = "Utilisateur inconnu";
 					include_once('Vues/gestionnaire_boit.vue.php');
 
@@ -28,6 +39,8 @@ if(!empty($_SESSION)){
 					
 					$TabAllBoitier = $ListeBoitiers->fetchall();
 					majGestionnaire($db,$Pseudo,$TabAllBoitier[(int)$_POST['reference']]['idBoitier']);
+
+					inserUsersEntite($db, $idUser,$idEntité);
 
 					$erreur="L'association s'est bien déroulée";
 					include('Vues/gestionnaire_boit.vue.php');
