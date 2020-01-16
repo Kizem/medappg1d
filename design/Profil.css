@@ -148,3 +148,42 @@ width: 250px;
 	color: #3E628D;
 	text-align: center;
 }
+
+.ConteneurMessagerie{
+	background-color: #eee;
+	border-radius: 3px;
+ 	border :4px solid #3E628D;
+ 	height: 100px;
+ 	margin-top: 5px;
+}
+
+.TitreMessagerie{
+    justify-content: center;
+	background-color:#3E628D;
+	margin-top: 0px;
+	font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	color:#C9D8DA;
+}
+
+.messagerie:hover{
+	background-color: #28292A;
+	color: #e9e8e8;
+}
+
+.ConteneurMessagerie a {
+  font-family: Roboto-Black;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  color: black;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+  padding: 8px 8px 11px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+
+  transition: all .2s; /* on vient agir sur toutes les transitions du hover/focus */
+  
+}
