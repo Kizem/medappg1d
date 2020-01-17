@@ -10,8 +10,8 @@
 		<!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
-	   <?php $id = $_SESSION['idUser'];
-	   tableauTestFinale($db,$id)
+	   <?php $id = $_GET['user'];
+	   tableauTestFinale($db,$id);
 	   ?>
 	   
         <!-- FOOTER -->

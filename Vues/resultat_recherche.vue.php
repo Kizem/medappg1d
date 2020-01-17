@@ -21,7 +21,8 @@
     				<th>Mail</th>
   				</tr>
   				</thead>
-  				
+  				                  <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
+
   				<tbody>
   				<?php 
   				if (count($fonction) > 0) {
@@ -34,10 +35,10 @@
   						echo $fonction[$i]['Prenom'], ' ';
   						echo "</td>";
   						echo "<td>";
-
-              // echo '<a class="link_profil" href="Profil.php">'.$fonction[$i]['login'].'</a>';
-
-              echo $fonction[$i]['login'], ' ';
+              if($fonction[$i]['Type']=='Utilisateur'){
+                $id=$fonction[$i]['idUser'];
+                echo "<a class='link_datas' href='Utilisateur.php?user=$id'>".$fonction[$i]['login'].'</a>';
+              }
               echo "</td>";
               echo "<td>";
   						echo $fonction[$i]['Mail'], ' ',"<br>";
