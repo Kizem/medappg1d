@@ -11,9 +11,6 @@
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
 	   <?php $id = $_SESSION['idUser'];
-	   tableauTest($db,$id,'Frequence');
-	   tableauTest($db,$id,'Perception');
-	   tableauTest($db,$id,'Temperature');
 	   tableauTestFinale($db,$id)
 	   ?>
 	   
