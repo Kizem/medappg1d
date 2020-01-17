@@ -29,7 +29,13 @@ if(!empty($_SESSION)){
 		if(($_GET["action"]=="ajouter")){
 			$reponse=addCodeUtilisateur($db,genererChaineAleatoire(10),$_SESSION['idEntite'],"Utilisateur");
 			//on met a jour la fonction
-			$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+			if($_SESSION['Type']=='Gestionnaire'){
+				$req = getCodeEntite($db, $_SESSION['idEntite']);
+			}
+			else if($_SESSION['Type']=='Administrateur'){
+				$req = $db->prepare("SELECT * FROM `codeinscription` ORDER BY fonction");
+			}
+			
 			$req->execute();
 			$fonction = $req->fetchall();
 
