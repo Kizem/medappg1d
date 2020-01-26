@@ -6,7 +6,7 @@ body{
     background-color:#eee;
     border:3px solid #e6e6e6;
     border-radius:1px;margin:0 0 10px;
-    padding:19px;
+    
     margin: 12;
     border-radius:10px;
     display: flex;
@@ -14,7 +14,11 @@ body{
     margin: 12px;
 
 }
+.titre{
+	padding: 10px;
+}
 form{
+	padding: 10px;
 	display: flex;
 	flex-direction: row;
 }
@@ -63,4 +67,39 @@ width: 250px;
   background: #66B14B;
   border-color: #F6F1F0;
   color:#eee;
+}
+/*Css pour le tableau*/
+table {
+  border: 4px solid #28292A;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto;
+}
+table td, table th {
+  border: 1px solid #28292A;
+  padding: 5px 10px;
+}
+table tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table td:nth-child(-n+2) {
+  background: #28292A;
+}
+table thead {
+  background: rgb(90,157,215);
+  border-bottom: 10px solid #28292A;
+}
+table thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 2px solid #28292A;
+}
+table thead th:first-child {
+  border-left: none;
 }

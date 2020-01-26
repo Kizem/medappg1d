@@ -2,6 +2,8 @@
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
 
+$recherche="";
+$fonction;
 if(empty($_SESSION)){
 	echo "voila";
 	exit();
@@ -24,7 +26,7 @@ else if(!empty($_POST)){
 	}
 	$rep=selectMulticriteres($db,$recherche);
 	$fonction = $rep->fetchall();
-	print_r($fonction);
+	
 	/*$rep = rechercheUtilisateur($db, $_POST['keywords']);
 	$fonction = $rep->fetchall();*/
 	include('Vues/rechercheMulticriteres.vue.php');

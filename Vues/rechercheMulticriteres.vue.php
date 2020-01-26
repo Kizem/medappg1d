@@ -18,8 +18,12 @@
             
               <SELECT class="liste" name="listeDeroulante" size="1">
                 <OPTION value="Utilisateur">Utilisateur</OPTION>
-                <OPTION value="Gestionnaire">Gestionnaire</OPTION>
-                <OPTION value="Administrateur">Administrateur</OPTION>
+                <?php 
+                if($_SESSION['Type']=="Administrateur"){
+                    echo "<OPTION value=\"Gestionnaire\">Gestionnaire</OPTION>
+                <OPTION value=\"Administrateur\">Administrateur</OPTION>";
+                }?>
+                
                 </SELECT>
               </div>
             
@@ -45,7 +49,51 @@
              <input class="boutonValider" type="submit" value="Rechercher">
         </div>
       </form>
+      <div class="ConteneurTable">
+        <table style="width:80%">
+          <thead>
+          <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Pseudo</th>
+              <th>Adresse E-mail</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+            <?php 
+            if(!empty($fonction)){
+
+
+              if (count($fonction) > 0) {
+                for ($i=0; $i < count($fonction); $i++) {
+                  echo "<tr>";
+                  echo "<td>";
+                  echo $fonction[$i]['Nom'], ' ';
+                  echo "</td>";
+                  echo "<td>";
+                  echo $fonction[$i]['Prenom'], ' ';
+                  echo "</td>";
+                  echo "<td>";
+                  echo $fonction[$i]['login'], ' ';
+                  echo "</td>";
+                  echo "<td>";
+                  echo $fonction[$i]['Mail'], ' ',"<br>";
+                  echo "</td>";
+                  echo "</tr>";
+                }
+              }
+            else{
+              echo "Aucun utilisateurs trouvés.";
+            }
+          }
+            ?>
+            </tbody>
+            
+        </table>
+      </div>
     </div>
+    
     <footer><?php include_once('includes/footer.php'); ?></footer>
   </body>
 </html>
