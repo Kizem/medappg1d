@@ -93,6 +93,8 @@
                 </form>
               </div>
             </section>
+            <a class="recherche_multi" href="rechercheMulticriteres.php">Recherche Multicritères</a>
+
           </center>
 
         </div>
