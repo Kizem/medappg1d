@@ -331,5 +331,10 @@ function convertDataToChartForm($data)
 
     return $newData;
 }
+function selectMulticriteres($db, $texte){
+	$req = $db->prepare($texte);
+	$req->execute();
+	return $req;
+}
 
 ?>

@@ -1,0 +1,66 @@
+body{
+
+  margin: 0px;
+}
+.boxtotale{
+    background-color:#eee;
+    border:3px solid #e6e6e6;
+    border-radius:1px;margin:0 0 10px;
+    padding:19px;
+    margin: 12;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+
+}
+form{
+	display: flex;
+	flex-direction: row;
+}
+.entreeDeTexte{
+font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+font-size:16px;
+display:inline-block;
+color:#222427;
+border:2px solid #d9d9d9;
+border-color:#3090E3;
+border-radius:5px;
+background:#fff
+margin:10px;
+width: 250px;
+}
+.conteneurChamp{
+  
+  margin:  auto;
+
+}
+.liste{
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+  font-size:16px;
+  display:inline-block;
+  color:#222427;
+  border:2px solid #d9d9d9;
+  border-color:#3090E3;
+  border-radius:5px;
+  background:#fff
+  margin:10px;
+}
+
+.boutonValider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #F6F1F0;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+  color:#CD1F01;
+}.boutonValider:hover{
+  background: #66B14B;
+  color:#eee;
+}
+.boutonValider:active{
+  background: #66B14B;
+  border-color: #F6F1F0;
+  color:#eee;
+}

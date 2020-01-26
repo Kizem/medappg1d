@@ -136,7 +136,7 @@
                                 </label> 
                             </div>
                             <div class="Entree">
-                                <label class="input-label" for="om"><p class="champTexte">Nom :  </p>
+                                <label class="input-label" for="nom"><p class="champTexte">Nom :  </p>
                                         <input class="entreeDeTexte" type="charset" name="nom" />
                                 </label> 
                             </div>
