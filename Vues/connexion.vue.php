@@ -61,7 +61,7 @@
                                                 <input class="boutonValider" type="submit" value="Connexion">				
                                             </div>
                                             <div class="Mdp_oublié">
-                                                <a class = "forgot" href="connexion.php?forgot=1">mot de passe oublié?</a>
+                                                <a class = "forgot" href="connexion.php?forgot=1">Mot de passe oublié?</a>
                                         	</div>
 
             				

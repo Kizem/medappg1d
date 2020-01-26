@@ -2,7 +2,7 @@
 include_once("includes/AccesBase.php");
 
 if(!empty($_GET['forgot'])){
-	$erreur="Veuillez contacter votre administrateur";
+	$erreur="Veuillez contacter votre administrateur / gestionnaire";
 	include_once('Vues/connexion.vue.php');
 }
 
