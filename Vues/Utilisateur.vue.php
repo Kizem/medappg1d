@@ -10,7 +10,7 @@
 		<!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
-        <div class="topnav">
+		<div class="topnav">
 		  <a class="active" href="#home">Tableaux</a>
 		  <a href=<?php echo "graphique.php?user=".$_GET['user'];?>>Graphiques</a>
 		</div>
