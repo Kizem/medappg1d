@@ -21,6 +21,7 @@
               <th>Type de test</th>
               <th>Boitier</th>
               <th>Code</th>
+              <th>Score</th>
     				</tr>
     				</thead>
     				
@@ -45,7 +46,16 @@
                 echo $fonction[$i]['idBoitier'], ' ';
                 echo "</td>";
                 echo "<td>";
-                echo $fonction[$i]['Code'], ' ',"<br>";
+                echo $fonction[$i]['Code'], ' ';
+                echo "</td>";
+                echo "<td>";
+                if(!empty($fonction[$i]['Score'])){
+                  echo $fonction[$i]['Score'], ' ',"<br>";
+                }
+                else{
+                  echo "", ' ',"<br>";
+                }
+                
                 echo "</td>";
                 echo "</tr>";
     					}
