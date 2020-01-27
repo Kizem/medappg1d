@@ -21,36 +21,75 @@
     				<th>Mail</th>
   				</tr>
   				</thead>
-  				  <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
 
   				<tbody>
   				<?php 
-  				if (count($fonction) > 0) {
-  					for ($i=0; $i < count($fonction); $i++) {
-  						echo "<tr>";
-  						echo "<td>";
-  						echo $fonction[$i]['Nom'], ' ';
-  						echo "</td>";
-  						echo "<td>";
-  						echo $fonction[$i]['Prenom'], ' ';
-  						echo "</td>";
-  						echo "<td>";
 
-              if($fonction[$i]['Type']=='Utilisateur'){
-                $id=$fonction[$i]['idUser'];
-                echo "<a class='link_datas' href='Utilisateur.php?user=$id'>".$fonction[$i]['login'].'</a>';
+          if($_SESSION['Type']=='Gestionnaire'){
+              $id_comp = $_SESSION['idUser'];
+            if (count($fonction) > 0) {
+              for ($i=0; $i < count($fonction); $i++) {
+
+                if(sameEntit($db, $fonction[$i]['idUser'], $id_comp)){
+
+                  echo "<tr>";
+                  echo "<td>";
+                  echo $fonction[$i]['Nom'], ' ';
+                  echo "</td>";
+                  echo "<td>";
+                  echo $fonction[$i]['Prenom'], ' ';
+                  echo "</td>";
+                  echo "<td>";
+
+                  if($fonction[$i]['Type']=='Utilisateur'){
+
+                    $id=$fonction[$i]['idUser'];
+                    echo "<a class='link_datas' href='Utilisateur.php?user=$id'>".$fonction[$i]['login'].'</a>';
+                  }
+                  
+                  echo "</td>";
+                  echo "<td>";
+                  echo $fonction[$i]['Mail'], ' ',"<br>";
+                  echo "</td>";
+                  echo "</tr>";
+                } else{}
               }
-              
-              echo "</td>";
-              echo "<td>";
-  						echo $fonction[$i]['Mail'], ' ',"<br>";
-  						echo "</td>";
-  						echo "</tr>";
-  					}
-  				}
-  				else{
-  					echo "Aucun utilisateurs trouvés.";
-  				}
+            }
+            else{
+              echo "Aucun utilisateurs trouvés.";
+            }
+
+
+          }
+          else{
+    				if (count($fonction) > 0) {
+    					for ($i=0; $i < count($fonction); $i++) {
+    						echo "<tr>";
+    						echo "<td>";
+    						echo $fonction[$i]['Nom'], ' ';
+    						echo "</td>";
+    						echo "<td>";
+    						echo $fonction[$i]['Prenom'], ' ';
+    						echo "</td>";
+    						echo "<td>";
+
+                if($fonction[$i]['Type']=='Utilisateur'){
+
+                  $id=$fonction[$i]['idUser'];
+                  echo "<a class='link_datas' href='Utilisateur.php?user=$id'>".$fonction[$i]['login'].'</a>';
+                }
+                
+                echo "</td>";
+                echo "<td>";
+    						echo $fonction[$i]['Mail'], ' ',"<br>";
+    						echo "</td>";
+    						echo "</tr>";
+    					}
+    				}
+    				else{
+    					echo "Aucun utilisateurs trouvés.";
+    				}
+          }
   				?>
   				</tbody>
   				

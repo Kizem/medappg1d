@@ -173,6 +173,30 @@ function rechercheUtilisateur($db, $keyword){
 	$req->execute();
 	return $req;
 }
+
+function sameEntit($db, $idU, $idGest){
+
+	$req = $db->prepare("SELECT * FROM 'utilisateur/entité' WHERE idUser='$idU'");
+	$req->execute();
+	$entit1 = $req->fetch();
+	$e1 = $entit1['idEntité'];
+	echo $e1;
+	$req1 = $db->prepare("SELECT * FROM 'utilisateur/entité' WHERE idUser='$idGest'");
+	$req1->execute();
+	$entit2 = $req1->fetch();
+	$e2 = $entit2['idEntité'];
+	echo $e2;
+	if($e1==$e2){
+		return true;
+	}
+	else{
+		return false;
+	}
+
+
+
+
+}
 function modificationInformationUtilisateur($db, $nouvelleInfo, $info, $id){
 	$req = $db->prepare("UPDATE `utilisateur` SET $info='$nouvelleInfo' WHERE idUser='$id'");
 	$req->execute();

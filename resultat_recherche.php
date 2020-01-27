@@ -9,13 +9,10 @@ if(!empty($_SESSION)){
 
 if(isset($_POST['keywords']) && !empty($_POST['keywords'])) {
 
-	if($_SESSION['Type']=="Gestionnaire"){
-		$rep = rechercheUser_Gestionnaire($db, $_POST['keywords'], $_SESSION['idBoitier']);
-	}
-	else{
-		$rep = rechercheUtilisateur($db, $_POST['keywords']);
-	}
+
+	$rep = rechercheUtilisateur($db, $_POST['keywords']);
 	$fonction = $rep->fetchall();
+	
 	include('Vues/resultat_recherche.vue.php');
 }
 
