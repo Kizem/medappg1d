@@ -3,6 +3,8 @@
 require("Modeles/fonction.php");
 require("includes/AccesBase.php");
 
+ini_set('display_errors', 'off');
+
     if(isset($_POST['submit']))
     {
       $destinataire = $_POST['destinataire'];
@@ -12,20 +14,20 @@ require("includes/AccesBase.php");
 
       if(!$donnees)
       {
-        echo "Identifiant introuvable";
-        include_once('Vues/Messagerie.vue.php');
+      	$rep = "Identifiant introuvable";
+      	include_once('Vues/Messagerie.vue.php');
       }
       elseif($donnees)
       {
-        envoieMessage($db, $date, $Heure, $message, $donnees);
-        echo "Message envoyé!";
+      	$datetime = date("Y-m-d H:i:s");
+        envoieMessage($db, $datetime, $message, $donnees);
+        $rep = "Message envoyé!";
         include_once('Vues/Messagerie.vue.php');
       }
       else
       {
-        echo "Une erreur est survenue.";
-        include_once('Vues/Messagerie.vue.php');
+      	$rep = "Une erreur est survenue.";
+      	include_once('Vues/Messagerie.vue.php');
       }
     }
-
 ?>
