@@ -100,11 +100,7 @@
 
     </div>
 
-    <form action="envoie_message.php" method="post">
-      <input type="text" name="destinataire" placeholder="Pseudonyme du destinataire"></br>
-      <textarea name="message" rows="10" cols="70" placeholder="Votre message . . ."></textarea></br>
-      <input type="submit" name="submit" value="Envoyer">
-    </form>
+    
 
     <footer><?php include_once('includes/footer.php'); ?></footer>
   </body>

@@ -1,7 +1,7 @@
 <?php
 
-require("includes/AccesBase.php");
 require("Modeles/fonction.php");
+require("includes/AccesBase.php");
 
     if(isset($_POST['submit']))
     {
@@ -13,15 +13,18 @@ require("Modeles/fonction.php");
       if(!$donnees)
       {
         echo "Identifiant introuvable";
+        include_once('Vues/Messagerie.vue.php');
       }
       elseif($donnees)
       {
         envoieMessage($db, $date, $Heure, $message, $donnees);
         echo "Message envoyé!";
+        include_once('Vues/Messagerie.vue.php');
       }
       else
       {
         echo "Une erreur est survenue.";
+        include_once('Vues/Messagerie.vue.php');
       }
     }
 
