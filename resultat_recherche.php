@@ -16,7 +16,6 @@ if(isset($_POST['keywords']) && !empty($_POST['keywords'])) {
 		$rep = rechercheUtilisateur($db, $_POST['keywords']);
 	}
 	$fonction = $rep->fetchall();
-	//echo $fonction['Prenom'], " ", $fonction['Nom'];
 	include('Vues/resultat_recherche.vue.php');
 }
 
