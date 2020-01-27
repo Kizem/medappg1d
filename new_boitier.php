@@ -34,11 +34,7 @@ if(!empty($_SESSION)){
 				$erreur= "Ce boîtier existe déjà";
 				include('Vues/new_boitier.vue.php');
 			}
-		// }
-		// else{
-		// 	$erreur= "Cette entité n'existe pas";
-		// 	include('Vues/new_boitier.vue.php');
-		// }
+		
 
 	}
 	else{
