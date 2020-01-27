@@ -8,10 +8,6 @@
   </head>
   <body>
     <header><?php include_once('includes/header.php'); ?></header>
-    <div class="chip">
-      <img <?php echo "src='$cheminPhoto'";  ?> alt="Person" width="96" height="96">
-      <p><?php  echo $nom;echo " "; echo $prenom;?></p>
-    </div>
     <div id = "main">
 
       <div align="center">

@@ -13,7 +13,7 @@ $ListeDef=array_unique($cl);//on supprime les valeurs duppliquées
 $ListeDef=array_values($ListeDef);//supressions des cases vides
 $ListeALL= [];
 
-function delete_col(&$array, $key)
+function delete_col(&$array, $key)//supression des clés
 		{
 		    // Check that the column ($key) to be deleted exists in all rows before attempting delete
 		    foreach ($array as &$row)   { if (!array_key_exists($key, $row)) { return false; } }
@@ -35,14 +35,5 @@ for($i=0; $i<count($ListeDef); $i++){
 		$data=$req;
 		return $data;
 	}
-
-
-/*if(array_key_exists('listeDeroulante', $_POST)){
-	$indicateur=true;
-	echo "im here";
-
-	
-}*/
-
 include_once('Vues/graphique.vue.php');
 ?>
