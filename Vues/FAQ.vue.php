@@ -81,144 +81,96 @@
 		<div class="theme">
 
 
-			<h2 id="ancre_theme1">Thème 1</h2>
+			<h2 id="ancre_theme1">Questions sur l'inscription</h2>
 
 			<div class="t1_questions">
-				<h1 id="ancre_theme1_q1">Question 1</h1>
+				<h1 id="ancre_theme1_q1">Où trouver mon code d'inscription ?</h1>
 
 				<p>
-					réponse 1
+					Vous devriez recevoir votre code dans un courrier envoyé chez vous.
 				</p>
 
-				<h1 id="ancre_theme1_q2">Question 2</h1>
+				<h1 id="ancre_theme1_q2">Je n'arrive pas à rentrer mon mot de passe lors de l'inscription </h1>
 
 				<p>
-					réponse 2
+					Utilisez un mot de passe plus compliqué, comprenant des majuscules, minuscules, chiffres et caractères spéciaux.
 				</p>
 
-				<h1 id="ancre_theme1_q3">Question 3</h1>
+				<h1 id="ancre_theme1_q3">Je peux mettre ce que je veux comme speudo ?</h1>
 
 				<p>
-					réponse 3
+					Non, votre seul restriction est d'éviter de mettre un speudo injurieux. Dans le cas contraire, vous risquez un bannissement
 				</p>
 
-				<h1 id="ancre_theme1_q4">Question 4</h1>
+				<h1 id="ancre_theme1_q4">Mon code d'inscription ne marche pas</h1>
 
 				<p>
-					réponse 4
+					Veuillez contacter votre établissement d'examen.
 				</p>
 
-				<h1 id="ancre_theme1_q5">Question 5</h1>
-
-				<p>
-					réponse 5
-				</p>
-
-				<h1 id="ancre_theme1_q6">Question 6</h1>
-
-				<p>
-					réponse 6
-				</p>
-
-				<h1 id="ancre_theme1_q7">Question 7</h1>
-
-				<p>
-					réponse 7
-				</p>
+				
 			</div>
 
-			<h2 id="ancre_theme2">Thème 2</h2>
+			<h2 id="ancre_theme2">Questions sur les tests</h2>
 
 			<div class="t2_questions">
-				<h1 id="ancre_theme2_q1">Question 1</h1>
+				<h1 id="ancre_theme2_q1">Quels sont les tests disponibles ?</h1>
 
 				<p>
-					réponse 1
+					Les tests de bases assumés par nos boîtiers sont la prise de température, le mesure de fréquence cardiaque et la mesure des capacités auditives. Ensuite, selon votre centre d'examen, d'autres tests pourraient être ajoutés.
 				</p>
 
-				<h1 id="ancre_theme2_q2">Question 2</h1>
+				<h1 id="ancre_theme2_q2">Où consulter mes résultats</h1>
 
 				<p>
-					réponse 2
+					Votre page mon espace.
 				</p>
 
-				<h1 id="ancre_theme2_q3">Question 3</h1>
+				<h1 id="ancre_theme2_q3">Est-ce que mes résultats restent confidentiels ?</h1>
 
 				<p>
-					réponse 3
+					Non, en vous inscrivant, vous accepter que les gestionnaires et administrateurs de votre centre d'examen accèdent à vos résultats.
 				</p>
 
-				<h1 id="ancre_theme2_q4">Question 4</h1>
+				<h1 id="ancre_theme2_q4">Comment faire pour récupérer mes résultats en format papier ?</h1>
 
 				<p>
-					réponse 4
+					Envoyez un mail à votre centre d'examen.
 				</p>
 
-				<h1 id="ancre_theme2_q5">Question 5</h1>
-
-				<p>
-					réponse 5
-				</p>
-
-				<h1 id="ancre_theme2_q6">Question 6</h1>
-
-				<p>
-					réponse 6
-				</p>
-
-				<h1 id="ancre_theme2_q7">Question 7</h1>
-
-				<p>
-					réponse 7
-				</p>
+				
 			</div>
 
 				
 
-			<h2 id="ancre_theme3">Thème 3</h2>
+			<h2 id="ancre_theme3">Questions sur le boîtier.</h2>
 
 			<div class="t3_questions">
-				<h1 id="ancre_theme3_q1">Question 1</h1>
+				<h1 id="ancre_theme3_q1">Je voudrais obtenir l'un de vos boîtiers</h1>
 
 				<p>
-					réponse 1
+					Envoyez nous un message sur la page officielle de INFINTE MEASURES.
 				</p>
 
-				<h1 id="ancre_theme3_q2">Question 2</h1>
+				<h1 id="ancre_theme3_q2">Est-il possible de réaliser d'autres types de tests que ceux fournis par le centre ?</h1>
 
 				<p>
-					réponse 2
+					Non
 				</p>
 
-				<h1 id="ancre_theme3_q3">Question 3</h1>
+				<h1 id="ancre_theme3_q3">Le boîtier ne semble plus fonctionner</h1>
 
 				<p>
-					réponse 3
+					Renvoyer le au siège social d'INFINTE MEASURES. 
 				</p>
 
-				<h1 id="ancre_theme3_q4">Question 4</h1>
+				<h1 id="ancre_theme3_q4">Vous êtes les meilleurs !</h1>
 
 				<p>
-					réponse 4
+					Merci !
 				</p>
 
-				<h1 id="ancre_theme3_q5">Question 5</h1>
-
-				<p>
-					réponse 5
-				</p>
-
-				<h1 id="ancre_theme3_q6">Question 6</h1>
-
-				<p>
-					réponse 6
-				</p>
-
-				<h1 id="ancre_theme3_q7">Question 7</h1>
-
-				<p>
-					réponse 7
-				</p>
+				
 			</div>
 
 		</div>
