@@ -74,7 +74,7 @@ else{
 		$Poids=$_POST['Poids'];
 		$req=modificationInformationUtilisateur($db, $Poids, 'Poids', $idUser);
 		if($resultat!=""){
-			$resultat .="-Votre Poids a bien été mis à jour.";
+			$resultat .="-Votre Poids a bien été mis à jour.<br/>";
 		}
 		else{
 			$resultat ="-Votre Poids a bien été mis à jour. <br/>";
@@ -116,7 +116,10 @@ else{
 		}
 		$req=modificationInformationUtilisateur($db, $Sexe, 'Sexe', $idUser);
 		if($resultat!=""){
-			$resultat .='-Votre sexe a bien été mis à jour.';
+			$resultat .='-Votre sexe a bien été mis à jour.<br/>';
+		}
+		else{
+			$resultat='-Votre sexe a bien été mis à jour.<br/>';
 		}
 		
 	}
@@ -125,7 +128,10 @@ else{
 		
 		$req=modificationInformationUtilisateur($db, $Taille, 'Taille', $idUser);
 		if($resultat!=""){
-			$resultat .="-Votre taille a bien été mise à jour. /n";
+			$resultat .="-Votre taille a bien été mise à jour. <br/>";
+		}
+		else{
+			$resultat='-Votre taille a bien été mise à jour. <br/>';
 		}
 	}
 	if(!empty($_POST['DateDeNaissance'])){
@@ -133,7 +139,10 @@ else{
 		
 		$req=modificationInformationUtilisateur($db, $DateDeNaissance, 'DateDeNaissance', $idUser);
 		if($resultat!=""){
-			$resultat .="-Votre date de naissance a bien été mise à jour.";
+			$resultat .="-Votre date de naissance a bien été mise à jour.<br/>";
+		}
+		else{
+			$resultat='-Votre date de naissance a bien été mise à jour.<br/>';
 		}
 	}
 
