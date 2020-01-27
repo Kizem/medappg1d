@@ -294,10 +294,9 @@ function addCodeUtilisateur($db, $code,$idEntité, $fonction){
 	return $req;
 }
 
-function recupid($db, $login){
-	$req = $db->prepare("SELECT idUser FROM utilisateur WHERE login = '$login'");
-	$req->execute();
-	return $req;
+function recupid($db, $user){
+	$requete = $db->prepare("SELECT idUser FROM utilisateur WHERE login = '$user'");
+	$requete->execute();
 }
 
 function chercheDestinataire($db, $destinataire){
@@ -313,7 +312,7 @@ function envoieMessage($db, $datetime, $message, $donnees){
 }
 
 function affichageMessage($db, $idUser){
-	$req = $db->prepare("SELECT * FROM message WHERE idUser = '$idUser'");
+	$req = $db->prepare("SELECT * FROM message WHERE idUser = 'gt' ORDER BY Date");
 	$req->execute();
 	return $req;
 }

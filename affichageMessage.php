@@ -3,13 +3,14 @@
 require("Modeles/fonction.php");
 require("includes/AccesBase.php");
 
-echo $_SESSION['login'];
+/*$user = $_SESSION['Mail'];
 
-//$idUser = recupid($db, $_SESSION['login']);
-//echo $idUser;
+$idUtilisateur = recupid($db, $user);
 
-//$fonction = affichageMessage($db, $idUser);
-//$messagesUtilisateur = $fonction->fetchall();
+$fonction = affichageMessage($db, $idUtilisateur);
+var_dump($fonction);
+$messagesUtilisateur = $fonction->fetchall();
+var_dump($messagesUtilisateur);*/
 
 include_once('Vues/affichageMessage.vue.php');
 
