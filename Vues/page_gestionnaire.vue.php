@@ -55,7 +55,7 @@
 
           <ul class="Actions">
             
-            <li class="Del_cap"><a href="page_admin.php?delete_cap=<?= $c['idCapteur']?>" onclick="return confirm('Etes-vous sûr de vouloir effectuer la suppresion ?');">Supprimer</a></li>
+            <li class="Del_cap"><a href="page_gestionnaire.php?delete_cap=<?= $c['idCapteur']?>" onclick="return confirm('Etes-vous sûr de vouloir effectuer la suppresion ?');">Supprimer</a></li>
           
             <li class="Modif_cap"><a href="page_capteur.php?modif_cap=<?= $c['idCapteur']?>">Modifier</a> </li>
           </ul>

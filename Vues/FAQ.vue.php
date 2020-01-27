@@ -343,6 +343,7 @@
 
 		<p>
 			<h2 id="ancre_propos">A propos</h2>
+			<p> Cette plateforme a été réalisée par la société Digitest, réunissant six étudiants diplômés de l'ISEP, école d'ingénieur du numérique.</p>
 		</p>
 		<footer><?php include_once('includes/footer.php'); ?></footer>
 	</body>

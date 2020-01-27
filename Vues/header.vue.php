@@ -35,7 +35,11 @@
 	  <li class="limenu"><a href="Profil.php">Mon profil</a></li>
 	  <li class="limenu"><a href="session_test.php">Nos tests</a></li>
 	  <li class="limenu"><a href="monEspace.php">Mon espace</a></li>
+	  <?php if(!empty($_SESSION)) {
+	  			if($_SESSION['Type']=='Utilisateur'){
+	  	?>
 	  <li class="limenu"><a href="participerTest.php">Participer à un test</a></li>
+	  <?php } }?>
 	  <li class="limenu"><a href="FAQ.php#ancre_propos">A propos</a></li>
 	</ul>
 
