@@ -50,7 +50,7 @@
 
             <?php while($c = $capteurs->fetch()){ ?>
 
-              <p class="capteur"><?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
+              <p class="capteur"><?= $c['idCapteur'] ?> - <?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
               / Seuil :  <?= $c['seuil'] ?></p>          
 
           <ul class="Actions">
