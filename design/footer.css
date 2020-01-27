@@ -1,11 +1,4 @@
-/*footer{
-  display:flexbox;
-  position: relative;
-  min-height: 100px;
-  bottom: 0;
-  left: 0; right: 0;
-  top: auto;
-}*/
+
 body{
   
   min-height: 100%;
@@ -30,10 +23,7 @@ footer{
       0 -4px 0 hsl(210, 100%, 60%) inset, 
       0 -5px 0 hsl(210, 100%, 70%) inset; 
   display: flex;
-  
-  /*position:relative;
-  position: absolute;
-  bottom: 0;*/
+
 }
 .boutons{
   height:100%;

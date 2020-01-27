@@ -43,26 +43,19 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 							include('Vues/Inscription.vue.php');
 						}
 						else{
-							//print_r($fonction);
 							for ($i=0; $i < count($fonction); $i++) {
 								if($fonction[$i]['fonction']==$typeUtilisateur){
 									$req = insertUsers($db, $nom, $prenom, $mail, $Mdp, $typeUtilisateur, $login);
 									$req=deleteCodeInscription($db,$fonction[$i]['idCodeInscription']);
-									/*if($fonction[$i]['fonction']=="Utilisateur"){
-										$req=deleteCodeInscription($db,$fonction[$i]['idCodeInscription']);
-									}*/
 									if(!is_null($fonction[$i]['idEntité'])){
 										$req=login($db, $login);
 										$DonneeLogin = $req->fetch();
 										$req=inserUsersEntite($db, $DonneeLogin['idUser'],$fonction[$i]['idEntité']);
-
 									}
-									
 								    $erreur="";
 								    include('connexion.php');
 								    break;
 								}
-
 								else{
 									$erreur="Le code ne correspond pas à ce privilège";
 									include('Vues/Inscription.vue.php');
@@ -70,10 +63,6 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 							}
 						}
 					}
-							
-							
-
-					
 					else{
 						$erreur= "Les mots de passes ne correspondent pas";
 						include('Vues/Inscription.vue.php');
@@ -100,15 +89,8 @@ if(!empty($_POST['login']) AND !empty($_POST['nom']) AND !empty($_POST['prenom']
 	}
 }
 else{
-	//$erreur= "Veuillez remplir tous les champs";
 	include('Vues/Inscription.vue.php');
 	}
-	/*echo 'Votre nom est '.$_POST['nom'];
-}
-}
-else{
-	echo 'nom pas declare';*/
-
 
 ?>
 

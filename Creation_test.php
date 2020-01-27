@@ -43,21 +43,12 @@ if(!empty($_SESSION)){
 					include_once('Vues/Creation_test.vue.php');
 			}
 			else{
-				/*if($idCapteur==FALSE){
-					$erreur="capteur inconnu";
-					include_once('Vues/Creation_test.vue.php');
-					}
-				else{*/
 					$erreur="session de test créée";
 					$code = genererChaineAleatoire(10);
-					//inserer dans la base de donnee maintenant
-					
 					$ListesCapteurs = $db->query("SELECT * FROM capteur where idCapteur='$Capteur' ORDER BY idCapteur DESC");
 					$Type=$ListesCapteurs->fetch();
-					
 					insertTest($db, $date,$code,$idUser, $idBoitier, $Type['Type']);
 					include_once('affichageTest.php');
-					
 				}
 			}
 		else{
