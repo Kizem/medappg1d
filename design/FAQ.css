@@ -71,11 +71,8 @@ nav a{
   background: #28292A;
 }
 
-/*Quand on passe la souris sur les catégories (thème 1, thème 2, etc)*/
-
 nav a:hover{
   color: rgb(90,157,215);
-  /*border-bottom: 2px solid rgb(130,197,254);*/
       box-shadow: 
       0 -1px 0 hsl(210, 100%, 42%) inset, 
       0 -2px 0 hsl(210, 100%, 48%) inset, 
@@ -135,24 +132,6 @@ nav > ul li:hover .sous{
 
 /*-----Moteur de recherche & Modifier-----*/
 
-/*.recherche{
-  text-align: right;
-  margin-right: 10px;
-}
-
-.champ_saisie{
-  border-radius: 5px;
-  border-width: 3px;
-  border-color: black;
-}
-
-.bouton_recherche{
-  border-radius: 10px;
-  font-weight: bold;
-  color: white;
-  background: #28292A;
-}*/
-
 .edit{
   margin-left: 10px;
 }
@@ -163,17 +142,6 @@ nav > ul li:hover .sous{
   font-weight: bold;
 }
 
-/*#mail{
-  margin: auto;
-  max-width: 300px;
-  width: 30%;
-  background-color:#eee;
-  border:3px solid #e6e6e6;
-  border-radius:1px;margin:10 0 0px;
-  padding:50px;
-  margin: 12;
-  border-radius:10px;
-}*/
 #mail{
   margin: 30px 30% 42px 30%;
 }

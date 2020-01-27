@@ -13,8 +13,13 @@
 
         <form name="Edition de la FAQ" method="post" action=".../Edition_FAQ.php">
 
-            Veuillez indiquer le nom du thème n°1 : <input type="text" name="Theme1" placeholder="bile" /> <br/>
+            Veuillez indiquer le nom du thème n°1 : 
+            <form action="Edition_FAQ.php" method="post">
+                <input type="text" name="Theme1" placeholder="Theme1"> 
+                <input type="submit" name="submit" value="Valider">
+            </form>
 
+            </br>
 
             <?php 
 
@@ -40,9 +45,9 @@
             <form action="Edition_FAQ.php" method="post">
                 <input type="text" name="Theme2" placeholder="Theme2"> 
                 <input type="submit" name="submit" value="Valider">
-                <br/>
             </form>
-            
+
+            </br>
 
             <?php 
 
@@ -64,7 +69,13 @@
 
             </br>
 
-            Veuillez indiquer le nom du thème n°3 : <input type="text" name="Theme3"/> <br/>
+            Veuillez indiquer le nom du thème n°3 : 
+            <form action="Edition_FAQ.php" method="post">
+                <input type="text" name="Theme3" placeholder="Theme3"> 
+                <input type="submit" name="submit" value="Valider">
+            </form>
+
+            </br>
 
             <?php 
 
