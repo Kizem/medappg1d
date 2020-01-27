@@ -12,7 +12,7 @@
         <!--corp-->
         <div class="topnav">
 		  <a class="active" href="#home">Tableaux</a>
-		  <a href="graphique.php">Graphiques</a>
+		  <a href=<?php echo "graphique.php?user=".$_GET['user'];?>>Graphiques</a>
 		</div>
 	   <?php $id = $_GET['user'];
 	   tableauTestFinale($db,$id);

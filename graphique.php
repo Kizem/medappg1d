@@ -1,7 +1,8 @@
 <?php
 include_once("includes/AccesBase.php");
 include_once("Modeles/fonction.php");
-$idUser= $_SESSION['idUser'];
+//$idUser= $_SESSION['idUser'];
+$idUser=$_GET['user'];
 $i=0;
 $req=$db->prepare("SELECT Type FROM `test` WHERE idUser='$idUser'");
 $req->execute();

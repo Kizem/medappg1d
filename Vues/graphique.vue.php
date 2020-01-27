@@ -10,7 +10,7 @@
 	<header><?php include_once('includes/header.php'); ?></header>
 	<div class="topnav">
 		  <a class="active" href="#home">Graphiques</a>
-		  <a href="monEspace.php">Tableaux</a>
+		  <a href=<?php echo "Utilisateur.php?user=".$_GET['user'];?>>Tableaux</a>
 		</div>
 	<div class="conteneur">
 		<div class="Titre">
