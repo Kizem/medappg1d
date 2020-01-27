@@ -39,7 +39,11 @@
 	  			if($_SESSION['Type']=='Utilisateur'){
 	  	?>
 	  <li class="limenu"><a href="participerTest.php">Participer à un test</a></li>
-	  <?php } }?>
+	  <?php } else{?><li class="limenu"><a href="FAQ.php#ancre_contact">Nous contacter</a></li>
+	  
+	 	<?php } } else {?><li class="limenu"><a href="FAQ.php#ancre_contact">Nous contacter</a></li>
+
+		<?php }?>
 	  <li class="limenu"><a href="FAQ.php#ancre_propos">A propos</a></li>
 	</ul>
 

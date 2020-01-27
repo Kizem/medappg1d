@@ -47,6 +47,8 @@
 
         <div class="catégorie">
           <p class="titre_catég"> Capteurs </p>
+          
+            <a class="Add_cap" href="add_capteur.php">Ajouter</a>
 
             <?php while($c = $capteurs->fetch()){ ?>
 
@@ -61,7 +63,7 @@
           </ul>
           <?php } ?>
 
-          <a class="Add_cap" href="add_capteur.php">Ajouter</a>
+          
 
         </div>        
 

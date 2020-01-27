@@ -168,8 +168,34 @@ function rechercheUtilisateur($db, $keyword){
 	return $req;
 }
 
-function rechercheUser_Gestionnaire($db, $keyword, $idEntit){
-	$req = $db->prepare("SELECT * FROM utilisateur WHERE idBoitier='$idBoit' AND (Nom LIKE '%$keyword%' OR Prenom LIKE '%$keyword%')  ORDER BY Nom");
+function rechercheUser_Gestionnaire($db, $keyword, $idBoitier){
+
+	// $req1 = $db->query("SELECT * FROM boitier WHERE idBoitier='$idBoitier'");
+	// $res = $req1->fetch();
+	// $entit = $res['idEntité'];
+
+	// $req2 = $db->prepare("SELECT * FROM 'utilisateur/entité' WHERE idEntité='$entit'");
+	// $req2->execute();
+	// $user = $req2->fetchall();
+	// $id = $user['idUser'];
+
+	// $req3 = $db->prepare("SELECT * FROM utilisateur WHERE idUser='$id' AND (Nom LIKE '%$keyword%' OR Prenom LIKE '%$keyword%') ORDER BY Nom");
+	// $req3->execute();
+
+	// return $req3;	
+
+
+	$req1 = $db->query("SELECT * FROM boitier WHERE idBoitier='$idBoitier'");
+	$res = $req1->fetch();
+	$entit = $res['idEntité'];
+
+	$req2 = $db->query("SELECT * FROM 'utilisateur/entité' WHERE idEntité='$entit'");
+	$res2 = $req2->fetchall();
+
+	
+
+
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE idBoitier='$idBoitier' AND (Nom LIKE '%$keyword%' OR Prenom LIKE '%$keyword%')  ORDER BY Nom");
 	$req->execute();
 	return $req;	
 }

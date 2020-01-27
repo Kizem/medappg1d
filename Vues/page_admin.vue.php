@@ -22,7 +22,8 @@
 
           <p class="titre_catég"> Utilisateurs </p>
 
-            
+            <a class="code" href="gestionCodeInscription.php"> Gérer les codes d'inscription</a>
+
             <?php while($u = $utilisateurs->fetch()){ ?>
 
               <!-- On affiche tous les utilisateurs sauf celui qui est connecté -->
@@ -37,7 +38,6 @@
               <?php } else{} ?>
             <?php } ?>
 
-            <a class="code" href="gestionCodeInscription.php"> Gérer les codes d'inscription</a>
         </div>
 
         <!-- *********************************** -->
@@ -47,7 +47,7 @@
 
         <div class="catégorie">
           <p class="titre_catég"> Capteurs </p>
-
+            <a class="Add_cap" href="add_capteur.php">Ajouter</a>
             <?php while($c = $capteurs->fetch()){ ?>
 
               <p class="membre"><?= $c['idCapteur'] ?> - <?= $c['Type'] ?> / Val : <?=$c['Valeur'] ?>
@@ -61,9 +61,10 @@
           </ul>
         <?php } ?>
 
-          <a class="Add_cap" href="add_capteur.php">Ajouter</a>
+          
 
         </div>
+
         <!-- ******************** -->
 
 

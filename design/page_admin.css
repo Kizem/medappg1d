@@ -10,17 +10,21 @@ body{
 }
 
 .options{
+
 	margin:5%;
 	display:flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+
 }
 
 .catégorie{
+  overflow:auto;
 	box-shadow: 3px 1px 5px grey;
 	border: 1px solid black;
 	width:400px;
-	height: auto;
+	height: 500px;
+
 }
 
 .titre_catég{

@@ -17,11 +17,12 @@ body{
 }
 
 .catégorie{
+  overflow: auto;
 	box-shadow: 3px 1px 5px grey;
 	border: 1px solid black;
 	width:400px;
-	height: auto;
-  margin-top: 10px
+	height: 500px;
+  margin-top: 10px;
 }
 
 .titre_catég{
