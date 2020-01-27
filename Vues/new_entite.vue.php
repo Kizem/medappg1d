@@ -57,23 +57,6 @@
                                     
                                 </div>       
 
-<!--                                 <div class="conteneurChamp">
-                                    <label class="input-label" for="reference">
-                                        <p class="champTexte">Référence du boîtier* : 
-                                        </p>
-                                        <input class="entreeDeTexte" type="charset" name="reference"/>
-                                    </label>
-                                    
-                                </div>    -->                      
-
-<!--                                 <div class="conteneurChamp">
-                                    <label class="input-label" for="gestionnaire">
-                                        <p class="champTexte">Pseudo du premier gestionnaire* : 
-                                        </p>
-                                        <input class="entreeDeTexte" type="charset" name="gestionnaire"/>
-                                    </label>
-                                    
-                                </div> -->
 
                                 <div class="conteneurChamp">
                                     <input class="boutonValider" type="submit" value="Valider">
