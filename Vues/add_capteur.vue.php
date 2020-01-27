@@ -49,26 +49,20 @@
                                     
                                 </div>
 
-                                <div class="conteneurChamp">
-                                    <label class="input-label"><p class="champTexte">Boîtier associé* :
+                                <?php if($_SESSION['Type']=='Administrateur'){ ?>
+                                    <!-- On affiche le choix de boîter que si c'est un administrateur qui vient faire l'ajout
+                                        de capteurs, car si c'est un gestionnaire, alors le choix du boîtier est évident -->
+        
+
+                                    <div class="conteneurChamp">
+                                    <label class="input-label" for="reference">
+                                        <p class="champTexte">Référence du boîtier à associer* : 
                                         </p>
-                                        <FORM>
-                                        <SELECT class="liste" name="listeDeroulante" size="1">
-                                            <OPTION value=0></OPTION>
-                                            <?php while($b = $ListeBoitier->fetch() ){ ?>
-                                                <OPTION value=<?php $i ?>> 
-                                                
-                                                <?php echo $b['idBoitier'] ?>-<?php echo $b['Reference']; ?>
-                                                       
-                                                </OPTION>
-                                                <?php 
-                                                $i++;
-                                            }
-                                             ?>
-                                        </SELECT>
-                                    </FORM>
+                                        <input class="entreeDeTexte" type="charset" name="reference"/>
                                     </label>
-                                </div>                                  
+                                    
+                                </div>                       
+                                <?php } ?>
 
                                 <div class="conteneurChamp">
                                     <input class="boutonValider" type="submit" value="Valider">

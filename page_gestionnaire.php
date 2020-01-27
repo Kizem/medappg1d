@@ -16,8 +16,8 @@ if(isset($_GET['delete_cap']) AND !empty($_GET['delete_cap'])){
 	$req -> execute(array($_GET['delete_cap']));
 
 }
-
-$capteurs = $db->query('SELECT * FROM capteur ORDER BY idCapteur DESC'); //permet de classer les capteurs par ordre d'ajout(les derniers en tête)
+$idBoit = $_SESSION['idBoitier'];
+$capteurs = $db->query("SELECT * FROM capteur WHERE idBoitier='$idBoit'ORDER BY idCapteur DESC"); //permet de classer les capteurs par ordre d'ajout(les derniers en tête)
 
 include_once('Vues/page_gestionnaire.vue.php');
 ?>

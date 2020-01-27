@@ -168,7 +168,7 @@ function rechercheUtilisateur($db, $keyword){
 	return $req;
 }
 
-function rechercheUser_Gestionnaire($db, $keyword, $idBoit){
+function rechercheUser_Gestionnaire($db, $keyword, $idEntit){
 	$req = $db->prepare("SELECT * FROM utilisateur WHERE idBoitier='$idBoit' AND (Nom LIKE '%$keyword%' OR Prenom LIKE '%$keyword%')  ORDER BY Nom");
 	$req->execute();
 	return $req;	
