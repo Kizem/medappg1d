@@ -21,7 +21,7 @@
     				<th>Mail</th>
   				</tr>
   				</thead>
-  				                  <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
+  				  <li class="Modif"><a href="page_admin.php?modifier=<?= $u['idUser']?>">Modifier</a> </li>
 
   				<tbody>
   				<?php 
