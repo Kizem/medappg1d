@@ -1,6 +1,7 @@
 <?php 
 require("Modeles/fonction.php");
 require("includes/AccesBase.php");
+
 if(!empty($_SESSION)){
 	if(isset($_POST['Theme1']) && !empty($_POST['Theme1'])){
 		$id = 1;

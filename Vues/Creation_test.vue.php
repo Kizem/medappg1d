@@ -91,9 +91,6 @@
             </article>  
         </form>
         <script src="autoCompletion.js"></script>
-    
-    
-    <footer><?php include_once('includes/footer.php'); ?></footer>
     <script>
         autocomplete(document.getElementById("pseudoCreationSessionDeTest"), <?php echo json_encode($listePseudo); ?>);
     </script>
