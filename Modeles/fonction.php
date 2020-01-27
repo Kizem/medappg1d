@@ -294,6 +294,12 @@ function addCodeUtilisateur($db, $code,$idEntité, $fonction){
 	return $req;
 }
 
+function recupid($db, $login){
+	$req = $db->prepare("SELECT idUser FROM utilisateur WHERE login = '$login'");
+	$req->execute();
+	return $req;
+}
+
 function chercheDestinataire($db, $destinataire){
 	$requete = $db->prepare("SELECT * FROM utilisateur WHERE login = '$destinataire'");
     $requete->execute();
@@ -302,15 +308,14 @@ function chercheDestinataire($db, $destinataire){
 }
 
 function envoieMessage($db, $datetime, $message, $donnees){
-	$requete = $db->prepare("INSERT INTO `message`(`idMessage`, `Date`, `contenu`, `idUser`) VALUES(?,?,?,?)");
-    $requete->execute(array($_SESSION['id'], $datetime, $message, $donnees['idUser']));
+	$requete = $db->prepare("INSERT INTO `message`(`idMessage`, `Date`, `contenu`, `MailExpediteur`, `idUser`) VALUES(?,?,?,?,?)");
+    $requete->execute(array($_SESSION['id'], $datetime, $message, $_SESSION['Mail'], $donnees['idUser']));
 }
 
-function affichageMessage($db, $destinataire){
-	$req = $db->prepare("SELECT * FROM message WHERE idUser = '$destinataire'");
+function affichageMessage($db, $idUser){
+	$req = $db->prepare("SELECT * FROM message WHERE idUser = '$idUser'");
 	$req->execute();
-	$donnees = $req->fetch();
-	return $donnees;
+	return $req;
 }
 
 function br2nl($str)
