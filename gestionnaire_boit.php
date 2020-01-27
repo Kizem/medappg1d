@@ -37,9 +37,7 @@ if(!empty($_SESSION)){
 				}
 				else{
 					
-					$TabAllBoitier = $ListeBoitiers->fetchall();
-					majGestionnaire($db,$Pseudo,$TabAllBoitier[(int)$_POST['reference']]['idBoitier']);
-
+					majGestionnaire($db,$Pseudo,$i_entit['idBoitier']);
 					inserUsersEntite($db, $idUser,$idEntité);
 
 					$erreur="L'association s'est bien déroulée";
