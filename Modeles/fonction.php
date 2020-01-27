@@ -167,6 +167,13 @@ function rechercheUtilisateur($db, $keyword){
 	$req->execute();
 	return $req;
 }
+
+function rechercheUser_Gestionnaire($db, $keyword, $idBoit){
+	$req = $db->prepare("SELECT * FROM utilisateur WHERE idBoitier='$idBoit' AND (Nom LIKE '%$keyword%' OR Prenom LIKE '%$keyword%')  ORDER BY Nom");
+	$req->execute();
+	return $req;	
+}
+
 function modificationInformationUtilisateur($db, $nouvelleInfo, $info, $id){
 	$req = $db->prepare("UPDATE `utilisateur` SET $info='$nouvelleInfo' WHERE idUser='$id'");
 	$req->execute();

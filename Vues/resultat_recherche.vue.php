@@ -35,6 +35,9 @@
   						echo $fonction[$i]['Prenom'], ' ';
   						echo "</td>";
   						echo "<td>";
+
+              //Permet de transformer le nom affiché en un lien vers sa page de données
+
               if($fonction[$i]['Type']=='Utilisateur'){
                 $id=$fonction[$i]['idUser'];
                 echo "<a class='link_datas' href='Utilisateur.php?user=$id'>".$fonction[$i]['login'].'</a>';
