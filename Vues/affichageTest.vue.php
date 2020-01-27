@@ -7,12 +7,10 @@
 	</head>
 		<header><?php include_once('includes/header.php'); ?></header>
 	<body>
-
 		<h2 class="TitrePage">Résultat de la recherche :<br/></h2>
     <div class="boxtotale">
   		<div class="ConteneurTable">
   			<table style="width:80%">
-  				
   				<thead>
   				<tr>
       				<th>Nom</th>
@@ -21,9 +19,9 @@
               <th>Type de test</th>
               <th>Boitier</th>
               <th>Code</th>
+              <th>Score</th>
     				</tr>
     				</thead>
-    				
     				<tbody>
     				<?php 
     				if (count($fonction) > 0) {
@@ -45,7 +43,15 @@
                 echo $fonction[$i]['idBoitier'], ' ';
                 echo "</td>";
                 echo "<td>";
-                echo $fonction[$i]['Code'], ' ',"<br>";
+                echo $fonction[$i]['Code'], ' ';
+                echo "</td>";
+                echo "<td>";
+                if(!empty($fonction[$i]['Score'])){
+                  echo $fonction[$i]['Score'], ' ',"<br>";
+                }
+                else{
+                  echo "", ' ',"<br>";
+                }
                 echo "</td>";
                 echo "</tr>";
     					}
@@ -55,7 +61,6 @@
     				}
     				?>
     				</tbody>
-    				
   			</table>
   		</div>
     </div>
