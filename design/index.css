@@ -44,9 +44,7 @@ body {
 }
 
 .go_connex_user , .go_connex_gest , .enSavoirPlus {
-  /*position: absolute;
-  bottom: -22%;
-  left: 21.4%;*/
+  
 
   font:bold 25px Roboto-Light;
   color: white;
