@@ -21,14 +21,27 @@
         <div class="ban" align="center">
           <img class="image" src="ressources/ESPACE_UTILISATEUR.png" alt="Alt text"/>
           <div class="je_me_connecte">
-            <a class="go_connex_user" href="connexion.php">Je me connecte</a>
+                        <!-- En tant qu'invité, ce bouton nous redirige vers la page de connexion
+              Si l'on est connectés, cela nous redirige vers l'espace de l'utilisateur -->
+
+            <?php if(empty($_SESSION)) { ?>
+            <a class="go_connex_gest" href="connexion.php ">Je me connecte</a>
+            <?php } else{ ?> <a class="go_connex_gest" href="monEspace.php ">Mon espace</a>
+            <?php } ?>
           </div>
         </div>
 
         <div class="ban" align="center">
           <img class="image" src="ressources/ESPACE_GESTIONNAIRE.png" alt="Alt text"/>
           <div class="connect_guest">
+
+            <!-- En tant qu'invité, ce bouton nous redirige vers la page de connexion
+              Si l'on est connectés, cela nous redirige vers l'espace de l'utilisateur -->
+
+            <?php if(empty($_SESSION)) { ?>
             <a class="go_connex_gest" href="connexion.php ">Je me connecte</a>
+            <?php } else{ ?> <a class="go_connex_gest" href="monEspace.php ">Mon espace</a>
+            <?php } ?>
           </div>
         </div>
         
