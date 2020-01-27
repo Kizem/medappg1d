@@ -295,17 +295,22 @@ function addCodeUtilisateur($db, $code,$idEntité, $fonction){
 }
 
 function chercheDestinataire($db, $destinataire){
-	$requete = $db->prepare('SELECT * FROM messageuser WHERE idUser = :destinataire');
-    $requete->execute(array('destinataire' => $destinataire));
+	$requete = $db->prepare("SELECT * FROM utilisateur WHERE login = '$destinataire'");
+    $requete->execute();
     $donnees = $requete->fetch();
-    $requete->CloseCursor();
     return $donnees;
 }
 
-function envoieMessage($db, $date, $Heure, $message, $donnees){
-	$requete = $db->prepare('INSERT INTO message(idMessage, Date, Heure, contenu, idUser) VALUES(?,?,?,?)');
-    $requete->execute(array($_SESSION['id'], $date, $Heure, $message, $donnees['id']));
-    $requete->CloseCursor();
+function envoieMessage($db, $datetime, $message, $donnees){
+	$requete = $db->prepare("INSERT INTO `message`(`idMessage`, `Date`, `contenu`, `idUser`) VALUES(?,?,?,?)");
+    $requete->execute(array($_SESSION['id'], $datetime, $message, $donnees['idUser']));
+}
+
+function affichageMessage($db, $destinataire){
+	$req = $db->prepare("SELECT * FROM message WHERE idUser = '$destinataire'");
+	$req->execute();
+	$donnees = $req->fetch();
+	return $donnees;
 }
 
 function br2nl($str)
@@ -337,6 +342,7 @@ function convertDataToChartForm($data)
 
     return $newData;
 }
+
 function selectMulticriteres($db, $texte){
 	$req = $db->prepare($texte);
 	$req->execute();

@@ -222,7 +222,7 @@
                     <h2 class="TitreMessagerie">Accéder à votre messagerie</h2>
                 </div>
                     <center>
-                        <a class="messagerie" href="Vues/Messagerie.vue.php">Votre messagerie</a>
+                        <a class="messagerie" href="Messagerie.php">Votre messagerie</a>
                     </center>
                 </div>
             </div>
