@@ -20,7 +20,7 @@ if(!empty($_SESSION)){
 		echo "Vous ne possedez pas de boitier, contactez votre administrateur";
 	}
 	else{
-		$ListesCapteurs = $db->query('SELECT * FROM capteur ORDER BY idCapteur DESC');
+		$ListesCapteurs = $db->query("SELECT * FROM capteur where idBoitier='$idBoitier' ORDER BY idCapteur DESC");
 		$liste=$db->query('SELECT login FROM utilisateur');
 		$liste=$liste->fetchall();
 		
@@ -35,25 +35,29 @@ if(!empty($_SESSION)){
 			$Pseudo=htmlspecialchars($_POST['Pseudo']);
 			$Capteur=htmlspecialchars($_POST['listeDeroulante']);
 			$erreur='cetsbon';
-			$idCapteur=capteurDisponible($db, $Capteur);
+			$idCapteur=idCapteur($db, $Capteur, $idBoitier);
 			$idUser=pseudoDisponible($db, $Pseudo);
+
 			if(is_bool($idUser) && $idUser==TRUE){
 				$erreur="Utilisateur inconnu";
 					include_once('Vues/Creation_test.vue.php');
 			}
 			else{
-				if($idCapteur==FALSE){
+				/*if($idCapteur==FALSE){
 					$erreur="capteur inconnu";
 					include_once('Vues/Creation_test.vue.php');
 					}
-				else{
+				else{*/
 					$erreur="session de test créée";
 					$code = genererChaineAleatoire(10);
 					//inserer dans la base de donnee maintenant
-					$TableauListeCapteurs = $ListesCapteurs->fetchall();
-					insertTest($db, $date,$code,$idUser, $idBoitier, $TableauListeCapteurs[(int)$_POST['listeDeroulante']]['Type']);
+					
+					$ListesCapteurs = $db->query("SELECT * FROM capteur where idCapteur='$Capteur' ORDER BY idCapteur DESC");
+					$Type=$ListesCapteurs->fetch();
+					
+					insertTest($db, $date,$code,$idUser, $idBoitier, $Type['Type']);
 					include_once('affichageTest.php');
-					}
+					
 				}
 			}
 		else{
