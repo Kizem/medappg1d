@@ -10,6 +10,10 @@
 		<!-- ENTETE -->
         <header><?php include_once('includes/header.php'); ?></header>
         <!--corp-->
+        <div class="topnav">
+		  <a class="active" href="#home">Tableaux</a>
+		  <a href="graphique.php">Graphiques</a>
+		</div>
 	   <?php $id = $_GET['user'];
 	   tableauTestFinale($db,$id);
 	   ?>
