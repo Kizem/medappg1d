@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `app`
 --
-
+CREATE DATABASE IF NOT EXISTS `app` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `app`;
 -- --------------------------------------------------------
 
 --
