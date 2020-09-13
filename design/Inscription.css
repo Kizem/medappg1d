@@ -121,6 +121,15 @@ width: 250px;
   font:bold 13px Arial;
   color:#CD1F01;
 }
+.boutonValider:hover{
+  background: #66B14B;
+  color:#eee;
+}
+.boutonValider:active{
+  background: #66B14B;
+  border-color: #F6F1F0;
+  color:#eee;
+}
 .erreur{
   color: #CD1F01;
 }
@@ -132,15 +141,7 @@ form{
 
 }
 
-.boutonValider:hover{
-  background: #66B14B;
-  color:#eee;
-}
-.boutonValider:active{
-  background: #66B14B;
-  border-color: #F6F1F0;
-  color:#eee;
-}
+
 .infobulle { 
 
   text-decoration:none; 
